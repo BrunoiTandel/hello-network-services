@@ -149,7 +149,7 @@
 
 <?php if ($this->session->userdata('logged-in-admin')) { ?>
   <script>
-    check_admin_login();
+    // check_admin_login();
   </script>
 <?php } ?>
 

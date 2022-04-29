@@ -560,7 +560,6 @@ $config['uat_list_riyatsa'] = $uat_list_riyatsa;
 $config['production_ip_list'] = $production_ip_list;
 $config['staging_ip_list'] = $staging_ip_list;
 
-
 $config['ip_localhost_list'] = $localhost_list;
 $config['ip_uat_list'] = $uat_list;
 
@@ -568,130 +567,20 @@ $config['my_base_url'] = $config['base_url'];
 
 $link_from_crm_website = 0;
 
-if ($link_from_crm_website == 1) {
-	if (in_array($_SERVER['REMOTE_ADDR'], $localhost_list) || in_array($_SERVER['SERVER_ADDR'], $localhost_list)) {
-		$config['factsuite_crm_url'] = 'http://localhost/gitHUB/factsuite-crm-v2/';
-		$config['factsuite_crm_url_for_client'] = 'http://localhost/gitHUB/factsuite-crm-v2/client';
-		$config['factsuite_crm_url_for_image'] = 'http://localhost/gitHUB/factsuite-crm-v2/uploads/';
-		$config['factsuite_crm_url_for_content_image'] = 'http://localhost/gitHUB/factsuite-crm-v2/uploads/';
-	} else if (in_array($_SERVER['REMOTE_ADDR'], $uat_list) || in_array($_SERVER['SERVER_ADDR'], $uat_list)) {
-		$config['factsuite_crm_url'] = 'http://riyatsa.in/factsuite-main-website/factsuite-crm-v2/';
-		$config['factsuite_crm_url_for_client'] = 'http://riyatsa.in/factsuite-main-website/factsuite-crm-v2/client';
-
-		$config['factsuite_crm_url_for_image'] = 'http://riyatsa.in/factsuite-main-website/factsuite-crm-v2/uploads/';
-		$config['factsuite_crm_url_for_content_image'] = 'http://riyatsa.in/factsuite-main-website/factsuite-crm-v2/uploads/';
-	} else {
-		$config['factsuite_crm_url'] = 'http://riyatsa.in/factsuite-main-website/factsuite-crm-v2/';
-		$config['factsuite_crm_url_for_client'] = 'http://riyatsa.in/factsuite-main-website/factsuite-crm-v2/client';
-		$config['factsuite_crm_url_for_image'] = 'http://riyatsa.in/factsuite-main-website/factsuite-crm-v2/uploads/';
-		$config['factsuite_crm_url_for_content_image'] = 'http://riyatsa.in/factsuite-main-website/factsuite-crm-v2/uploads/';
-	}
-} else {
-	$config['factsuite_crm_url'] = $config['my_base_url'];
-	$config['factsuite_crm_url_for_image'] = $config['my_base_url'].'assets/uploads/';
-	if (in_array($_SERVER['REMOTE_ADDR'], $localhost_list) || in_array($_SERVER['SERVER_ADDR'], $localhost_list)) {
-		$config['factsuite_crm_url_for_content_image'] = 'http://localhost/gitHUB/factsuite-crm-v2/uploads/';
-	} else if (in_array($_SERVER['REMOTE_ADDR'], $uat_list) || in_array($_SERVER['SERVER_ADDR'], $uat_list)) {
-		$config['factsuite_crm_url_for_content_image'] = 'http://riyatsa.in/factsuite-main-website/factsuite-crm-v2/uploads/';
-	} else {
-		$config['factsuite_crm_url_for_content_image'] = 'http://riyatsa.in/factsuite-main-website/factsuite-crm-v2/uploads/';
-	}
-}
-
-// if(in_array($_SERVER['REMOTE_ADDR'], $whitelist) || in_array($_SERVER['SERVER_ADDR'], $whitelist)){
-// 	$config['my_base_url'] = $config['my_base_url'].'?/';
-// 	$config['factsuite_crm_url'] = 'http://localhost/gitHUB/factsuite-crm-v2/'.'?/';
-// 	$config['factsuite_crm_url_for_client'] = 'http://localhost/gitHUB/factsuite-crm-v2/client'.'?/';
-// }
-
 $config['ip_address_list'] = $whitelist;
-
-$config['candidate_url'] = 'http://riyatsa.in/factsuite-main-website/factsuite-crm-v2/candidate';
 
 $config['my_base_url'] = $config['my_base_url'];
 
 // failure_msg_for_purchase_package -  0 - for localhost, 1 for UAT,Staging and production
 
 if (in_array($_SERVER['REMOTE_ADDR'], $production_ip_list) || in_array($_SERVER['SERVER_ADDR'], $production_ip_list)) {
-	// $config['candidate_link'] = "http://onelink.to/56bvgj";
-	$config['candidate_link'] = "https://bit.ly/3L8xmHW";
 
-	$config['factsuite_crm_url'] = 'https://factsuitecrm.com/R1';
-	$config['factsuite_crm_url_for_client'] = 'https://factsuitecrm.com/R1/client';
-	$config['factsuite_crm_url_for_image'] = 'http://165.232.189.3/R1/assets/uploads/';
-	$config['factsuite_crm_url_for_content_image'] = 'https://factsuitecrm.com/R1/uploads/';
-	
-	$config['candidate_url'] = 'https://factsuitecrm.com/R1/candidate';
-	$config['factsuite_crm_fs_team_link'] = 'https://factsuitecrm.com/R1/factsuite-team/';
-
-	$config['factsuite_crm_db'] = 'factsuite_crm';
-	$config['factsuite_website_db'] = 'factsuite-main-website';
-
-	$config['failure_msg_for_purchase_package'] = 1;
-
-	$config['purchased_package_invoice_file_storage_link'] = '/var/www/html/R1/assets/uploads/purchased-package-invoice/';
 } else if (in_array($_SERVER['REMOTE_ADDR'], $staging_ip_list) || in_array($_SERVER['SERVER_ADDR'], $staging_ip_list)) {
-	$config['candidate_link'] = "https://bit.ly/3L8xmHW";
 	
-	$config['factsuite_crm_url'] = 'http://159.89.174.203/factsuite-crm-v2';
-	$config['factsuite_crm_url_for_client'] = 'http://159.89.174.203/factsuite-crm-v2/client';
-	$config['factsuite_crm_url_for_image'] = 'http://159.89.174.203/factsuite-main-website/assets/uploads/';
-	$config['factsuite_crm_url_for_content_image'] = 'http://159.89.174.203/factsuite-crm-v2/uploads/';
-	
-	$config['candidate_url'] = 'http://159.89.174.203/factsuite-crm-v2/candidate';
-	$config['factsuite_crm_fs_team_link'] = 'http://159.89.174.203/factsuite-crm-v2/factsuite-team/';
-
-	$config['factsuite_crm_db'] = 'factsuite-crm-staging';
-	$config['factsuite_website_db'] = 'factsuite-main-website-staging';
-
-	$config['failure_msg_for_purchase_package'] = 1;
-
-	$config['purchased_package_invoice_file_storage_link'] = '/var/www/html/factsuite-main-website/assets/uploads/purchased-package-invoice/';
 } else if (in_array($_SERVER['REMOTE_ADDR'], $uat_list_riyatsa) || in_array($_SERVER['SERVER_ADDR'], $uat_list_riyatsa)) {
-	$config['candidate_link'] = "https://bit.ly/3L8xmHW";
-
-	$config['factsuite_crm_url'] = 'http://riyatsa.in/factsuite-main-website/factsuite-crm-v2/';
-	$config['factsuite_crm_url_for_client'] = 'http://riyatsa.in/factsuite-main-website/factsuite-crm-v2/client';
-	$config['factsuite_crm_url_for_image'] = 'http://riyatsa.in/factsuite-main-website/factsuite-crm-v2/uploads/';
-	$config['factsuite_crm_url_for_content_image'] = 'http://riyatsa.in/factsuite-main-website/factsuite-crm-v2/uploads/';
-
-	$config['candidate_url'] = 'http://riyatsa.in/FSV1/factsuite-crm-v2/candidate';
-	$config['factsuite_crm_fs_team_link'] = 'http://riyatsa.in/FSV1/factsuite-crm-v2/factsuite-team/';
-
-	$config['factsuite_crm_db'] = 'factsuite_crm';
-	$config['factsuite_website_db'] = 'factsuite-main-website';
-
-	$config['failure_msg_for_purchase_package'] = 1;
-
-	$config['purchased_package_invoice_file_storage_link'] = '/var/www/Riyatsa.in/factsuite-main-website/factsuite-main-website/assets/uploads/purchased-package-invoice/';
+	
 } else {
-	$config['candidate_link'] = "http://onelink.to/uejyhs";
-
-	$config['factsuite_crm_url'] = $config['my_base_url'];
-	$config['factsuite_crm_url_for_image'] = $config['my_base_url'].'assets/uploads/';
-	if (in_array($_SERVER['REMOTE_ADDR'], $localhost_list) || in_array($_SERVER['SERVER_ADDR'], $localhost_list)) {
-		$config['factsuite_crm_url_for_content_image'] = 'http://localhost/gitHUB/factsuite-crm-v2/uploads/';
-	} else if (in_array($_SERVER['REMOTE_ADDR'], $uat_list) || in_array($_SERVER['SERVER_ADDR'], $uat_list)) {
-		$config['factsuite_crm_url_for_content_image'] = 'http://riyatsa.in/factsuite-main-website/factsuite-crm-v2/uploads/';
-	} else {
-		$config['factsuite_crm_url_for_content_image'] = 'http://riyatsa.in/factsuite-main-website/factsuite-crm-v2/uploads/';
-	}
-
 	$config['my_base_url'] = $config['my_base_url'].'?/';
-	$config['factsuite_crm_url'] = 'http://localhost/gitHUB/factsuite-crm-v2/'.'?/';
-	$config['factsuite_crm_url_for_client'] = 'http://localhost/gitHUB/factsuite-crm-v2/client'.'?/';
-	$config['factsuite_crm_fs_team_link'] = 'http://localhost/gitHUB/factsuite-crm-v2/factsuite-team'.'?/';
-
-	$config['candidate_url'] = 'http://localhost/gitHUB/factsuite-crm-v2/candidate';
-	$config['factsuite_crm_fs_team_link'] = 'http://localhost/gitHUB/factsuite-crm-v2/factsuite-team/';
-
-	$config['factsuite_crm_db'] = 'factsuite_crm';
-	$config['factsuite_website_db'] = 'factsuite-main-website';
-
-	$config['failure_msg_for_purchase_package'] = 0;
-
-	$config['purchased_package_invoice_file_storage_link'] = 'G:/WorkProjetcts/WAMPP/www/GITHUB/factsuite-main-website/assets/uploads/purchased-package-invoice/';
 }
 
-$config['service_list_for_showing_initiate_case_inputs'] = [1];
 $config['reset_password_timeout'] = 10;

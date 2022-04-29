@@ -95,57 +95,24 @@ $db['default'] = array(
 	'save_queries' => TRUE
 );
 
-$db['factsuite_crm'] = array(
-	'dsn'	=> '',
-	// 'hostname' => '157.245.98.110',
-	// 'username' => 'crmapp',
-	// 'password' => 'Factsuite@@321',
-	// 'database' => 'factsuite-crm-staging',
-	'dbdriver' => 'mysqli',
-	'dbprefix' => '',
-	'pconnect' => FALSE,
-	'db_debug' => (ENVIRONMENT !== 'production'),
-	'cache_on' => FALSE,
-	'cachedir' => '',
-	'char_set' => 'utf8',
-	'dbcollat' => 'utf8_general_ci',
-	'swap_pre' => '',
-	'encrypt' => FALSE,
-	'compress' => FALSE,
-	'stricton' => FALSE,
-	'failover' => array(),
-	'save_queries' => TRUE
-);
-
 if (in_array($_SERVER['REMOTE_ADDR'], $production_ip_list) || in_array($_SERVER['SERVER_ADDR'], $production_ip_list)) {
-	$db['factsuite_crm']['hostname'] = $db['default']['hostname'] = '157.245.98.110';
-	$db['factsuite_crm']['username'] = $db['default']['username'] = 'crmapp';
-	$db['factsuite_crm']['password'] = $db['default']['password'] = 'Factsuite@@321';
-	$db['default']['database'] = 'factsuite-main-website';
-
-	$db['factsuite_crm']['database'] = 'factsuite_crm';
+	$db['default']['hostname'] = '157.245.98.110';
+	$db['default']['username'] = 'crmapp';
+	$db['default']['password'] = 'Factsuite@@321';
+	$db['default']['database'] = 'hello-network-services';
 } else if (in_array($_SERVER['REMOTE_ADDR'], $staging_ip_list) || in_array($_SERVER['SERVER_ADDR'], $staging_ip_list)) {
-	// $db['factsuite_crm']['hostname'] = $db['default']['hostname'] = '157.245.98.110';
-	// $db['factsuite_crm']['username'] = $db['default']['username'] = 'crmapp';
-	// $db['factsuite_crm']['hostname'] = $db['default']['hostname'] = '159.89.174.203';
-	$db['factsuite_crm']['hostname'] = $db['default']['hostname'] = 'localhost';
-	$db['factsuite_crm']['username'] = $db['default']['username'] = 'pmauser';
-	$db['factsuite_crm']['password'] = $db['default']['password'] = 'Factsuite@123';
-	$db['default']['database'] = 'factsuite-main-website-staging';
-
-	$db['factsuite_crm']['database'] = 'factsuite-crm-staging';
+	$db['default']['hostname'] = 'localhost';
+	$db['default']['username'] = 'pmauser';
+	$db['default']['password'] = 'Factsuite@123';
+	$db['default']['database'] = 'hello-network-services';
 } else if (in_array($_SERVER['REMOTE_ADDR'], $uat_list_riyatsa) || in_array($_SERVER['SERVER_ADDR'], $uat_list_riyatsa)) {
-	$db['factsuite_crm']['hostname'] = $db['default']['hostname'] = 'localhost';
-	$db['factsuite_crm']['username'] = $db['default']['username'] = 'root';
-	$db['factsuite_crm']['password'] = $db['default']['password'] = 'Riyat123$';
-	$db['default']['database'] = 'factsuite-main-website';
-
-	$db['factsuite_crm']['database'] = 'factsuite_crm';
+	$db['default']['hostname'] = 'localhost';
+	$db['default']['username'] = 'root';
+	$db['default']['password'] = 'Riyat123$';
+	$db['default']['database'] = 'hello-network-services';
 } else {
-	$db['factsuite_crm']['hostname'] = $db['default']['hostname'] = 'localhost';
-	$db['factsuite_crm']['username'] = $db['default']['username'] = 'root';
-	$db['factsuite_crm']['password'] = $db['default']['password'] = '';
-	$db['default']['database'] = 'factsuite-main-website';
-
-	$db['factsuite_crm']['database'] = 'factsuite_crm';
+	$db['default']['hostname'] = 'localhost';
+	$db['default']['username'] = 'root';
+	$db['default']['password'] = '';
+	$db['default']['database'] = 'hello-network-services';
 }

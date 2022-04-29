@@ -58,7 +58,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <script src="<?php echo base_url()?>assets/plugins/jquery-ui/jquery-ui.css"></script>
   <script src="<?php echo base_url()?>assets/plugins/jquery-ui/jquery-ui.js"></script>
 
-  <script src="<?php echo base_url()?>assets/users/js/jquery.md5.js" type="text/javascript" charset="utf-8"></script>
 </head>
  
 <script>

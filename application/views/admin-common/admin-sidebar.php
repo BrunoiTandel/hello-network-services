@@ -2,14 +2,10 @@
   extract($_GET);
   
   $pages = '';
-  $product = '';
-  $enquiries = '';
-  $payment_gateway = '';
   $dashboard = '';
   $website_services = '';
-  $website_faq = '';
-  $general_settings = '';
-
+  $payment_gateway = '';
+  
   $content_img = 'home.svg';
   $product_img = 'product.svg';
   $dashboard_img = 'dashboard.svg';
@@ -26,56 +22,18 @@
     $check_event_id = '/'.$event_id;
   }
   
-  if (strtolower(uri_string()) == 'factsuite-admin/pages' 
-    || strtolower(uri_string()) == 'factsuite-admin/home-page' 
-    || strtolower(uri_string()) == 'factsuite-admin/client-logo' 
-    || strtolower(uri_string()) == 'factsuite-admin/add-job' 
-    || strtolower(uri_string()) == 'factsuite-admin/all-jobs' 
-    || strtolower(uri_string()) == 'factsuite-admin/careers-page' 
-    || strtolower(uri_string()) == 'factsuite-admin/about-us' 
-    || strtolower(uri_string()) == 'factsuite-admin/our-journey' 
-    || strtolower(uri_string()) == 'factsuite-admin/contact-us' 
-    || strtolower(uri_string()) == 'factsuite-admin/add-blog' 
-    || strtolower(uri_string()) == 'factsuite-admin/all-blogs'
-    || strtolower(uri_string()) == 'factsuite-admin/add-testimonials'
-    || strtolower(uri_string()) == 'factsuite-admin/all-testimonials') {
+  if (strtolower(uri_string()) == 'admin/pages' ) {
     $pages = 'active';
     $pages_img = 'colored-pages.svg';
-  } else if (strtolower(uri_string()) == 'factsuite-admin/add-website-services' 
-    || strtolower(uri_string()) =='factsuite-admin/all-website-services'
-    || strtolower(uri_string()) =='factsuite-admin/add-website-package'
-    || strtolower(uri_string()) =='factsuite-admin/add-website-package-component-details'
-    || strtolower(uri_string()) =='factsuite-admin/add-website-package-alacarte-component-details'
-    || strtolower(uri_string()) =='factsuite-admin/all-website-packages'
-    || strtolower(uri_string()) =='factsuite-admin/edit-website-package-details'
-    || strtolower(uri_string()) =='factsuite-admin/edit-website-package-components'
-    || strtolower(uri_string()) =='factsuite-admin/edit-website-package-alacarte-component-details') {
+  }  else if (strtolower(uri_string()) == 'admin/add-website-services') {
     $website_services = 'active';
     $website_services_img = 'colored-globe.png';
-  } else if (strtolower(uri_string()) == 'factsuite-admin/add-service-faq' 
-    || strtolower(uri_string()) == 'factsuite-admin/all-service-faq' 
-    || strtolower(uri_string()) == 'factsuite-admin/add-package-faq' 
-    || strtolower(uri_string()) == 'factsuite-admin/all-package-faq' 
-    || strtolower(uri_string()) == 'factsuite-admin/view-all-events-case-studies'.$check_event_id) {
-    $website_faq = 'active';
-    $website_faq_img = 'colored-faq.png';
   } else if (strtolower(uri_string()) == 'factsuite-admin/payment-gateway') {
     $payment_gateway = 'active';
     $payment_gateway_img = 'colored-payment.svg';
-  } else if (strtolower(uri_string()) == 'factsuite-admin/terms-and-conditions' 
-    || strtolower(uri_string()) == 'factsuite-admin/privacy-policy' 
-    || strtolower(uri_string()) == 'factsuite-admin/cancellation-policy') {
-    $general_settings = 'active';
-    $general_settings_img = 'colored-gear.png';
   } else {
     $dashboard_img = 'colored-dashboard.svg';
     $dashboard = 'active';
-  }
-
-  if(isset($product_category)) {
-    $content = '';
-    $product = 'active';
-    $product_img = 'coloured-product.svg';
   }
 ?>
 
@@ -105,7 +63,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar">
     <!-- Brand Logo -->
-    <a href="<?php echo $this->config->item('my_base_url')?>factsuite-admin/dashboard" class="brand-link">
+    <a href="<?php echo $this->config->item('my_base_url')?>admin/pages" class="brand-link">
       <img src="<?php echo base_url()?>assets/dist/img/logo/logo.png" alt="Logo" class="brand-image">
       <span class="brand-text font-weight-light">&nbsp;</span>
     </a>
@@ -120,7 +78,7 @@
       <nav class="custom-sidebar-nav-menu">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
-          <li class="nav-item" title="Dashboard">
+          <li class="nav-item d-none" title="Dashboard">
             <a href="<?php echo $this->config->item('my_base_url')?>factsuite-admin/dashboard" class="sidebar-nav nav-link text-center <?php echo $dashboard; ?>">
               <span class="d-block sidebar-nav-link-img">
                 <img src="<?php echo base_url()?>assets/dist/img/sidebar-images/<?php echo $dashboard_img; ?>">
@@ -138,15 +96,6 @@
             </a>
           </li>
 
-          <li class="nav-item d-none" title="Product">
-            <a href="<?php echo $this->config->item('my_base_url')?>factsuite-admin/add-product" class="sidebar-nav nav-link text-center <?php echo $product; ?>">
-              <span class="d-block sidebar-nav-link-img">
-                <img src="<?php echo base_url()?>assets/dist/img/sidebar-images/<?php echo $product_img; ?>">
-              </span>
-              <span class="d-block sidebar-nav-link-name">Products</span>
-            </a>
-          </li>
-
           <li class="nav-item sidebar-nav-item-mrgn" title="Services">
             <a href="<?php echo $this->config->item('my_base_url')?>factsuite-admin/add-website-services" class="sidebar-nav nav-link text-center <?php echo $website_services; ?>">
               <span class="d-block sidebar-nav-link-img">
@@ -156,30 +105,12 @@
             </a>
           </li>
 
-          <li class="nav-item sidebar-nav-item-mrgn" title="FAQs">
-            <a href="<?php echo $this->config->item('my_base_url')?>factsuite-admin/add-package-faq" class="sidebar-nav nav-link text-center <?php echo $website_faq; ?>">
-              <span class="d-block sidebar-nav-link-img">
-                <img src="<?php echo base_url()?>assets/dist/img/sidebar-images/<?php echo $website_faq_img; ?>">
-              </span>
-              <span class="d-block sidebar-nav-link-name">FAQs</span>
-            </a>
-          </li>
-
           <li class="nav-item sidebar-nav-item-mrgn" title="Payment Gateway">
             <a href="<?php echo $this->config->item('my_base_url')?>factsuite-admin/payment-gateway" class="sidebar-nav nav-link text-center <?php echo $payment_gateway; ?>">
               <span class="d-block sidebar-nav-link-img">
                 <img src="<?php echo base_url()?>assets/dist/img/sidebar-images/<?php echo $payment_gateway_img; ?>">
               </span>
               <span class="d-block sidebar-nav-link-name">Payment Gateway</span>
-            </a>
-          </li>
-
-          <li class="nav-item sidebar-nav-item-mrgn" title="General Settings">
-            <a href="<?php echo $this->config->item('my_base_url')?>factsuite-admin/terms-and-conditions" class="sidebar-nav nav-link text-center <?php echo $general_settings; ?>">
-              <span class="d-block sidebar-nav-link-img">
-                <img src="<?php echo base_url()?>assets/dist/img/sidebar-images/<?php echo $general_settings_img; ?>">
-              </span>
-              <span class="d-block sidebar-nav-link-name">Settings</span>
             </a>
           </li>
 

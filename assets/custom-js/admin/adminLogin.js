@@ -17,7 +17,7 @@ function adminLogin() {
 		  	 dataType: "json",
 		  	success: function(data) {
 			  	if (data.status == '1') {
-			  		window.location.href = base_url+"factsuite-admin/pages";
+			  		window.location.href = base_url+"admin/pages";
 			  	} else {
 					$('#login-error').html("<span class='text-danger error-msg-small d-block mt-2'>Incorrect Email Id or Password</span>");
 		  		}
