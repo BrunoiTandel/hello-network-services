@@ -1,0 +1,31 @@
+service
+
+service_id
+service_name
+service_short_description
+service_description
+service_selected_components
+service_maximum_checks
+service_thumbnail_image
+service_benifits (Will store benifit_name, image,image on hover)
+service_for_self_check_status
+service_status
+service_updated_date
+service_created_date
+
+
+service_log
+
+service_log_id
+service_id
+service_name
+service_short_description
+service_description
+service_selected_components
+service_maximum_checks
+service_thumbnail_image
+service_benifits (Will store benifit_name, image,image on hover)
+service_for_self_check_status
+service_status
+service_added_updated_by_admin_id
+service_log_created_date

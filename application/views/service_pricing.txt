@@ -1,0 +1,31 @@
+service_pricing
+
+service_pricing_id
+service_id
+service_for_self_check_status (Only If Self check is selected)
+service_type (Fresher / Experience)
+service_package_name 
+service_package_description
+tat_and_price (Will store )
+components_included
+mark_as_most_popular
+pricing_status
+pricing_updated_date
+pricing_created_date
+
+
+service_pricing_log
+
+service_pricing_log_id
+service_pricing_id
+service_id
+service_for_self_check_status
+service_type
+service_package_name
+service_package_description
+tat_and_price
+components_included
+mark_as_most_popular
+pricing_status
+pricing_added_or_updated_by_admin_id
+pricing_log_created_date
