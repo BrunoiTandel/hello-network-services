@@ -1,0 +1,111 @@
+.progress-bar-wrapper,
+.progress-bar-wrapper-2 {
+    margin: 35px 0px;
+}
+
+ul.custom-progress-bar {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    list-style: none;
+}
+
+li.section {
+    display: inline-block;
+    padding-top: 85px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #481777;
+    vertical-align: top;
+    position: relative;
+    text-align: center;
+    /*overflow: hidden;*/
+    text-overflow: ellipsis;
+    padding-left: 20px;
+}
+
+li.section:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: calc(50% - 15px);
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    line-height: 50px;
+    background: #f59e1d;
+    padding-top: 12px;
+}
+
+.status-bar {
+    height: 2.5px;
+    background: gray;
+    position: relative;
+    top: 34px;
+    margin: 0 auto;
+}
+
+.current-status {
+    height: 2.5px;
+    width: 0;
+    border-radius: 1px;
+    background: #f59e1d;
+}
+
+@keyframes changeBackground {
+    from {background: gray}
+    to {background: mediumseagreen}
+}
+
+li.section.visited:before {
+    /*content: '\2714';
+    animation: changeBackground .5s linear;
+    animation-fill-mode: forwards;*/
+}
+
+/*li.section.visited.current:before {*/
+li.section.visited:before {
+    /*box-shadow: 0 0 0 2px #f59e1d;*/
+    box-shadow: 0 0 0 2px #ffffff,
+                0 0 0 5px #f59e1d/*, 
+                0 0 0 10px #ffffff, 
+                0 0 0 12px #f59e1d*/;
+    transition: .3s ease-in-out;
+}
+
+.progress-bar-wrapper li.section:nth-child(1):before {
+    content: url(../images/select-check.png);
+    padding-left: 4px;
+}
+
+.progress-bar-wrapper li.section:nth-child(2):before {
+    content: url(../images/make-payment.png);
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+.progress-bar-wrapper li.section:nth-child(3):before {
+    content: url(../images/initiate-verification.png);
+    padding-left: 11px;
+}
+
+.progress-bar-wrapper-2 li.section:nth-child(1):before {
+    content: url(../images/fill-form.png);
+    padding-left: 7px;
+}
+
+.progress-bar-wrapper-2 li.section:nth-child(2):before {
+    content: url(../images/customize.png);
+    padding-left: 4px;
+}
+
+.progress-bar-wrapper-2 li.section:nth-child(3):before {
+    content: url(../images/download.png);
+    padding-left: 5px;
+    padding-top: 8px;
+}

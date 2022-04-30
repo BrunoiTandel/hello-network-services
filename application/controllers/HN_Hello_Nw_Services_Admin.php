@@ -46,4 +46,24 @@ class HN_Hello_Nw_Services_Admin extends CI_Controller {
 		$this->load->view('admin/internal-team/role',$data);
 		$this->load->view('admin-common/admin-footer');
 	}
+
+	function add_internal_team_member() {
+		$this->check_Admin_Login_Model->check_admin_login();
+		$data['title'] = "Internal Team Role";
+		$this->load->view('admin-common/admin-header');
+		$this->load->view('admin-common/admin-sidebar');
+		$this->load->view('admin/internal-team/internal-team-header');
+		$this->load->view('admin/internal-team/add-internal-team-member',$data);
+		$this->load->view('admin-common/admin-footer');
+	}
+
+	function view_internal_team_members() {
+		$this->check_Admin_Login_Model->check_admin_login();
+		$data['title'] = "Internal Team Role";
+		$this->load->view('admin-common/admin-header');
+		$this->load->view('admin-common/admin-sidebar');
+		$this->load->view('admin/internal-team/internal-team-header');
+		$this->load->view('admin/internal-team/view-internal-team-members',$data);
+		$this->load->view('admin-common/admin-footer');
+	}
 }

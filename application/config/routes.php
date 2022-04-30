@@ -61,7 +61,7 @@ $route['admin/logout'] = 'Admin_Logout/index';
 // Admin All Pages Links
 $route['admin/pages'] = 'HN_Hello_Nw_Services_Admin/pages';
 
-// Internal Team
+// Internal Team Role
 $route['admin/internal-team-role'] = 'HN_Hello_Nw_Services_Admin/internal_team_role';
 $route['admin/check-new-internal-role-name'] = 'Admin_Internal_Team/check_new_internal_role_name';
 $route['admin/add-new-internal-team-role'] = 'Admin_Internal_Team/add_new_internal_team_role';
@@ -71,6 +71,13 @@ $route['admin/get-single-internal-team-role-details'] = 'Admin_Internal_Team/get
 $route['admin/check-edit-internal-team-role-name'] = 'Admin_Internal_Team/check_edit_internal_team_role_name';
 $route['admin/update-internal-team-role-name'] = 'Admin_Internal_Team/update_internal_team_role_name';
 $route['admin/delete-internal-team-role-name'] = 'Admin_Internal_Team/delete_internal_team_role_name';
+
+// Internal Team Member
+$route['admin/add-internal-team-member'] = 'HN_Hello_Nw_Services_Admin/add_internal_team_member';
+$route['admin/check-new-candidate-mobile-number'] = 'Admin_Internal_Team/check_new_candidate_mobile_number';
+$route['admin/check-new-team-member-email-id'] = 'Admin_Internal_Team/check_new_team_member_email_id';
+$route['admin/add-new-internal-team-member'] = 'Admin_Internal_Team/add_new_internal_team_member';
+$route['admin/view-internal-team-members'] = 'HN_Hello_Nw_Services_Admin/view_internal_team_members';
 
 
 // Verify Admin Password

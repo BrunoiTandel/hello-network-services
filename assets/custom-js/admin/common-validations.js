@@ -1274,6 +1274,46 @@ function mandatory_mobile_number_pin_code_with_max_length_limitation(variable_ar
 	}
 }
 
+function mandatory_mobile_number_with_check_duplication(variable_array) {
+	var mobile_number = $(variable_array.input_id).val();
+	if (mobile_number != '') {
+		if (!numbers_only.test(mobile_number)) {
+			$(variable_array.error_msg_div_id).html('<span class="text-danger error-msg-small">'+variable_array.not_a_number_input_error_msg+'</span>');
+			$(variable_array.input_id).val(mobile_number.slice(0,-1));
+			return 0;
+		} else if (mobile_number.length != variable_array.mobile_number_length) {
+			$(variable_array.error_msg_div_id).html('<span class="text-danger error-msg-small">'+variable_array.exceeding_max_length_input_error_msg+'</span>');
+			$(variable_array.input_id).val(mobile_number.slice(0,10));
+			return 0;
+		} else {
+			$.ajax({
+				type: "POST",
+			    url: base_url+variable_array.ajax_call_url,
+			    dataType: "json",
+			    data : variable_array.ajax_pass_data,
+			    success: function(data) {
+			    	if (data.status == '1') {
+			    		if (data.number_count.count == 0) {
+				      		$(variable_array.error_msg_div_id).html('');
+				      		return 1;
+				      	} else {
+				      		$(variable_array.error_msg_div_id).html('<span class="text-danger error-msg-small">'+variable_array.duplicate_email_id_error_msg+'</span>');
+				      		return 0;
+				      	}
+			    	} else {
+			    		$(variable_array.error_msg_div_id).html('');
+			    	}
+			    }
+			});
+			$(variable_array.error_msg_div_id).html('');
+			return 1;
+		}
+	} else {
+		$(variable_array.error_msg_div_id).html('<span class="text-danger error-msg-small">'+variable_array.empty_input_error_msg+'</span>');
+		return 0;
+	}
+}
+
 function mandatory_email_id(variable_array) {
 	var email = $(variable_array.input_id).val().toLowerCase();
 	if (email != '') {

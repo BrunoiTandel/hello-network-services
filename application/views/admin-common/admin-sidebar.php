@@ -22,7 +22,9 @@
     $check_event_id = '/'.$event_id;
   }
   
-  if (strtolower(uri_string()) == 'admin/pages' ) {
+  if (strtolower(uri_string()) == 'admin/pages'
+      || strtolower(uri_string()) == 'admin/internal-team-role'
+      || strtolower(uri_string()) == 'admin/add-internal-team-member') {
     $pages = 'active';
     $pages_img = 'colored-pages.svg';
   }  else if (strtolower(uri_string()) == 'admin/add-website-services') {

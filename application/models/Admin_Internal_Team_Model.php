@@ -130,4 +130,38 @@ class Admin_Internal_Team_Model extends CI_Model {
 		}
 		return array('status'=>'0','message'=>'Something went wrong while deleting the role.');
 	}
+
+	function check_new_candidate_mobile_number($mobile_number) {
+		return $this->db->select('COUNT(*) AS count')->where('internal_team_member_mobile_number',$mobile_number)->get('internal_team_member')->row_array();
+	}
+
+	function check_new_team_member_email_id($email) {
+		return $this->db->select('COUNT(*) AS count')->where('internal_team_member_email_id',$email)->get('internal_team_member')->row_array();
+	}
+
+	function add_new_internal_team_member() {
+		$password = random_string('alnum', 8);
+		$add_data = array(
+			'internal_team_member_role' => $this->input->post('job_role'),
+			'internal_team_member_name' => $this->input->post('name'),
+			'internal_team_member_mobile_number' => $this->input->post('mobile_number'),
+			'internal_team_member_email_id' => $this->input->post('email_id'),
+			'internal_team_member_block' => $this->input->post('block'),
+			'internal_team_member_password' => MD5($password),
+			'internal_team_member_district' => $this->input->post('district'),
+			'internal_team_member_address' => $this->input->post('address')
+		);
+
+		if ($this->db->insert('internal_team_member',$add_data)) {
+			$admin_info = $this->session->userdata('logged-in-admin');
+			$add_data['internal_team_member_id'] = $this->db->insert_id();
+			$add_data['added_updated_by_admin_id'] = $admin_info['admin_id'];
+
+			$this->db->insert('internal_team_member_log',$add_data);
+
+			return array('status'=>'1','message'=>'Role has been added successfully.');
+		} else {
+			return array('status'=>'0','message'=>'Something went wrong while adding the role. Please try again');
+		}
+	}
 }

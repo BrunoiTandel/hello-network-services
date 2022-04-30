@@ -83,9 +83,7 @@ function get_all_roles() {
 	         			var check ='';
 				        if (data.role_list[i].internal_team_role_status == '1') {
 				        	check ='checked';
-				        } else {
-				            check ='';
-				       	}
+				        }
 
 		        		html += '<div class="col-md-4 mt-3" id="role-div-'+data.role_list[i].internal_team_role_id+'">';
 		                html += '<div class="product-category-description">';
