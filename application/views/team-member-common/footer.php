@@ -145,9 +145,9 @@
   // $('.select2').select2()
 </script>
 
-<script src="<?php echo base_url()?>assets/custom-js/admin/check-admin-login.js"></script>
+<!-- <script src="<?php echo base_url()?>assets/custom-js/team-member/check-admin-login.js"></script> -->
 
-<?php if ($this->session->userdata('logged-in-admin')) { ?>
+<?php if ($this->session->userdata('logged-in-team-member')) { ?>
   <script>
     // check_admin_login();
   </script>

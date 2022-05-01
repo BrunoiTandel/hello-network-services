@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Admin Login</title>
+  <title>Team Member Login</title>
 
   <link rel="icon" href="<?php echo base_url()?>assets/users/desktop/images/icon.jpg">
   
@@ -42,7 +42,7 @@
               <div class="login-logo">
                 <img src="<?php echo base_url()?>assets/dist/img/logo/logo.png" class="login-logo-img">
               </div>
-              <p class="login-box-msg mt-5">Admin Login</p>
+              <p class="login-box-msg mt-5">Team Member Login</p>
               <div class="input-group">
                 <input type="email" id="email" class="form-control login-input" placeholder="Email Id">
               </div>
@@ -78,7 +78,7 @@
   <!-- jQuery -->
   <script src="<?php echo base_url()?>assets/plugins/jquery/jquery.min.js"></script>
   <!-- Custome JS -->
-  <script src="<?php echo base_url()?>assets/custom-js/admin/adminLogin.js"></script>
+  <script src="<?php echo base_url()?>assets/custom-js/team-member/team-member-login.js"></script>
   <!-- Bootstrap 4 -->
   <script src="<?php echo base_url()?>assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- AdminLTE App -->

@@ -58,3 +58,35 @@
 		</div>
 	</div>
 </div>
+
+<div class="container enquire-now-div">
+	<div class="enquire-now-txt">Enquire Now</div>
+	<div class="row">
+		<div class="col-md-6 contact-fld">
+			<input type="text" class="form-control" placeholder="First Name" id="contact-us-first-name">
+			<div id="contact-us-first-name-error-msg-div"></div>
+		</div>	
+		<div class="col-md-6 contact-fld">
+			<input type="text" class="form-control" placeholder="Last Name" id="contact-us-last-name">
+			<div id="contact-us-last-name-error-msg-div"></div>
+		</div>	
+		<div class="col-md-6 contact-fld">
+			<input type="text" class="form-control" placeholder="Email ID" id="contact-us-email-id">
+			<div id="contact-us-email-id-error-msg-div"></div>
+		</div>	
+		<div class="col-md-6 contact-fld">
+			<input type="text" class="form-control" placeholder="Phone" id="contact-us-phone-number">
+			<div id="contact-us-phone-number-error-msg-div"></div>
+		</div>	
+		<div class="col-md-12 contact-fld">
+			<textarea class="form-control" placeholder="Message" id="contact-us-message"></textarea>
+			<div id="contact-us-message-error-msg-div"></div>
+		</div>
+		<div class="col-md-6"></div>
+		<div class="col-md-6">
+            <button class="contact-btn" id="contact-us-submit-btn">Send</button>
+		</div>	
+	</div>
+</div>
+
+<script src="<?php echo base_url()?>assets/custom-js/user/contact-us.js"></script>

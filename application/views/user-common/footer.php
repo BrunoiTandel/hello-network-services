@@ -64,10 +64,15 @@
    	</div>
 </footer>
 </body>
-	<script type="text/javascript" src="<?php echo base_url()?>assets/user/js/jquery.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url()?>assets/user/js/popper.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url()?>assets/user/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url()?>assets/user/js/slick.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url()?>assets/user/js/wow.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url()?>assets/user/js/bootstrap-input-spinner.js"></script>
+
+	<script src="<?php echo base_url()?>assets/custom-js/common-validations.js"></script>
+
+	<!-- Toastr -->
+	<script src="<?php echo base_url()?>assets/plugins/sweetalert2/sweetalert2.min.js"></script>
+	<script src="<?php echo base_url()?>assets/plugins/toastr/toastr.min.js"></script>
 </html>

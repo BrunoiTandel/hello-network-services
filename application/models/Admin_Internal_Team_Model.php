@@ -131,7 +131,7 @@ class Admin_Internal_Team_Model extends CI_Model {
 		return array('status'=>'0','message'=>'Something went wrong while deleting the role.');
 	}
 
-	function check_new_candidate_mobile_number($mobile_number) {
+	function check_new_team_member_mobile_number($mobile_number) {
 		return $this->db->select('COUNT(*) AS count')->where('internal_team_member_mobile_number',$mobile_number)->get('internal_team_member')->row_array();
 	}
 

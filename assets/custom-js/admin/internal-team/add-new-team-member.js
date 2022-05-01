@@ -83,12 +83,12 @@ function check_team_member_mobile_number() {
 	var variable_array = {};
 	variable_array['input_id'] = '#team-member-mobile-number';
 	variable_array['error_msg_div_id'] = '#team-member-mobile-number-error-msg-div';
-	variable_array['empty_input_error_msg'] = 'Please enter candidate mobile number';
+	variable_array['empty_input_error_msg'] = 'Please enter team member mobile number';
 	variable_array['not_a_number_input_error_msg'] = 'Mobile number should be only digits.'
 	variable_array['exceeding_max_length_input_error_msg'] = 'Mobile number should be of '+mobile_number_length+' digits';
 	variable_array['mobile_number_length'] = mobile_number_length;
 	variable_array['duplicate_email_id_error_msg'] = 'This mobile number already exists. Please add another number.';
-	variable_array['ajax_call_url'] = 'admin/check-new-candidate-mobile-number';
+	variable_array['ajax_call_url'] = 'admin/check-new-team-member-mobile-number';
 	variable_array['ajax_pass_data'] = {verify_admin_request : '1',mobile_number : $('#team-member-mobile-number').val()};
 	return mandatory_mobile_number_with_check_duplication(variable_array);
 }
@@ -200,6 +200,14 @@ function add_new_team_member() {
 				  	} else {
 				  		toastr.error('Something went wrong while adding the team member. Please try again.');
 			  		}
+			  	} else if(data.tatus == '2') {
+				  	if (data.mobile_number_count != 0) {
+				  		check_team_member_mobile_number();
+				  	}
+
+				  	if (data.email_id_count != 0) {
+				  		check_team_member_email_id();
+				  	}
 			  	} else {
 			  		check_admin_login();
 			  	}

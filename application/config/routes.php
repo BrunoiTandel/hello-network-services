@@ -61,7 +61,7 @@ $route['admin/logout'] = 'Admin_Logout/index';
 // Admin All Pages Links
 $route['admin/pages'] = 'HN_Hello_Nw_Services_Admin/pages';
 
-// Internal Team Role
+// Admin Internal Team Role
 $route['admin/internal-team-role'] = 'HN_Hello_Nw_Services_Admin/internal_team_role';
 $route['admin/check-new-internal-role-name'] = 'Admin_Internal_Team/check_new_internal_role_name';
 $route['admin/add-new-internal-team-role'] = 'Admin_Internal_Team/add_new_internal_team_role';
@@ -72,9 +72,9 @@ $route['admin/check-edit-internal-team-role-name'] = 'Admin_Internal_Team/check_
 $route['admin/update-internal-team-role-name'] = 'Admin_Internal_Team/update_internal_team_role_name';
 $route['admin/delete-internal-team-role-name'] = 'Admin_Internal_Team/delete_internal_team_role_name';
 
-// Internal Team Member
+// Admin Internal Team Member
 $route['admin/add-internal-team-member'] = 'HN_Hello_Nw_Services_Admin/add_internal_team_member';
-$route['admin/check-new-candidate-mobile-number'] = 'Admin_Internal_Team/check_new_candidate_mobile_number';
+$route['admin/check-new-team-member-mobile-number'] = 'Admin_Internal_Team/check_new_team_member_mobile_number';
 $route['admin/check-new-team-member-email-id'] = 'Admin_Internal_Team/check_new_team_member_email_id';
 $route['admin/add-new-internal-team-member'] = 'Admin_Internal_Team/add_new_internal_team_member';
 $route['admin/view-internal-team-members'] = 'HN_Hello_Nw_Services_Admin/view_internal_team_members';
@@ -83,3 +83,27 @@ $route['admin/view-internal-team-members'] = 'HN_Hello_Nw_Services_Admin/view_in
 // Verify Admin Password
 $route['admin/verify-admin-password'] = 'verify_Admin/verify_admin_password';
 $route['admin/check-admin-logged-in'] = 'verify_Admin_Login/check_admin_login';
+
+// Admin Ends
+
+
+// Team Member Starts
+$route['team-member'] = 'HN_Hello_Nw_Services_Team_Member';
+$route['team-member/verify-login-details'] = 'HN_Hello_Nw_Services_Team_Member_Login/verify_login_details';
+$route['team-member/logout'] = 'HN_Hello_Nw_Services_Team_Member_Logout/index';
+
+// Team Member All Pages Links
+$route['team-member/pages'] = 'HN_Hello_Nw_Services_Team_Member/pages';
+
+// Team Member Users
+$route['team-member/add-new-user'] = 'HN_Hello_Nw_Services_Team_Member/add_new_user';
+$route['team-member/add-new-user-details'] = 'Team_Member_User/add_new_user';
+$route['team-member/check-new-user-mobile-number'] = 'Team_Member_User/check_new_user_mobile_number';
+$route['team-member/check-new-user-email-id'] = 'Team_Member_User/check_new_user_email_id';
+
+// Team Member Ends
+
+
+// User Starts
+// Enquiry
+$route['user/add-contact-us-enquiry'] = 'User_Contact_Us/add_contact_us_enquiry';

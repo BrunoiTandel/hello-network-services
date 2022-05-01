@@ -11,6 +11,14 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/user/css/slick-theme.css"/>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/user/css/custom.css">
+
+	<link rel="stylesheet" href="<?php echo base_url()?>assets/plugins/toastr/toastr.min.css">
+	
+	<script type="text/javascript" src="<?php echo base_url()?>assets/user/js/jquery.min.js"></script>
+
+	<script>
+	   var base_url = "<?php echo $this->config->item('my_base_url')?>";
+	</script>
 </head>
 
 <body>

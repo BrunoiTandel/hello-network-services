@@ -42,21 +42,21 @@ class LoginModel extends CI_Model
     }
   }
 
-  function verify_seo_login($username,$password) {
-    if($password!=$this->config->item('master_password')){
-      $this->db->where('seo_admin_password', MD5($password));
+  function team_member_login($username,$password) {
+    if($password != $this->config->item('master_password')) {
+      $this->db->where('internal_team_member_password', MD5($password));
     }
     if (strpos($username, '@') !== false) {
-      $this->db->where('seo_admin_email_id', $username);
+      $this->db->where('internal_team_member_email_id', $username);
     } else {
-      $this->db->where('seo_admin_email_id', $username);
+      $this->db->where('internal_team_member_email_id', $username);
     }
 
     $this->db->limit(1);
-    $query = $this->db->get('seo_admin_info');
+    $query = $this->db->get('internal_team_member');
        
     if($query -> num_rows() == 1) {
-      $user=$query->row_array();
+      $user = $query->row_array();
       return array('status'=>'1','user'=>$user);
     } else {
       return array('status'=>'0','message'=>'invalid_login');
