@@ -30,7 +30,7 @@
   }  else if (strtolower(uri_string()) == 'admin/add-website-services') {
     $website_services = 'active';
     $website_services_img = 'colored-globe.png';
-  } else if (strtolower(uri_string()) == 'factsuite-admin/payment-gateway') {
+  } else if (strtolower(uri_string()) == 'admin/payment-gateway') {
     $payment_gateway = 'active';
     $payment_gateway_img = 'colored-payment.svg';
   } else {
@@ -54,7 +54,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo $this->config->item('my_base_url')?>factsuite-admin/logout">
+        <a class="nav-link" href="<?php echo $this->config->item('my_base_url')?>admin/logout">
           <span class="header-admin-greetings logout-fa"><i class="fa fa-power-off" aria-hidden="true"></i></span>
         </a>
       </li>
@@ -81,7 +81,7 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
           <li class="nav-item d-none" title="Dashboard">
-            <a href="<?php echo $this->config->item('my_base_url')?>factsuite-admin/dashboard" class="sidebar-nav nav-link text-center <?php echo $dashboard; ?>">
+            <a href="<?php echo $this->config->item('my_base_url')?>admin/dashboard" class="sidebar-nav nav-link text-center <?php echo $dashboard; ?>">
               <span class="d-block sidebar-nav-link-img">
                 <img src="<?php echo base_url()?>assets/dist/img/sidebar-images/<?php echo $dashboard_img; ?>">
               </span>
@@ -90,7 +90,7 @@
           </li>
 
           <li class="nav-item" title="Pages">
-            <a href="<?php echo $this->config->item('my_base_url')?>factsuite-admin/pages" class="sidebar-nav nav-link text-center <?php echo $pages; ?>">
+            <a href="<?php echo $this->config->item('my_base_url')?>admin/pages" class="sidebar-nav nav-link text-center <?php echo $pages; ?>">
               <span class="d-block sidebar-nav-link-img">
                 <img src="<?php echo base_url()?>assets/dist/img/sidebar-images/<?php echo $pages_img; ?>">
               </span>
@@ -99,7 +99,7 @@
           </li>
 
           <li class="nav-item sidebar-nav-item-mrgn" title="Services">
-            <a href="<?php echo $this->config->item('my_base_url')?>factsuite-admin/add-website-services" class="sidebar-nav nav-link text-center <?php echo $website_services; ?>">
+            <a href="<?php echo $this->config->item('my_base_url')?>admin/add-website-services" class="sidebar-nav nav-link text-center <?php echo $website_services; ?>">
               <span class="d-block sidebar-nav-link-img">
                 <img src="<?php echo base_url()?>assets/dist/img/sidebar-images/<?php echo $website_services_img; ?>">
               </span>
@@ -108,7 +108,7 @@
           </li>
 
           <li class="nav-item sidebar-nav-item-mrgn" title="Payment Gateway">
-            <a href="<?php echo $this->config->item('my_base_url')?>factsuite-admin/payment-gateway" class="sidebar-nav nav-link text-center <?php echo $payment_gateway; ?>">
+            <a href="<?php echo $this->config->item('my_base_url')?>admin/payment-gateway" class="sidebar-nav nav-link text-center <?php echo $payment_gateway; ?>">
               <span class="d-block sidebar-nav-link-img">
                 <img src="<?php echo base_url()?>assets/dist/img/sidebar-images/<?php echo $payment_gateway_img; ?>">
               </span>

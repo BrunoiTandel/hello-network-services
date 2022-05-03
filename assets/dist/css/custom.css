@@ -84,8 +84,8 @@ body:not(.sidebar-mini-md) .content-wrapper, body:not(.sidebar-mini-md) .main-fo
 
 .brand-link .brand-image {
 	max-height: unset !important;
-	height: 26px;
-    width: 60%;
+	height: 50px;
+    /*width: 60%;*/
     margin-top: 10px;
 }
 
