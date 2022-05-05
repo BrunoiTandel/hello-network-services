@@ -34,6 +34,29 @@
            </a>
          </div>
 
+ <div class="col-md-3">
+           <a href="<?php echo $this->config->item('my_base_url')?>admin/view-users">
+            <div class="edit-pages-a">
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="<?php echo base_url()?>assets/dist/img/sidebar-images/colored-pages.svg">
+                </div>
+                <div class="col-md-6 text-right">
+                  <i class="fa fa-angle-right"></i>
+                </div>
+              </div>
+              <span class="card-pages-name">Users</span>
+              <div>
+                <span class="card-last-edited-txt">
+                  Last edited :  
+                </span>
+                <span class="card-last-edited-date pl-2" id="home-page-updated-date">-</span>
+              </div>
+            </div>
+           </a>
+         </div>
+
+
         </div>
       </div>
     </section>

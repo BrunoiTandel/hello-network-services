@@ -9,7 +9,9 @@ class HN_Hello_Nw_Services_Admin extends CI_Controller {
 	  	$this->load->helper('url');  
 	  	$this->load->model('loginModel');
 	  	$this->load->model('check_Admin_Login_Model');
+	  	$this->load->model('admin_users_Model');
 	}
+
 
 	function index() {
 		if($this->session->userdata('logged-in-admin')) {
@@ -64,6 +66,16 @@ class HN_Hello_Nw_Services_Admin extends CI_Controller {
 		$this->load->view('admin-common/admin-sidebar');
 		$this->load->view('admin/internal-team/internal-team-header');
 		$this->load->view('admin/internal-team/view-internal-team-members',$data);
+		$this->load->view('admin-common/admin-footer');
+	}
+
+	function view_users() {
+		$this->check_Admin_Login_Model->check_admin_login();
+		$data['title'] = "View Users";
+		$data['users'] = $this->admin_users_Model->get_all_users();
+		$this->load->view('admin-common/admin-header');
+		$this->load->view('admin-common/admin-sidebar'); 
+		$this->load->view('admin/users/view-user',$data);
 		$this->load->view('admin-common/admin-footer');
 	}
 }
