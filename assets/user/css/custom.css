@@ -53,13 +53,13 @@ html, body {
 }
 
 .plans-div {
-    margin-top: 20px;
+    margin-top: 85px;
 }
 
 .text-plan-type-hdr {
     color: #613c86;
     font-weight: bold;
-    font-size: 27px;
+    font-size: 35px;
 }
 
 .text-plan-type-hdr span {
@@ -69,7 +69,7 @@ html, body {
 .text-plan-type-desc {
     display: block;
     color: #404040;
-    font-size: 12px;
+    font-size: 17px;
 }
 
 .custom-container-fluid {
@@ -331,4 +331,93 @@ footer {
     border: 0;
     float: right;
     letter-spacing: 0.79px;
+}
+
+.our-company {
+    margin-top: 85px;
+}
+
+.our-company-img {
+    width: 100%;
+    border-radius: 30% 70% 70% 30% / 30% 36% 64% 70%;
+}
+
+.custom-container-fluid-2 {
+    width: 90%;
+}
+
+.our-company-hdr {
+    color: #613c86;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.our-company-hdr span {
+    color: #F59E1D;
+}
+
+.our-company-desc li::marker {
+    color: #F59E1D;
+    font-size: 23px;
+}
+
+.our-services {
+    margin-top: 85px;
+}
+
+.our-services-hdr {
+    color: #613c86;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.our-services-hdr span {
+    color: #F59E1D;
+}
+
+.our-services {
+    background: #613c8621;
+    padding: 45px 0;
+}
+
+.service-we-provide {
+    background: #FFFFFF;
+    padding: 10px 10px;
+    transition: .2s ease-in-out;
+    text-align: center;
+}
+
+.service-we-provide:hover {
+    background: #f59e1d91;
+}
+
+.service-number {
+    width: 100%;
+    position: absolute;
+    font-size: 40px;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #F59E1D;
+    transition: .2s ease-in-out;
+}
+
+.service-image img {
+    width: 30%;
+    margin: auto;
+    opacity: 0;
+    transition: .2s ease-in-out;
+}
+
+.service-we-provide:hover .service-number {
+    opacity: 0;
+}
+
+.service-we-provide:hover .service-image img {
+    opacity: 1;
 }

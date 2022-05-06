@@ -21,6 +21,33 @@
   	<?php } ?>
 </div>
 
+<div class="our-company container-fluid">
+	<div class="container-fluid custom-container-fluid-2">
+		<div class="row mt-5">
+			<div class="col-md-6">
+				<img class="our-company-img" src="<?php echo base_url()?>assets/user/images/grey-2.png">
+			</div>
+			<div class="col-md-6">
+				<div class="our-company-hdr">
+					<label>
+						Our company has <span>1+ years of experience!</span>
+					</label>
+				</div>
+				<div class="our-company-desc">
+					<p>An aspiring initiative of CSC e-Governance Services India Ltd. in form of CSC Wi-Fi Choupal is introduced for development of digital infrastructure in the villages as ‘Digital Village’. The initiative focuses on enhancement of Internet connectivity at the last mile through utilization of BharatNet Infrastructure.</p>
+					<ul>
+                        <li>Broadband Internet access across village via Rural Hostspots.</li>
+                        <li>Broadband Internet access for Home &amp; Business Subscribers. </li>
+                        <li>GPON &amp; OFC Maintenance. Professional Teams with equipments.</li>
+                        <li>Wi-Fi Voice &amp; Video calling Soulutions.</li>
+                        <li>Creating Infrastrure for Office Content Delivery.</li>
+            		</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div class="plans-div container-fluid">
 	<div class="row">
 		<div class="col-md-12 text-center">
@@ -53,6 +80,28 @@
 					<span class="package-validity">Validity : 2Days</span>
 					<span class="package-price">Plan Price : <i class="fa fa-inr"></i> 150<br>(Inclusive of GST)</span>
 					<button class="buy-plan-btn">Buy</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="our-services container-fluid">
+	<div class="container-fluid custom-container-fluid-2">
+		<div class="row mt-5">
+			<div class="col-md-12">
+				<div class="our-services-hdr">
+					<label>
+						Services <span>We Provide</span>
+					</label>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="service-we-provide">
+					<div class="service-number-image">
+						<div class="service-number">01</div>
+						<div class="service-image"><img src="<?php echo base_url()?>assets/user/images/creative.png"></div>
+					</div>
 				</div>
 			</div>
 		</div>
