@@ -107,3 +107,43 @@ $route['team-member/check-new-user-email-id'] = 'Team_Member_User/check_new_user
 // User Starts
 // Enquiry
 $route['user/add-contact-us-enquiry'] = 'User_Contact_Us/add_contact_us_enquiry';
+
+
+
+// Admin Testimonials
+$route['admin/add-testimonials'] = 'HN_Hello_Nw_Services_Admin/add_testimonials';
+$route['admin/all-testimonials'] = 'HN_Hello_Nw_Services_Admin/all_testimonials';
+$route['admin/add-new-testimonial'] = 'admin_Testimonial/add_new_testimonial';
+$route['admin/get-all-testimonials'] = 'admin_Testimonial/get_all_testimonials';
+$route['admin/change-testimonial-status'] = 'admin_Testimonial/change_testimonial_status';
+$route['admin/delete-testimonial'] = 'admin_Testimonial/delete_testimonial';
+$route['admin/get-testimonial-details'] = 'admin_Testimonial/get_testimonial_details';
+$route['admin/update-testimonial'] = 'admin_Testimonial/update_testimonial';
+
+
+/*Payment gatway*/
+// Admin Payment Gateway
+$route['admin/payment-gateway'] = 'HN_Hello_Nw_Services_Admin/payment_gateway';
+$route['admin/get-payment-details'] = 'admin_Payment_Details/get_payment_details';
+$route['admin/update-payment-gateway-details'] = 'admin_Payment_Details/update_payment_gateway_details';
+
+
+// Admin Contact Us
+$route['admin/contact-us'] = 'HN_Hello_Nw_Services_Admin/contact_us';
+$route['admin/update-contact-us-details'] = 'admin_Contact_Us/update_contact_us_details';
+$route['admin/get-contact-us-details'] = 'admin_Contact_Us/get_contact_us_details';
+
+
+// Admin Blogs
+$route['admin/add-blog'] = 'HN_Hello_Nw_Services_Admin/add_blog';
+$route['admin/all-blogs'] = 'HN_Hello_Nw_Services_Admin/all_blogs';
+$route['admin/get-all-post-type'] = 'admin_Blog/get_all_post_type';
+$route['admin/add-new-blog'] = 'admin_Blog/add_new_blog';
+$route['admin/get-all-blogs'] = 'admin_Blog/get_all_blogs';
+$route['admin/change-blog-status'] = 'admin_Blog/change_blog_status';
+$route['admin/get-blog-details'] = 'admin_Blog/get_blog_details';
+$route['admin/update-blog'] = 'admin_Blog/update_blog';
+$route['admin/delete-blog'] = 'admin_Blog/delete_blog';
+
+
+

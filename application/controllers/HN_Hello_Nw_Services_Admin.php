@@ -78,4 +78,73 @@ class HN_Hello_Nw_Services_Admin extends CI_Controller {
 		$this->load->view('admin/users/view-user',$data);
 		$this->load->view('admin-common/admin-footer');
 	}
+
+
+	function add_testimonials() {
+		$this->check_Admin_Login_Model->check_admin_login();
+		$data['title']="Admin Dashboard";
+		$this->load->view('admin-common/admin-header');
+		$this->load->view('admin-common/admin-sidebar');
+		$this->load->view('admin/home-page/home-page-header');
+		$this->load->view('admin/home-page/add-testimonials',$data);
+		$this->load->view('admin-common/admin-footer');
+	}
+
+	function all_testimonials() {
+		$this->check_Admin_Login_Model->check_admin_login();
+		$data['title']="Admin Dashboard";
+		$this->load->view('admin-common/admin-header');
+		$this->load->view('admin-common/admin-sidebar');
+		$this->load->view('admin/home-page/home-page-header');
+		$this->load->view('admin/home-page/all-testimonials',$data);
+		$this->load->view('admin-common/admin-footer');
+	}
+
+	/*payment gatway*/
+	
+	function payment_gateway() {
+		$this->check_Admin_Login_Model->check_admin_login();
+		$data['title']="Admin Dashboard";
+		$this->load->view('admin-common/admin-header');
+		$this->load->view('admin-common/admin-sidebar');
+		$this->load->view('admin/payment-gateway/payment-gateway-header');
+		$this->load->view('admin/payment-gateway/payment-gateway',$data);
+		$this->load->view('admin-common/admin-footer');
+	}
+
+
+	function contact_us() {
+		$this->check_Admin_Login_Model->check_admin_login();
+		$data['title']="Admin Dashboard";
+		$this->load->view('admin-common/admin-header');
+		$this->load->view('admin-common/admin-sidebar');
+		$this->load->view('admin/contact-us/contact-us-header');
+		$this->load->view('admin/contact-us/contact-us',$data);
+		$this->load->view('admin-common/admin-footer');
+	}
+
+
+
+	function add_blog() {
+		$this->check_Admin_Login_Model->check_admin_login();
+		$data['title']="Admin Dashboard";
+		$this->load->view('admin-common/admin-header');
+		$this->load->view('admin-common/admin-sidebar');
+		$this->load->view('admin/blogs/blogs-header');
+		$this->load->view('admin/blogs/add-blog',$data);
+		$this->load->view('admin-common/admin-footer');
+	}
+
+	function all_blogs() {
+		$this->check_Admin_Login_Model->check_admin_login();
+		$data['title']="Admin Dashboard";
+		$this->load->view('admin-common/admin-header');
+		$this->load->view('admin-common/admin-sidebar');
+		$this->load->view('admin/blogs/blogs-header');
+		$this->load->view('admin/blogs/all-blogs',$data);
+		$this->load->view('admin-common/admin-footer');
+	}
+
+
+
 }
