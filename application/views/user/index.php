@@ -102,11 +102,95 @@
 						<div class="service-number">01</div>
 						<div class="service-image"><img src="<?php echo base_url()?>assets/user/images/creative.png"></div>
 					</div>
+					<div class="service-description-div">
+						<h4 class="service-hdr">LAST MILE CONNECTIVITY</h4>
+						<p class="service-desc">CSC Wi-Fi Choupal initiative encapsulates enabling of Wi-Fi Service in all 2.5 lakhs Gram Panchayat by deploying affordable and effective infrastructure thereby delivering services at an affordable price.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="service-we-provide">
+					<div class="service-number-image">
+						<div class="service-number">02</div>
+						<div class="service-image"><img src="<?php echo base_url()?>assets/user/images/creative.png"></div>
+					</div>
+					<div class="service-description-div">
+						<h4 class="service-hdr">LAST MILE CONNECTIVITY</h4>
+						<p class="service-desc">CSC Wi-Fi Choupal initiative encapsulates enabling of Wi-Fi Service in all 2.5 lakhs Gram Panchayat by deploying affordable and effective infrastructure thereby delivering services at an affordable price.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="service-we-provide">
+					<div class="service-number-image">
+						<div class="service-number">03</div>
+						<div class="service-image"><img src="<?php echo base_url()?>assets/user/images/creative.png"></div>
+					</div>
+					<div class="service-description-div">
+						<h4 class="service-hdr">LAST MILE CONNECTIVITY</h4>
+						<p class="service-desc">CSC Wi-Fi Choupal initiative encapsulates enabling of Wi-Fi Service in all 2.5 lakhs Gram Panchayat by deploying affordable and effective infrastructure thereby delivering services at an affordable price.</p>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
+<section id="hm-testi">
+   <div class="container">
+      <div class="hm-testi-hd wow fadeInUp" data-wow-duration="1.8s">
+         <h1 class="wow fadeInUp" data-wow-duration="1.8s">What Our Clients <span>Say About Us</span></h1>
+      </div>
+      <div class="hm-testi-cnt wow fadeInUp" data-wow-duration="2.1s">
+         <div class="hm-testi-item">
+            <div class="hm-testi-txt">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </div>
+            <div class="hm-testi-nm">
+               <h3>Ann Paul</h3>
+               <p>CEO, Founder @ IBM</p>
+            </div>
+         </div>
+         <div class="hm-testi-item">
+            <div class="hm-testi-txt">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+            <div class="hm-testi-nm">
+               <h3>Sam</h3>
+               <p>CEO, Founder @ TCS</p>
+            </div>
+         </div>
+         <div class="hm-testi-item">
+            <div class="hm-testi-txt">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </div>
+            <div class="hm-testi-nm">
+               <h3>Jennifer</h3>
+               <p>CEO, Founder @ Wipro</p>
+            </div>
+         </div>
+         <div class="hm-testi-item">
+            <div class="hm-testi-txt">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+            <div class="hm-testi-nm">
+               <h3>Ann Paul</h3>
+               <p>CEO, Founder @ IBM</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
 
 <div class="container enquire-now-div">
 	<div class="enquire-now-txt">Enquire Now</div>

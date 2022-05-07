@@ -63,6 +63,53 @@
       	</div>
    	</div>
 </footer>
+
+<div class="modal fade custom-modal" id="check-login-modal">
+    <div class="modal-dialog modal-md modal-dialog-centered">
+		<div class="modal-content">
+            <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">×</button>
+			</div>
+			<div class="modal-body">
+				<h4 class="how-to-continue-txt">Do you want to continue as</h4>
+				<div class="row mt-4 mb-3">
+					<div class="col-md-6 text-right">
+						<button class="btn b-btn-continue-as-user" id="modal-continue-as-user-btn">User</button>
+                    </div>
+					<div class="col-md-6">
+                        <a target="_blank" href="<?php echo $this->config->item('my_base_url')?>team-member" class="btn b-btn-team-member-login text-white no-text-decoration">Team Member</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade custom-modal" id="user-login-modal">
+    <div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+               	<button type="button" class="close" data-dismiss="modal">×</button>
+            </div>
+            <div class="modal-body sign-in-modal-body">
+            	<h4 class="sign-in-modal-hdr-txt" id="myModalLabel">Sign In</h4>
+	            <div class="mob-num" id="modal-mobile-number-otp-div">
+	            	<p>Enter your Mobile Number or Email ID</p>
+	            	<input type="text" id="user-login-mobile-number-or-email-id" placeholder="Mobile Number / Email ID" onblur="check_user_login_mobile_number_or_email_id()">
+	            	<div id="user-login-mobile-number-or-email-id-error-msg-div"></div>
+	            	<p>Enter your password</p>
+	            	<input type="password" id="user-login-password" placeholder="Password" onkeyup="check_user_login_password()">
+	            	<div id="user-login-password-error-msg-div"></div>
+	            	<div class="row mt-2">
+	            		<div class="col-md-12" id="user-login-mobile-number-error-msg-div"></div>
+	            	</div>
+	            	<button class="user-login-btn" id="user-login-btn" onclick="verify_user_login()" class="mt-2">Sign In</button>
+	            </div>
+	        </div>
+        </div>
+   	</div>
+</div>
+
 </body>
 	<script type="text/javascript" src="<?php echo base_url()?>assets/user/js/popper.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url()?>assets/user/js/bootstrap.min.js"></script>
@@ -71,8 +118,22 @@
 	<script type="text/javascript" src="<?php echo base_url()?>assets/user/js/bootstrap-input-spinner.js"></script>
 
 	<script src="<?php echo base_url()?>assets/custom-js/common-validations.js"></script>
+	
+	<script src="<?php echo base_url()?>assets/custom-js/user/login.js"></script>
 
 	<!-- Toastr -->
 	<script src="<?php echo base_url()?>assets/plugins/sweetalert2/sweetalert2.min.js"></script>
 	<script src="<?php echo base_url()?>assets/plugins/toastr/toastr.min.js"></script>
+
+	<script>
+		$('.hm-testi-cnt').slick({
+		  	autoplay: true,
+		  	dots: false,
+		  	autoplaySpeed: 3000,
+		  	slidesToScroll: 1,
+		  	centerMode: true,
+		  	centerPadding: '0px',
+		  	slidesToShow: 3
+		});
+	</script>
 </html>

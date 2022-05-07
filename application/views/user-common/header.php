@@ -24,7 +24,7 @@
 <body>
 	<nav class="navbar navbar-expand-md bg-white navbar-light fixed-top pb-0">
 		<div class="container">
-	  		<a class="navbar-brand" href="#">Navbar</a>
+	  		<a class="navbar-brand" href="<?php echo $this->config->item('my_base_url')?>"><img src="<?php echo base_url()?>assets/dist/img/logo/logo.png"></a>
 	  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 	    		<span class="navbar-toggler-icon"></span>
 	  		</button>
@@ -35,6 +35,9 @@
 	      			</li>
 	      			<li class="nav-item">
 	        			<a class="nav-link" href="#">Data Plans</a>
+	      			</li>
+	      			<li class="nav-item">
+	        			<button class="btn-sign-in-hdr" id="btn-sign-in-hdr" data-toggle="modal" data-target="#check-login-modal">Sign In</button>
 	      			</li>
 	    		</ul>
 	  		</div>
