@@ -45,6 +45,7 @@
 				</div>
 			</div>
 		</div>
+		<div id="plans-div"></div>
 	</div>
 </div>
 
@@ -68,7 +69,7 @@
 					<span class="package-speed">Speed : upto 4mbps</span>
 					<span class="package-validity">Validity : 2Days</span>
 					<span class="package-price">Plan Price : <i class="fa fa-inr"></i> 150<br>(Inclusive of GST)</span>
-					<button class="buy-plan-btn">Buy</button>
+					<button class="buy-plan-btn" onclick="but_now()">Buy</button>
 				</div>
 			</div>
 			<div class="col-md-4 package-details-main-div most-popular-active">
@@ -192,34 +193,43 @@
    </div>
 </section>
 
-<div class="container enquire-now-div">
+<div class="container-fluid pl-0 enquire-now-div">
 	<div class="enquire-now-txt">Enquire Now</div>
 	<div class="row">
-		<div class="col-md-6 contact-fld">
-			<input type="text" class="form-control" placeholder="First Name" id="contact-us-first-name">
-			<div id="contact-us-first-name-error-msg-div"></div>
-		</div>	
-		<div class="col-md-6 contact-fld">
-			<input type="text" class="form-control" placeholder="Last Name" id="contact-us-last-name">
-			<div id="contact-us-last-name-error-msg-div"></div>
-		</div>	
-		<div class="col-md-6 contact-fld">
-			<input type="text" class="form-control" placeholder="Email ID" id="contact-us-email-id">
-			<div id="contact-us-email-id-error-msg-div"></div>
-		</div>	
-		<div class="col-md-6 contact-fld">
-			<input type="text" class="form-control" placeholder="Phone" id="contact-us-phone-number">
-			<div id="contact-us-phone-number-error-msg-div"></div>
-		</div>	
-		<div class="col-md-12 contact-fld">
-			<textarea class="form-control" placeholder="Message" id="contact-us-message"></textarea>
-			<div id="contact-us-message-error-msg-div"></div>
-		</div>
-		<div class="col-md-6"></div>
 		<div class="col-md-6">
-            <button class="contact-btn" id="contact-us-submit-btn">Send</button>
-		</div>	
+			<img class="index-enquiry-now-img" src="<?php echo base_url()?>assets/user/images/grey-3.png">
+		</div>
+		<div class="col-md-6">
+			<div class="row">
+				<div class="col-md-6 contact-fld">
+					<input type="text" class="form-control" placeholder="First Name" id="contact-us-first-name">
+					<div id="contact-us-first-name-error-msg-div"></div>
+				</div>	
+				<div class="col-md-6 contact-fld">
+					<input type="text" class="form-control" placeholder="Last Name" id="contact-us-last-name">
+					<div id="contact-us-last-name-error-msg-div"></div>
+				</div>	
+				<div class="col-md-6 contact-fld">
+					<input type="text" class="form-control" placeholder="Email ID" id="contact-us-email-id">
+					<div id="contact-us-email-id-error-msg-div"></div>
+				</div>	
+				<div class="col-md-6 contact-fld">
+					<input type="text" class="form-control" placeholder="Phone" id="contact-us-phone-number">
+					<div id="contact-us-phone-number-error-msg-div"></div>
+				</div>	
+				<div class="col-md-12 contact-fld">
+					<textarea class="form-control" placeholder="Message" id="contact-us-message"></textarea>
+					<div id="contact-us-message-error-msg-div"></div>
+				</div>
+				<div class="col-md-6"></div>
+				<div class="col-md-6">
+		            <button class="contact-btn" id="contact-us-submit-btn">Send</button>
+				</div>	
+			</div>
+		</div>
 	</div>
 </div>
 
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script src="<?php echo base_url()?>assets/custom-js/user/contact-us.js"></script>
+<script src="<?php echo base_url()?>assets/custom-js/user/purchase-plan.js"></script>

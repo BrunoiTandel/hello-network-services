@@ -147,3 +147,15 @@ $route['admin/delete-blog'] = 'admin_Blog/delete_blog';
 
 
 
+// User Starts
+
+// User Login
+$route['user-login/verify-login'] = 'User_Login/verify_login';
+$route['user-login/verify-logout'] = 'User_Login/verify_logout';
+
+// User Contact Us
+$route['contact-us'] = 'User_Contact_Us';
+
+// User Blogs
+$route['blogs'] = 'User_Blogs';
+$route['blog-details'] = 'User_Blogs/blog_details';

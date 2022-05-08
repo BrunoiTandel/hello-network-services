@@ -94,16 +94,16 @@
             <div class="modal-body sign-in-modal-body">
             	<h4 class="sign-in-modal-hdr-txt" id="myModalLabel">Sign In</h4>
 	            <div class="mob-num" id="modal-mobile-number-otp-div">
-	            	<p>Enter your Mobile Number or Email ID</p>
-	            	<input type="text" id="user-login-mobile-number-or-email-id" placeholder="Mobile Number / Email ID" onblur="check_user_login_mobile_number_or_email_id()">
+	            	<p>Enter your Mobile Number</p>
+	            	<input type="text" id="user-login-mobile-number-or-email-id" placeholder="Mobile Number">
 	            	<div id="user-login-mobile-number-or-email-id-error-msg-div"></div>
 	            	<p>Enter your password</p>
-	            	<input type="password" id="user-login-password" placeholder="Password" onkeyup="check_user_login_password()">
+	            	<input type="password" id="user-login-password" placeholder="Password">
 	            	<div id="user-login-password-error-msg-div"></div>
 	            	<div class="row mt-2">
-	            		<div class="col-md-12" id="user-login-mobile-number-error-msg-div"></div>
+	            		<div class="col-md-12" id="user-login-error-msg-div"></div>
 	            	</div>
-	            	<button class="user-login-btn" id="user-login-btn" onclick="verify_user_login()" class="mt-2">Sign In</button>
+	            	<button class="user-login-btn" id="user-login-btn" class="mt-2">Sign In</button>
 	            </div>
 	        </div>
         </div>

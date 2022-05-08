@@ -1,13 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class User_Contact_Us extends CI_Controller {
+class User_Blogs extends CI_Controller {
 
 	function __construct() {
 	  	parent::__construct();
 	  	$this->load->database();
 	  	$this->load->helper('url');
-	  	$this->load->model('User_Contact_Us_Model');
+	  	$this->load->model('user_Blogs_Model');
 	  	// $this->load->model('email_Model');
 	}
 
@@ -15,7 +15,15 @@ class User_Contact_Us extends CI_Controller {
 		$data['title'] = 'Factsuite';
 		
 		$this->load->view('user-common/header',$data);
-		$this->load->view('user/contact-us');
+		$this->load->view('user/blogs');
+		$this->load->view('user-common/footer');
+	}
+
+	function blog_details() {
+		$data['title'] = 'Factsuite';
+		
+		$this->load->view('user-common/header',$data);
+		$this->load->view('user/blog-details');
 		$this->load->view('user-common/footer');
 	}
 

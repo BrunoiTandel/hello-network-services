@@ -974,18 +974,18 @@ function mandatory_any_input_with_max_length_validation(variable_array) {
 	}
 }
 
-function mandatory_any_input_with_min_length_validation(input_id,error_msg_div_id,empty_input_error_msg,min_length,min_length_error_msg) {
-	var input_value = $(input_id).val();
+function mandatory_any_input_with_min_length_validation(variable_array) {
+	var input_value = $(variable_array.input_id).val();
 	if (input_value != '') {
-		if (input_value.length < min_length) {
-			$(error_msg_div_id).html('<span class="text-danger error-msg-small">'+min_length_error_msg+'</span>');
+		if (input_value.length < variable_array.min_length) {
+			$(variable_array.error_msg_div_id).html('<span class="text-danger error-msg-small">'+variable_array.min_length_input_error_msg+'</span>');
 			return 0;
 		} else {
-			$(error_msg_div_id).html('');
+			$(variable_array.error_msg_div_id).html('');
 			return 1;
 		}
 	} else {
-		$(error_msg_div_id).html('<span class="text-danger error-msg-small">'+empty_input_error_msg+'</span>');
+		$(variable_array.error_msg_div_id).html('<span class="text-danger error-msg-small">'+variable_array.empty_input_error_msg+'</span>');
 		return 0;
 	}
 }
