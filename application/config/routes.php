@@ -58,6 +58,10 @@ $route['translate_uri_dashes'] = FALSE;
 $route['admin'] = 'HN_Hello_Nw_Services_Admin';
 $route['admin/logout'] = 'Admin_Logout/index';
 
+
+// Admin All Pages Links
+$route['admin/dashboard'] = 'HN_Hello_Nw_Services_Admin/dashboard';
+
 // Admin All Pages Links
 $route['admin/pages'] = 'HN_Hello_Nw_Services_Admin/pages';
 
@@ -146,6 +150,18 @@ $route['admin/update-blog'] = 'admin_Blog/update_blog';
 $route['admin/delete-blog'] = 'admin_Blog/delete_blog';
 
 
+// Admin Blogs
+$route['admin/add-product'] = 'HN_Hello_Nw_Services_Admin/add_product';
+$route['admin/all-products'] = 'HN_Hello_Nw_Services_Admin/all_products'; 
+$route['admin/add-new-product'] = 'admin_Product/add_new_product';
+$route['admin/get-all-products'] = 'admin_Product/get_all_products';
+$route['admin/change-product-status'] = 'admin_Product/change_product_status';
+$route['admin/get-product-details'] = 'admin_Product/get_product_details';
+$route['admin/update-product'] = 'admin_Product/update_product';
+$route['admin/delete-product'] = 'admin_Product/delete_product';
+
+
+
 
 // User Starts
 
@@ -159,3 +175,6 @@ $route['contact-us'] = 'User_Contact_Us';
 // User Blogs
 $route['blogs'] = 'User_Blogs';
 $route['blog-details'] = 'User_Blogs/blog_details';
+
+
+

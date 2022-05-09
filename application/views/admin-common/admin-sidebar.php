@@ -80,7 +80,7 @@
       <nav class="custom-sidebar-nav-menu">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
-          <li class="nav-item d-none" title="Dashboard">
+          <li class="nav-item" title="Dashboard">
             <a href="<?php echo $this->config->item('my_base_url')?>admin/dashboard" class="sidebar-nav nav-link text-center <?php echo $dashboard; ?>">
               <span class="d-block sidebar-nav-link-img">
                 <img src="<?php echo base_url()?>assets/dist/img/sidebar-images/<?php echo $dashboard_img; ?>">

@@ -3,7 +3,7 @@
       	<div class="row">
          	<div class="col-md-4">
 	            <div class="ftr-logo">
-               		<img src="<?php echo base_url()?>assets/users/desktop/images/factsuite-logo-white.png" />
+               		<img src="<?php echo base_url()?>assets/dist/img/logo/logo.png" />
                		<p>Better Decisions, Made Easy</p>
             	</div>
          	</div>

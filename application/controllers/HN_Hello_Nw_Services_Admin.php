@@ -10,8 +10,7 @@ class HN_Hello_Nw_Services_Admin extends CI_Controller {
 	  	$this->load->model('loginModel');
 	  	$this->load->model('check_Admin_Login_Model');
 	  	$this->load->model('admin_users_Model');
-	}
-
+	} 
 
 	function index() {
 		if($this->session->userdata('logged-in-admin')) {
@@ -142,6 +141,27 @@ class HN_Hello_Nw_Services_Admin extends CI_Controller {
 		$this->load->view('admin-common/admin-sidebar');
 		$this->load->view('admin/blogs/blogs-header');
 		$this->load->view('admin/blogs/all-blogs',$data);
+		$this->load->view('admin-common/admin-footer');
+	}
+
+
+	function add_product() {
+		$this->check_Admin_Login_Model->check_admin_login();
+		$data['title']="Admin Dashboard";
+		$this->load->view('admin-common/admin-header');
+		$this->load->view('admin-common/admin-sidebar');
+		$this->load->view('admin/product/product-header');
+		$this->load->view('admin/product/add-product-plans',$data);
+		$this->load->view('admin-common/admin-footer');
+	}
+
+	function all_products() {
+		$this->check_Admin_Login_Model->check_admin_login();
+		$data['title']="Admin Dashboard";
+		$this->load->view('admin-common/admin-header');
+		$this->load->view('admin-common/admin-sidebar');
+		$this->load->view('admin/product/product-header');
+		$this->load->view('admin/product/view-product',$data);
 		$this->load->view('admin-common/admin-footer');
 	}
 
