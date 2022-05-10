@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>NetZero</title>
+	<title>Hello Network Provider</title>
 
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/user/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/user/css/animate.min.css">

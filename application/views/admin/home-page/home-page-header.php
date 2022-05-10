@@ -27,8 +27,8 @@
       <div class="container-fluid">
         <div class="content-nav-tabs-container">
           <ul class="nav nav-tabs main-nav-tab" role="tablist">
-            <li class="nav-item d-none">
-              <a class="nav-link nav-link-product-tab nav-link-product-tab-first <?php echo $home_page_content_active;?>" href="<?php echo $this->config->item('my_base_url')?>factsuite-admin/home-page">Home Page Content</a>
+            <li class="nav-item">
+              <a class="nav-link nav-link-product-tab nav-link-product-tab-first <?php echo $home_page_content_active;?>" href="<?php echo $this->config->item('my_base_url')?>admin/home-page">Home Page Content</a>
             </li>
             <li class="nav-item d-none">
               <a class="nav-link nav-link-product-tab <?php echo $client_logo_active;?>" href="<?php echo $this->config->item('my_base_url')?>factsuite-admin/client-logo">Client Logo</a>

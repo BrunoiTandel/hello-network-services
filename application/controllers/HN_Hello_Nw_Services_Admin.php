@@ -29,6 +29,18 @@ class HN_Hello_Nw_Services_Admin extends CI_Controller {
 		$this->load->view('admin-common/admin-footer');
 	}
 
+	
+	function home_page() {
+		$this->check_Admin_Login_Model->check_admin_login();
+		$data['title']="Admin Dashboard";
+		$this->load->view('admin-common/admin-header');
+		$this->load->view('admin-common/admin-sidebar');
+		$this->load->view('admin/home-page/home-page-header');
+		$this->load->view('admin/home-page/home-page',$data);
+		$this->load->view('admin-common/admin-footer');
+	}
+
+
 	function pages() {
 		$this->check_Admin_Login_Model->check_admin_login();
 		$data['title'] = "Admin Dashboard";

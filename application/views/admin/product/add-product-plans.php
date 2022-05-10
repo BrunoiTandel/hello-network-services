@@ -4,7 +4,7 @@
                 <div class="col-sm-4">
                   <span class="product-details-span-light">Product title</span>
                   <input type="text" class="input-txt" name="product-title" id="product-title" placeholder="Product title">
-                  <div id="product-title-error-msg-div"></div>
+                  <div id="product-title-error-msg-div"></div> 
                 </div>
                 <div class="col-sm-4">
                   <span class="product-details-span-light">Data Volume Limit</span>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="col-sm-12 mt-3">
                   <span class="product-details-span-light">Resources Content</span>
-                  <textarea class="input-txt ckeditor" name="blog_content" id="blog_content" placeholder="Resources Content" rows="5"></textarea>
+                  <textarea class="input-txt ckeditor" name="product_content" id="product_content" placeholder="Resources Content" rows="5"></textarea>
                   <div id="blog-content-error-msg-div"></div>
                 </div>
               </div>
@@ -56,7 +56,7 @@
               <div class="col-sm-12 mt-4" id="product-error-div"></div>
               <div class="col-sm-10"></div>
               <div class="col-sm-2 text-right">
-                <button class="btn btn-add btn-add-2 text-white mt-0" id="add-blog-btn" name="add-blog-btn">Add</button>
+                <button class="btn btn-add btn-add-2 text-white mt-0" id="add-product-btn" name="add-product-btn">Add</button>
             </div>
           </div>
           </div>

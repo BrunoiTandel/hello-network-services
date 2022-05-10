@@ -62,6 +62,18 @@ $route['admin/logout'] = 'Admin_Logout/index';
 // Admin All Pages Links
 $route['admin/dashboard'] = 'HN_Hello_Nw_Services_Admin/dashboard';
 
+
+
+// Admin Home Page
+$route['admin/home-page'] = 'HN_Hello_Nw_Services_Admin/home_page';
+$route['admin/update-home-page-content'] = 'admin_Home_Page/update_home_page_content';
+$route['admin/get-home-page-details'] = 'admin_Home_Page/get_home_page_details';
+$route['admin/change-we-enabled-description-status'] = 'admin_Home_Page/change_we_enabled_description_status';
+$route['admin/get-single-we-enable-description'] = 'admin_Home_Page/get_single_we_enable_description';
+$route['admin/update-we-enable-description'] = 'admin_Home_Page/update_we_enable_description';
+$route['admin/delete-we-enable-description'] = 'admin_Home_Page/delete_we_enable_description';
+
+
 // Admin All Pages Links
 $route['admin/pages'] = 'HN_Hello_Nw_Services_Admin/pages';
 

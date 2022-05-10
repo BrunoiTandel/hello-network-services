@@ -7,30 +7,20 @@ class Admin_Product_Model extends CI_Model {
 		return $this->db->order_by('product_id','DESC')->get('products')->result_array();
 	}
 
-	function add_new_product($product_thumbnail_image) {
+	function add_new_product($product_thumbnail_image) { 
 		$add_data = array(
 			'product_title' => $this->input->post('product_title'),
-			'product_link' => $this->input->post('external_link'),
-			'post_type' => $this->input->post('post_type'),
+			'product_volume_data_limit' => $this->input->post('limit'),
+			'product_data_speed' => $this->input->post('speed'),
+			'product_data_validation' => $this->input->post('validity'),
+			'product_plan_price' => $this->input->post('price'),
+			'product_plan_type' => $this->input->post('product_type'),
 			'product_content' => $this->input->post('product_content'),
-			'product_thumbnail_image' => $product_thumbnail_image
+			'product_image' => $product_thumbnail_image
 		);
 
-		if ($this->db->insert('products',$add_data)) {
-			
-			$admin_info = $this->session->userdata('logged-in-admin');
-			$log_data = array(
-				'product_id' => $this->db->insert_id(),
-				'product_title' => $this->input->post('product_title'),
-				'product_link' => $this->input->post('external_link'),
-				'post_type' => $this->input->post('post_type'),
-				'product_content' => $this->input->post('product_content'),
-				'product_thumbnail_image' => $product_thumbnail_image,
-				'product_add_or_updated_by_admin_id' => $admin_info['admin_id']
-			);
-			$this->db->insert('product_log',$log_data);
-
-			return array('status'=>'1','message'=>'Blog has been added successfully.');
+		if ($this->db->insert('products',$add_data)) { 
+			return array('status'=>'1','message'=>'Product has been added successfully.');
 		} else {
 			return array('status'=>'0','message'=>'Something went wrong while adding the product. Please try again');
 		}
@@ -101,7 +91,7 @@ class Admin_Product_Model extends CI_Model {
 			);
 			$this->db->insert('product_log',$log_data);
 
-			return array('status'=>'1','message'=>'Blog has been updated successfully.','product_thumbnail_image'=>$get_image['product_thumbnail_image']);
+			return array('status'=>'1','message'=>'Product has been updated successfully.','product_thumbnail_image'=>$get_image['product_thumbnail_image']);
 		} else {
 			return array('status'=>'0','message'=>'Something went wrong while updating the nlog. Please try again');
 		}
@@ -130,7 +120,7 @@ class Admin_Product_Model extends CI_Model {
 			$this->db->insert('product_log',$log_data);
 
 			if($this->db->where('product_id',$this->input->post('product_id'))->delete('products')) {
-				return array('status'=>'1','message'=>'Blog been deleted successfully.');
+				return array('status'=>'1','message'=>'Product been deleted successfully.');
 			}
 			return array('status'=>'0','message'=>'Something went wrong while deleting the product.');
 		}

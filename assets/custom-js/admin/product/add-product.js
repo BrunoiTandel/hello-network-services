@@ -89,18 +89,19 @@ function handle_file_select_product_thumbnail_image(e) {
 }
 
 function add_product() {
-	var product_title = $('#product-title').val(),
-		external_link = $('#external-link').val(),
-		post_type = $('#post-type').val(),
+	var product_title = $('#product-title').val(),  
+	limit = $('#data-volume-limit').val(), 
+	speed = $('#speed').val(), 
+	validity = $('#validity').val(),
+	 price = $('#plan-price').val(), 
+	type = $('#plan-type').val(), 
 		product_content = CKEDITOR.instances['product_content'].getData(),
 		product_thumbnail_image = $("#product-thumbnail-image")[0].files[0];
 
-	var check_product_title_var = check_product_title(),
-		check_external_link_var = check_external_link(),
-		check_post_type_var = check_post_type();
+	var check_product_title_var = check_product_title();
 		// check_news_content_var = check_news_content();
 
-	if (check_product_title_var == 1 && check_external_link_var == 1 && check_post_type_var == 1 && product_content != '' && product_thumbnail_image != undefined) {
+	if (check_product_title_var == 1 ) {
 		$('#product-content-error-msg-div').html('');
 		$('#add-product-btn').prop('disabled',true);
 		$('#product-error-div').html('<span class="d-block text-warning error-msg text-center">Please wait while we are adding the product.</span>');
@@ -108,9 +109,12 @@ function add_product() {
 		var formdata = new FormData();
 		formdata.append('verify_admin_request',1);
 		formdata.append('product_title',product_title);
-		formdata.append('external_link',external_link);
+		formdata.append('limit',limit);
+		formdata.append('speed',speed);
+		formdata.append('validity',validity);
+		formdata.append('price',price); 
 		formdata.append('product_content',product_content);
-		formdata.append('post_type',post_type);
+		formdata.append('product_type',type);
 		formdata.append('product_thumbnail_image', product_thumbnail_image);
 
 		$.ajax({
@@ -126,9 +130,12 @@ function add_product() {
 					$('#product-error-div').html('');
 				  	if (data.new_blob_details.status == '1') {
 				  		toastr.success('New product has been added successfully.');
-						$('#product-title').val('');
-						$('#external-link').val('');
-						$('#post-type').val('');
+						$('#product-title').val();  
+						$('#data-volume-limit').val(); 
+						$('#speed').val();
+						$('#validity').val();
+						$('#plan-price').val(); 
+						$('#plan-type').val(); 
 						CKEDITOR.instances['product_content'].setData('');
 						$("#product-thumbnail-image").val('');
 						$('#product-thumbnail-image-div').html('');
