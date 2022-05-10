@@ -168,6 +168,11 @@ function view_product_modal(product_id) {
 		      	$('#product-title').val(data.product_detials.product_title); 
 		      	// $('#news-content').val(data.news_detials.news_content);
 		      	var post_type_list_html = '';
+		      	$('#data-volume-limit').val(data.product_detials.product_volume_data_limit);
+				$('#speed').val(data.product_detials.product_data_speed);
+				$('#validity').val(data.product_detials.product_data_validation);
+				$('#plan-price').val(data.product_detials.product_plan_price);
+				$('#plan-type').val(data.product_detials.product_plan_type);
 		      	 
 
 		      	$('#post-type').html(post_type_list_html);
@@ -203,33 +208,37 @@ function view_product_thumbnail_image_modal() {
 }
 
 function update_product(product_id) {
-	var product_title = $('#product-title').val(),
-		external_link = $('#external-link').val(),
-		post_type = $('#post-type').val(),
+	 
+		var product_title = $('#product-title').val(),  
+	limit = $('#data-volume-limit').val(), 
+	speed = $('#speed').val(), 
+	validity = $('#validity').val(),
+	 price = $('#plan-price').val(), 
+	type = $('#plan-type').val(), 
 		product_content = CKEDITOR.instances['product_content'].getData(),
 		product_thumbnail_image = $("#product-thumbnail-image")[0].files[0];
 
-	var check_product_title_var = check_product_title(),
-		check_external_link_var = check_external_link(),
-		check_post_type_var = check_post_type();
+	var check_product_title_var = check_product_title();
 		// check_news_content_var = check_news_content();
 
-	if (check_product_title_var == 1 && check_external_link_var == 1 && check_post_type_var == 1 && product_content != '') {
+	if (check_product_title_var == 1 ) {
 		$('#product-content-error-msg-div').html('');
 		$('#update-product-btn').removeAttr('onclick');
 		$('#update-product-btn').prop('disabled',true);
 		$('#product-error-div').html('<span class="d-block text-warning error-msg text-center">Please wait while we are updating the news.</span>');
 
 		var formdata = new FormData();
-		formdata.append('verify_admin_request',1);
 		formdata.append('product_id',product_id);
+		formdata.append('verify_admin_request',1);
 		formdata.append('product_title',product_title);
-		formdata.append('external_link',external_link);
-		formdata.append('post_type',post_type);
+		formdata.append('limit',limit);
+		formdata.append('speed',speed);
+		formdata.append('validity',validity);
+		formdata.append('price',price); 
 		formdata.append('product_content',product_content);
-		if (product_thumbnail_image != undefined) {
-			formdata.append('product_thumbnail_image', product_thumbnail_image);
-		}
+		formdata.append('product_type',type);
+		formdata.append('product_thumbnail_image', product_thumbnail_image);
+
 
 		$.ajax({
 			type: "POST",
