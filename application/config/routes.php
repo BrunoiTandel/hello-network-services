@@ -190,3 +190,6 @@ $route['blog-details'] = 'User_Blogs/blog_details';
 
 
 
+// User Purchase Package
+$route['user/purchase-package'] = 'User_Packages/purchase_package';
+$route['user/store-purchased-package-details'] = 'User_Packages/store_purchased_package_details';

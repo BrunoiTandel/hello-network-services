@@ -2,10 +2,7 @@ var phone_number_max_length = 10,
 	password_min_length = 8;
 
 $('#btn-sign-in-hdr').on('click', function() {
-	$('#check-login-modal').modal({
-    	backdrop: 'static',
-        keyboard: false
-    });
+	open_sign_in_modal();
 });
 
 $('#modal-continue-as-user-btn').on('click', function() {
@@ -20,6 +17,13 @@ $('#modal-continue-as-user-btn').on('click', function() {
         keyboard: false
     });
 });
+
+function open_sign_in_modal() {
+	$('#check-login-modal').modal({
+    	backdrop: 'static',
+        keyboard: false
+    });
+}
 
 $('#user-login-mobile-number-or-email-id').on('keyup blur', function() {
 	check_user_login_mobile_number_or_email_id();

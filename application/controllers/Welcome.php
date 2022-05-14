@@ -25,10 +25,13 @@ class Welcome extends CI_Controller {
 	  	parent::__construct();
 	  	$this->load->database();
 	  	$this->load->helper('url');
+	  	$this->load->model('user_Packages_Modal');
 	}
 
 	function index() {
 		$data['title'] = 'Hello Network Services';
+		$data['packages_list'] = $this->user_Packages_Modal->get_all_products();
+		
 		$this->load->view('user-common/header',$data);
 		$this->load->view('user/index');
 		$this->load->view('user-common/footer');
