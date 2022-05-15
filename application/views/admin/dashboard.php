@@ -11,12 +11,12 @@
       <div class="row">
 
          <div class="col-md-3">
-           <a href="<?php echo $this->config->item('my_base_url')?>admin/internal-team-role">
+           <a href="<?php echo $this->config->item('my_base_url')?>admin/view-users">
             <div class="edit-pages-a">
               <div class="row">
                 <div class="col-md-6">
                   <!-- <img src="<?php echo base_url()?>assets/dist/img/sidebar-images/colored-pages.svg"> -->
-                  <h2>10</h2>
+                  <h2><?php echo $analytics['user']; ?></h2>
                 </div>
                 <div class="col-md-6 text-right">
                   <!-- <i class="fa fa-angle-right"></i> -->
@@ -31,12 +31,12 @@
 
 
          <div class="col-md-3">
-           <a href="<?php echo $this->config->item('my_base_url')?>admin/internal-team-role">
+           <a href="<?php echo $this->config->item('my_base_url')?>admin/view-orders">
             <div class="edit-pages-a">
               <div class="row">
                 <div class="col-md-6">
                   <!-- <img src="<?php echo base_url()?>assets/dist/img/sidebar-images/colored-pages.svg"> -->
-                  <h2>10</h2>
+                  <h2><?php echo $analytics['user_purchased_package']; ?></h2>
                 </div>
                 <div class="col-md-6 text-right">
                   <!-- <i class="fa fa-angle-right"></i> -->
@@ -51,12 +51,12 @@
 
 
          <div class="col-md-3">
-           <a href="<?php echo $this->config->item('my_base_url')?>admin/internal-team-role">
+           <a href="<?php echo $this->config->item('my_base_url')?>admin/all-products">
             <div class="edit-pages-a">
               <div class="row">
                 <div class="col-md-6">
                   <!-- <img src="<?php echo base_url()?>assets/dist/img/sidebar-images/colored-pages.svg"> -->
-                  <h2>10</h2>
+                  <h2><?php echo $analytics['products']; ?></h2>
                 </div>
                 <div class="col-md-6 text-right">
                   <!-- <i class="fa fa-angle-right"></i> -->
@@ -75,7 +75,7 @@
               <div class="row">
                 <div class="col-md-6">
                   <!-- <img src="<?php echo base_url()?>assets/dist/img/sidebar-images/colored-pages.svg"> -->
-                  <h2>10</h2>
+                  <h2><?php echo $analytics['internal_team_member']; ?></h2>
                 </div>
                 <div class="col-md-6 text-right">
                   <!-- <i class="fa fa-angle-right"></i> -->

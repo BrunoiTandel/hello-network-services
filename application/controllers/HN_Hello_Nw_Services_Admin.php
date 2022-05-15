@@ -23,6 +23,7 @@ class HN_Hello_Nw_Services_Admin extends CI_Controller {
 
 	function dashboard() {
 		$this->check_Admin_Login_Model->check_admin_login();
+		$data['analytics'] = $this->admin_users_Model->get_analytics();
 		$data['title'] = "Admin Dashboard";
 		$this->load->view('admin-common/admin-header');
 		$this->load->view('admin-common/admin-sidebar');
@@ -30,7 +31,17 @@ class HN_Hello_Nw_Services_Admin extends CI_Controller {
 		$this->load->view('admin-common/admin-footer');
 	}
 
-	
+
+	function reports() {
+		$this->check_Admin_Login_Model->check_admin_login(); 
+		$data['title'] = "Admin Dashboard";
+		$this->load->view('admin-common/admin-header');
+		$this->load->view('admin-common/admin-sidebar');
+		$this->load->view('admin/report/excel-report',$data);
+		// $this->load->view('admin-common/admin-footer');
+	}
+
+		
 	function home_page() {
 		$this->check_Admin_Login_Model->check_admin_login();
 		$data['title']="Admin Dashboard";

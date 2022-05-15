@@ -1,5 +1,5 @@
 
-      <span class="edit-pages-txt">Internal Team</span>
+      <span class="edit-pages-txt">Order Details</span>
           </div>
         </div>
       </div>
@@ -11,7 +11,7 @@
 
         <div class="tab-content mt-0">
             <div class="tab-pane fade show active"role="tabpanel" aria-labelledby="custom-content-below-home-tab">  
-                  <table class="table-fixed table table-striped datatable">
+                  <table id="example1" class="table-fixed table table-striped ">
                <thead class="table-fixed-thead thead-bd-color">
                   <tr>
                      <!-- <th>Sr No.Case&nbsp;Id</th>  --> 
@@ -20,8 +20,10 @@
                      <th>User&nbsp;Mobile Number</th>  
                      <th>User&nbsp;Email</th>  
                      <th>User&nbsp;IP</th>  
-                     <th>Created Date</th>  
-                     <th>View&nbsp;Details</th>
+                     <th>Product Name</th>
+                     <th>Paid Amount</th>
+                     <th>Payment Id</th>
+                     <th>Purches Date</th>  
                      <!-- <th>Actions</th> -->
                   </tr>
                </thead>
@@ -37,8 +39,11 @@
                           echo '<td>'.$value['user_mobile_number'].'</td>';
                           echo '<td>'.$value['user_email_id'].'</td>';
                           echo '<td>'.$value['user_ip_address'].'</td>';
-                          echo '<td>'.$value['user_created_date'].'</td>';
-                          echo '<td><a href="#"><i class="fa fa-eye"></i></a></td>';
+                          echo '<td>'.$value['product_title'].'</td>';
+                          echo '<td>'.$value['amount_paid'].'</td>';
+                          echo '<td>'.$value['payment_id'].'</td>';
+                          echo '<td>'.$value['purchased_date'].'</td>'; 
+                          // echo '<td><a href="#"><i class="fa fa-eye"></i></a></td>';
                             
                           echo '</tr>';
                        }
