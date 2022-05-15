@@ -46,10 +46,17 @@
 	      			<li class="nav-item">
 	        			<a class="nav-link" href="<?php echo $this->config->item('my_base_url')?>contact-us">Contact Us</a>
 	      			</li>
-	      			<li class="nav-item" id="hdr-sign-in-logout-li">
-	      				<?php if ($this->session->userdata('logged-in-user')) { ?>
-	      					<button id="user-logout-btn" class="user-logout-btn"><i class="fa fa-power-off"></i></button>
-	      				<?php } else { ?>
+	      			<?php if ($this->session->userdata('logged-in-user')) { ?>
+	      				<li class="nav-item dropdown-hover" id="hdr-sign-in-logout-li">
+	      					<a id="user-logout-btn" href="javascript:void(0)" class="user-logout-btn nav-link profile"><img src="<?php echo base_url()?>assets/user/images/personal.png" /></a>
+	      					<div class="dropdown-hover-content">
+	                           	<div class="profile-mn">
+	                               	<a href="<?php echo $this->config->item('my_base_url')?>my-profile">Profile</a>
+	                              	<a href="javascript:void(0)"onclick="user_logout()" class="lg-out">Logout</a>
+	                           	</div>
+	                        </div>
+	      			<?php } else { ?>
+	      				<li class="nav-item" id="hdr-sign-in-logout-li">
 	        				<button class="btn-sign-in-hdr" id="btn-sign-in-hdr" data-toggle="modal" data-target="#check-login-modal">Sign In</button>
 	      				<?php } ?>
 	      			</li>
