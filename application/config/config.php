@@ -547,18 +547,12 @@ $uat_list_riyatsa = array(
     '159.89.172.172'
 );
 
-$production_ip_list = array(
-	'157.245.98.110',
-	'165.232.189.3'
+$production_ip_list = array( 
+	'128.199.27.25'
 );
-
-$staging_ip_list = array(
-	'159.89.174.203'
-);
-
+ 
 $config['uat_list_riyatsa'] = $uat_list_riyatsa;
-$config['production_ip_list'] = $production_ip_list;
-$config['staging_ip_list'] = $staging_ip_list;
+$config['production_ip_list'] = $production_ip_list; 
 
 $config['ip_localhost_list'] = $localhost_list;
 $config['ip_uat_list'] = $uat_list;

@@ -96,14 +96,9 @@ $db['default'] = array(
 );
 
 if (in_array($_SERVER['REMOTE_ADDR'], $production_ip_list) || in_array($_SERVER['SERVER_ADDR'], $production_ip_list)) {
-	$db['default']['hostname'] = '157.245.98.110';
-	$db['default']['username'] = 'crmapp';
-	$db['default']['password'] = 'Factsuite@@321';
-	$db['default']['database'] = 'hello-network-services';
-} else if (in_array($_SERVER['REMOTE_ADDR'], $staging_ip_list) || in_array($_SERVER['SERVER_ADDR'], $staging_ip_list)) {
 	$db['default']['hostname'] = 'localhost';
-	$db['default']['username'] = 'pmauser';
-	$db['default']['password'] = 'Factsuite@123';
+	$db['default']['username'] = 'root';
+	$db['default']['password'] = 'hello@network$';
 	$db['default']['database'] = 'hello-network-services';
 } else if (in_array($_SERVER['REMOTE_ADDR'], $uat_list_riyatsa) || in_array($_SERVER['SERVER_ADDR'], $uat_list_riyatsa)) {
 	$db['default']['hostname'] = 'localhost';
