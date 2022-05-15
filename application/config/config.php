@@ -564,7 +564,7 @@ $link_from_crm_website = 0;
 $config['ip_address_list'] = $whitelist;
 
 $config['my_base_url'] = $config['my_base_url'];
-
+$staging_ip_list = array();
 // failure_msg_for_purchase_package -  0 - for localhost, 1 for UAT,Staging and production
 
 if (in_array($_SERVER['REMOTE_ADDR'], $production_ip_list) || in_array($_SERVER['SERVER_ADDR'], $production_ip_list)) {

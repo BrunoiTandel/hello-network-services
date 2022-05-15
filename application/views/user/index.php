@@ -1,14 +1,18 @@
 <div id="home-page-banner-carousel" class="carousel slide" data-ride="carousel">
   	<div class="carousel-inner">
-  		<?php $n = 5; for ($i = 0; $i < $n; $i++) {
+  		<?php $n = 4; 
+  		  $a = 1; 
+  		for ($i = 0; $i < $n; $i++) {
   			$active = '';
   			if ($i == 0) {
   				$active = 'active';
   			} ?>
   			<div class="carousel-item <?php echo $active;?>">
-	  			<img src="<?php echo base_url()?>assets/user/images/grey.png" alt="Los Angeles">
+	  			<img src="<?php echo base_url()?>assets/user/images/<?php echo '0'.$a.'.jpg';?>" alt="Los Angeles">
 			</div>
-  		<?php } ?>
+  		<?php
+  		$a++;
+  		 } ?>
   	</div>
   	
   	<?php if ($n > 0) { ?>
@@ -25,7 +29,7 @@
 	<div class="container-fluid custom-container-fluid-2">
 		<div class="row mt-5">
 			<div class="col-md-6">
-				<img class="our-company-img" src="<?php echo base_url()?>assets/user/images/grey-2.png">
+				<img class="our-company-img" src="<?php echo base_url()?>assets/user/images/side-b.jpg">
 			</div>
 			<div class="col-md-6">
 				<div class="our-company-hdr">
@@ -196,7 +200,7 @@
 	<div class="enquire-now-txt">Enquire Now</div>
 	<div class="row">
 		<div class="col-md-6">
-			<img class="index-enquiry-now-img" src="<?php echo base_url()?>assets/user/images/grey-3.png">
+			<img class="index-enquiry-now-img" src="<?php echo base_url()?>assets/user/images/side-b.jpg">
 		</div>
 		<div class="col-md-6">
 			<div class="row">
