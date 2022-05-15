@@ -53,5 +53,4 @@
       </div>
     </section>
   </div>
-
-<script src="<?php echo base_url()?>assets/custom-js/admin/internal-team/add-new-team-member.js"></script>
+ 

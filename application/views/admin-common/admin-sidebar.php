@@ -27,7 +27,7 @@
       || strtolower(uri_string()) == 'admin/add-internal-team-member') {
     $pages = 'active';
     $pages_img = 'colored-pages.svg';
-  }  else if (strtolower(uri_string()) == 'admin/add-website-services') {
+  }  else if (strtolower(uri_string()) == 'admin/view-orders') {
     $website_services = 'active';
     $website_services_img = 'colored-globe.png';
   } else if (strtolower(uri_string()) == 'admin/payment-gateway') {
@@ -99,11 +99,11 @@
           </li>
 
           <li class="nav-item sidebar-nav-item-mrgn" title="Services">
-            <a href="<?php echo $this->config->item('my_base_url')?>admin/add-website-services" class="sidebar-nav nav-link text-center <?php echo $website_services; ?>">
+            <a href="<?php echo $this->config->item('my_base_url')?>admin/view-orders" class="sidebar-nav nav-link text-center <?php echo $website_services; ?>">
               <span class="d-block sidebar-nav-link-img">
                 <img src="<?php echo base_url()?>assets/dist/img/sidebar-images/<?php echo $website_services_img; ?>">
               </span>
-              <span class="d-block sidebar-nav-link-name">Services</span>
+              <span class="d-block sidebar-nav-link-name">Orders</span>
             </a>
           </li>
 

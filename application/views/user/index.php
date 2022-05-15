@@ -34,7 +34,7 @@
 					</label>
 				</div>
 				<div class="our-company-desc">
-					<p>An aspiring initiative of CSC e-Governance Services India Ltd. in form of CSC Wi-Fi Choupal is introduced for development of digital infrastructure in the villages as ‘Digital Village’. The initiative focuses on enhancement of Internet connectivity at the last mile through utilization of BharatNet Infrastructure.</p>
+					<p>An aspiring initiative of Hello Network Services (P) Ltd. in form of Hello Network Services is introduced for development of digital infrastructure in the villages as ‘Digital Village’. The initiative focuses on enhancement of Internet connectivity at the last mile through utilization of BharatNet Infrastructure.</p>
 					<ul>
                   <li>Broadband Internet access across village via Rural Hostspots.</li>
                   <li>Broadband Internet access for Home &amp; Business Subscribers. </li>
@@ -104,7 +104,7 @@
 					</div>
 					<div class="service-description-div">
 						<h4 class="service-hdr">LAST MILE CONNECTIVITY</h4>
-						<p class="service-desc">CSC Wi-Fi Choupal initiative encapsulates enabling of Wi-Fi Service in all 2.5 lakhs Gram Panchayat by deploying affordable and effective infrastructure thereby delivering services at an affordable price.</p>
+						<p class="service-desc">Hello Network Services initiative encapsulates enabling of Wi-Fi Service in all users by deploying affordable and effective infrastructure thereby delivering services at an affordable price.</p>
 					</div>
 				</div>
 			</div>
@@ -116,7 +116,7 @@
 					</div>
 					<div class="service-description-div">
 						<h4 class="service-hdr">LAST MILE CONNECTIVITY</h4>
-						<p class="service-desc">CSC Wi-Fi Choupal initiative encapsulates enabling of Wi-Fi Service in all 2.5 lakhs Gram Panchayat by deploying affordable and effective infrastructure thereby delivering services at an affordable price.</p>
+						<p class="service-desc">Hello Network Services initiative encapsulates enabling of Wi-Fi Service in users by deploying affordable and effective infrastructure thereby delivering services at an affordable price.</p>
 					</div>
 				</div>
 			</div>
@@ -128,7 +128,7 @@
 					</div>
 					<div class="service-description-div">
 						<h4 class="service-hdr">LAST MILE CONNECTIVITY</h4>
-						<p class="service-desc">CSC Wi-Fi Choupal initiative encapsulates enabling of Wi-Fi Service in all 2.5 lakhs Gram Panchayat by deploying affordable and effective infrastructure thereby delivering services at an affordable price.</p>
+						<p class="service-desc">Hello Network Services initiative encapsulates enabling of Wi-Fi Service in all users by deploying affordable and effective infrastructure thereby delivering services at an affordable price.</p>
 					</div>
 				</div>
 			</div>

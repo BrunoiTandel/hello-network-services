@@ -10,6 +10,7 @@ class HN_Hello_Nw_Services_Admin extends CI_Controller {
 	  	$this->load->model('loginModel');
 	  	$this->load->model('check_Admin_Login_Model');
 	  	$this->load->model('admin_users_Model');
+	  	$this->load->model('orderModel');
 	} 
 
 	function index() {
@@ -87,6 +88,15 @@ class HN_Hello_Nw_Services_Admin extends CI_Controller {
 		$this->load->view('admin-common/admin-header');
 		$this->load->view('admin-common/admin-sidebar'); 
 		$this->load->view('admin/users/view-user',$data);
+		$this->load->view('admin-common/admin-footer');
+	}
+	function view_orders() {
+		$this->check_Admin_Login_Model->check_admin_login();
+		$data['title'] = "View Users";
+		$data['users'] = $this->orderModel->get_all_orders();
+		$this->load->view('admin-common/admin-header');
+		$this->load->view('admin-common/admin-sidebar'); 
+		$this->load->view('admin/orders/view-orders',$data);
 		$this->load->view('admin-common/admin-footer');
 	}
 

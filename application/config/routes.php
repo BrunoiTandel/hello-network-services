@@ -95,6 +95,7 @@ $route['admin/check-new-team-member-email-id'] = 'Admin_Internal_Team/check_new_
 $route['admin/add-new-internal-team-member'] = 'Admin_Internal_Team/add_new_internal_team_member';
 $route['admin/view-internal-team-members'] = 'HN_Hello_Nw_Services_Admin/view_internal_team_members';
 $route['admin/view-users'] = 'HN_Hello_Nw_Services_Admin/view_users';
+$route['admin/view-orders'] = 'HN_Hello_Nw_Services_Admin/view_orders';
 
 // Verify Admin Password
 $route['admin/verify-admin-password'] = 'verify_Admin/verify_admin_password';
