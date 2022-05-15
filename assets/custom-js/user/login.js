@@ -79,9 +79,11 @@ function verify_user_login() {
 		  	success: function(data) {
 			  	if (data.status == '1') {
 			  		if (data.user_data.status == '1') {
-			  			$('#hdr-sign-in-logout-li').html('<button id="user-logout-btn" class="user-logout-btn" onclick="user_logout()"><i class="fa fa-power-off"></i></button>');
+			  			// $('#hdr-sign-in-logout-li').html('<button id="user-logout-btn" class="user-logout-btn" onclick="user_logout()"><i class="fa fa-power-off"></i></button>');
 			  			toastr.success('You have successfully logged in.');
 			  			$('#user-login-modal').modal('hide');
+
+			  			setInterval(function(){ location.reload() },3000);
 			  		} else {
 			  			$('#user-login-error-msg-div').html("<span class='text-danger error-msg-small d-block mt-2 text-center'>Incorrect Mobile No. or Password</span>");	
 			  		}

@@ -195,3 +195,9 @@ $route['blog-details'] = 'User_Blogs/blog_details';
 // User Purchase Package
 $route['user/purchase-package'] = 'User_Packages/purchase_package';
 $route['user/store-purchased-package-details'] = 'User_Packages/store_purchased_package_details';
+
+// User Profile
+$route['my-profile'] = 'User_Profile';
+$route['user/get-user-details'] = 'User_Profile/get_user_details';
+$route['user/update-profile-details'] = 'User_Profile/update_profile_details';
+$route['user/update-user-password'] = 'User_Profile/update_user_password';

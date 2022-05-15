@@ -698,7 +698,6 @@ footer {
     outline: 0;
     border: 0;
     background: transparent;
-    margin-top: 5px;
 }
 
 .index-enquiry-now-img {
@@ -1109,4 +1108,218 @@ footer {
     margin: 30px 0;
     letter-spacing: 0.81px;
     line-height: 1.6;
+}
+
+.dropdown-hover {
+    float: left;
+    overflow: hidden;
+}
+
+.header-cnt .navbar-light .navbar-nav .nav-link {
+    padding: 7px 12px 6px 12px;
+    color: #481777;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 13px 9px;
+    transition: all ease-in 0.1s;
+}
+
+a.nav-link.profile img {
+    width: 21px;
+}
+
+#hdr-sign-in-logout-li .dropdown-hover-content {
+    width: 16%;
+    left: 82%;
+    padding: 16px 25px 16px 25px;
+    box-shadow: 0px 0px 15px #0000001a;
+    border-radius: 5px;
+}
+
+.dropdown-hover:hover .dropdown-hover-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.profile-mn {
+    text-align: left;
+    width: 100%;
+}
+
+.profile-mn a {
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    color: #481777;
+    font-weight: 400;
+    padding: 7px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    line-height: 23px;
+}
+
+.dropdown-hover-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-top: 3px solid transparent;
+    padding: 16px 10px 16px 40px;
+    z-index: 5;
+    background: #FFF;
+    box-shadow: 0px 6px 7px #00000025;
+    transition: all ease-in-out 0.3s;
+}
+
+#profile1 {
+    margin: auto;
+    width: 100%;
+    padding: 120px 0px 10px 0px;
+}
+
+.profile-hd {
+    border-bottom: 1px solid rgba(112, 112, 112, 0.3);
+    padding-bottom: 12px;
+}
+
+.profile-hd h1 {
+    color: #000000;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 39px;
+    margin-bottom: 0;
+}
+
+.profile-hd span {
+    text-align: right;
+    display: block;
+}
+
+.profile-hd span button {
+    background: #F59E1D;
+    border-radius: 10px;
+    text-align: center;
+    padding: 12px 43px;
+    font-size: 14px;
+    color: #FFF;
+    border: 0;
+    font-weight: 300;
+    letter-spacing: 0.79px;
+}
+
+.profile-txt {
+    padding: 30px 0px 16px 0px;
+}
+
+.profile-txt h3 {
+    color: #707070;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 0px;
+    padding: 12px 0px;
+}
+
+.profile-txt h4 {
+    color: #707070;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 0px;
+    padding: 12px 0px;
+}
+
+.profile-txt span {
+    font-weight: 500;
+}
+
+.profile-txt span a {
+    color: #F59E1D;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.profile-txt span a i {
+    color: #F59E1D;
+    margin-right: 7px;
+}
+
+.login-fld {
+    border: 1px solid rgba(112, 112, 112, 0.5);
+    color: #707070;
+    font-size: 14px;
+    padding: 12px 12px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.logoutnow-hd h1 {
+    font-size: 25px;
+    font-weight: 500;
+    color: #481777;
+    line-height: 34px;
+    text-align: center;
+}
+
+.show-hide-pswd-icon.fa {
+    float: right;
+    margin-top: -33px;
+    position: relative;
+    z-index: 3;
+    color: #ee9e28;
+    font-size: 17px;
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+.modal-body-custom {
+    padding: 0px 50px 50px 50px;
+}
+
+.logoutnow-btns {
+    text-align: center;
+    padding-top: 12px;
+}
+
+.logoutnow-btns .no {
+    background: #FFF;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 12px 43px;
+    margin: 0px 7px;
+    color: #F59E1D;
+    font-weight: 300;
+    letter-spacing: 0.79px;
+    border: 1px solid #F59E1D;
+    width: 160px;
+}
+
+.logoutnow-btns .yes {
+    background: #F59E1D;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 12px 43px;
+    margin: 0px 7px;
+    color: #FFF;
+    font-weight: 300;
+    letter-spacing: 0.79px;
+    border: 1px solid #F59E1D;
+    width: 160px;
+}
+
+.user-plan-list-hdr {
+    color: #000000;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 39px;
+    padding-top: 15px;
+    margin-top: 20px;
+    border-top: 1px solid rgba(112, 112, 112, 0.3);
+}
+
+.user-plan-list table.table td,
+.user-plan-list table.table th {
+    border-top: 0 !important;
 }

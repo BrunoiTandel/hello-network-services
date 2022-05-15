@@ -7,6 +7,11 @@ class User_Packages_Modal extends CI_Model {
 		return $this->db->where('product_status','1')->order_by('product_id','DESC')->get('products')->result_array();
 	}
 
+	function get_purchased_packages() {
+		$user_details = $this->session->userdata('logged-in-user');
+		return $this->db->where('user_id',$user_details['user_id'])->order_by('user_purchased_package_id','DESC')->get('user_purchased_package')->result_array();
+	}
+
 	function get_purchase_package_details() {
 		$where_array = array(
 			'product_status' => 1,
