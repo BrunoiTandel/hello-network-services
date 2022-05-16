@@ -42,7 +42,7 @@
 					<ul>
                   <li>Broadband Internet access across village via Rural Hostspots.</li>
                   <li>Broadband Internet access for Home &amp; Business Subscribers. </li>
-                  <li>GPON &amp; OFC Maintenance. Professional Teams with equipments.</li>
+                  <li class="d-none">GPON &amp; OFC Maintenance. Professional Teams with equipments.</li>
                   <li>Wi-Fi Voice &amp; Video calling Soulutions.</li>
                   <li>Creating Infrastrure for Office Content Delivery.</li>
       			</ul>
@@ -112,7 +112,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3 d-none">
 				<div class="service-we-provide">
 					<div class="service-number-image">
 						<div class="service-number">02</div>
@@ -124,7 +124,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3 d-none">
 				<div class="service-we-provide">
 					<div class="service-number-image">
 						<div class="service-number">03</div>
