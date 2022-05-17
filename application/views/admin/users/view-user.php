@@ -4,13 +4,18 @@
         </div>
       </div>
     </div>
-
+ 
     <section class="content">
       <div class="container-fluid">
         <div class="content-nav-tabs-container"> 
-
+          <div class="add-team-bx border p-2 m-3 bg-white">
+            <div id="error-client"></div>
+          <h5>Bulk Upload</h5>
+          <input type="file" class="fld" name="excel_upload" id="add-bulk-upload-case">
+          <button type="button" onclick="import_excel()" class="btn btn-add text-white">Excel Data Submit</button> 
+        </div>
         <div class="tab-content mt-0">
-            <div class="tab-pane fade show active"role="tabpanel" aria-labelledby="custom-content-below-home-tab">  
+            <div class="tab-pane fade show active bg-white p-2"role="tabpanel" aria-labelledby="custom-content-below-home-tab">  
                   <table class="table-fixed table table-striped datatable1" id="example1">
                <thead class="table-fixed-thead thead-bd-color">
                   <tr>

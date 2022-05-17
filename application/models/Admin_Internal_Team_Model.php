@@ -164,4 +164,48 @@ class Admin_Internal_Team_Model extends CI_Model {
 			return array('status'=>'0','message'=>'Something went wrong while adding the role. Please try again');
 		}
 	}
+
+	function insert_bulk_case($users){
+		if ($this->db->insert_batch('users',$users)) {
+		return array('status'=>'1','message'=>'Service has been inserted.');
+		} else {
+			return array('status'=>'0','message'=>'Something went wrong while insert the users. Please try again');
+		}
+	}
+
+	function insert_new_customer_details(){
+		$users = array(
+			'user_id' => $this->input->post('user_id'),
+            'username' => $this->input->post('username'),
+            'password' => $this->input->post('user_password'),
+            'full_name' => $this->input->post('user_full_name'),
+            'phone' => $this->input->post('user_phone'),
+            'email' => $this->input->post('user_email'),
+            'address' => $this->input->post('user_address'),
+            'note' => $this->input->post('user_note'),
+            'id_proof' => $this->input->post('user_id_proof'),
+            'start_date' => $this->input->post('user_start_date'),
+            'end_date' => $this->input->post('user_end_date'),
+            'bandwidth' => $this->input->post('user_bandwidth'),
+            'ip_address' => $this->input->post('user_ip_address'),
+            'extra_ip_address' => $this->input->post('user_extra_ip_address'),
+            'mac_address' => $this->input->post('user_mac_address'),
+            'mac_vendor' => $this->input->post('user_mac_vendor'),
+            'location' => $this->input->post('user_location'),
+            'type' => $this->input->post('user_type'),
+            'auto_bind' => $this->input->post('user_auto_bind'),
+            'bandwidth_lock' => $this->input->post('user_bandwidth_lock'),
+            'status' => $this->input->post('user_status'),
+            'bill' => $this->input->post('user_bill'),
+            'due' => $this->input->post('user_due'),
+            'tag' => $this->input->post('user_tag'),
+            'zone' => $this->input->post('user_zone'),
+            'u_created_date' => date('Y-m-d H:i:s')
+		);
+		if ($this->db->insert('users',$users)) {
+		return array('status'=>'200','message'=>'Service has been inserted.');
+		} else {
+			return array('status'=>'202','message'=>'Something went wrong while insert the users. Please try again');
+		}
+	}
 }
