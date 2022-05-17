@@ -37,17 +37,17 @@
                      if (count($users)) {
                         $n = 0;
                        foreach ($users as $key => $value) { 
-                        $status = '<span class="text-danger">In-Active</span>';
-                        if ($value['user_status'] =='1') {
-                            $status = '<span class="text-success">Active</span>';
+                        $status = '<span class="text-danger">'.$value['status'].'</span>';
+                        if ($value['status'] =='online') {
+                            $status = '<span class="text-success">'.$value['status'].'</span>';
                         }
                           echo '<tr>';
                           echo '<td>'.($n+1).'</td>';
-                          echo '<td>'.$value['user_first_name'].'</td>';
-                          echo '<td>'.$value['user_mobile_number'].'</td>';
-                          echo '<td>'.$value['user_email_id'].'</td>';
-                          echo '<td>'.$value['user_ip_address'].'</td>';
-                          echo '<td>'.$value['user_created_date'].'</td>';
+                          echo '<td>'.$value['full_name'].'</td>';
+                          echo '<td>'.$value['phone'].'</td>';
+                          echo '<td>'.$value['email'].'</td>';
+                          echo '<td>'.$value['ip_address'].'</td>';
+                          echo '<td>'.$value['u_created_date'].'</td>';
                           echo '<td>'.$status.'</td>';
                           echo '<td><a href="#"><i class="fa fa-eye"></i></a></td>';
                             
