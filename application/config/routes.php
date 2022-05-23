@@ -62,6 +62,10 @@ $route['admin/logout'] = 'Admin_Logout/index';
 // Admin All Pages Links
 $route['admin/dashboard'] = 'HN_Hello_Nw_Services_Admin/dashboard';
 
+/*enquiry*/
+$route['admin/user-enquire'] = 'HN_Hello_Nw_Services_Admin/user_enquiry';
+$route['admin/new-user-request'] = 'HN_Hello_Nw_Services_Admin/add_user_requiest';
+
 
 
 // Admin Home Page

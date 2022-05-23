@@ -88,6 +88,66 @@
            </a>
          </div>
 
+         <div class="col-md-3 mt-4">
+           <a href="#">
+            <div class="edit-pages-a">
+              <div class="row">
+                <div class="col-md-6">
+                  <!-- <img src="<?php echo base_url()?>assets/dist/img/sidebar-images/colored-pages.svg"> -->
+                  <span style="font-size: 25px;"><b><?php echo $analytics['total']; ?></b></span>
+                </div>
+                <div class="col-md-6 text-right">
+                  <!-- <i class="fa fa-angle-right"></i> -->
+                </div>
+              </div>
+              <span class="card-pages-name">Total Revenue</span>
+              <div>  
+              </div>
+            </div>
+           </a>
+         </div>
+
+         <div class="col-md-3 mt-4">
+           <a href="#">
+            <div class="edit-pages-a">
+              <div class="row">
+                <div class="col-md-6">
+                  <!-- <img src="<?php echo base_url()?>assets/dist/img/sidebar-images/colored-pages.svg"> -->
+                  <span style="font-size: 25px;"><b><?php
+                  $pr = ($analytics['total']/100) * 25;
+                   echo $pr; ?></b>  <span>(25%)</span></span>
+                </div>
+                <div class="col-md-6 text-right">
+                  <!-- <i class="fa fa-angle-right"></i> -->
+                </div>
+              </div>
+              <span class="card-pages-name">BBNL</span>
+              <div>  
+              </div>
+            </div>
+           </a>
+         </div>
+
+         <div class="col-md-3 mt-4">
+           <a href="#">
+            <div class="edit-pages-a">
+              <div class="row">
+                <div class="col-md-6">
+                  <!-- <img src="<?php echo base_url()?>assets/dist/img/sidebar-images/colored-pages.svg"> -->
+                  <span style="font-size: 25px;"><b><?php 
+                   echo $analytics['total'] - $pr; ?></b>  <span>(75%)</span></span>
+                </div>
+                <div class="col-md-6 text-right">
+                  <!-- <i class="fa fa-angle-right"></i> -->
+                </div>
+              </div>
+              <span class="card-pages-name">Hello Network</span>
+              <div>  
+              </div>
+            </div>
+           </a>
+         </div>
+
 </div>
           </div>
           </div>

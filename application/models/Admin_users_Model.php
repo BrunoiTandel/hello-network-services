@@ -12,12 +12,13 @@ class Admin_users_Model extends CI_Model {
 		$internal_team_member = $this->db->get('internal_team_member')->num_rows();
 		$user_purchased_package = $this->db->get('user_purchased_package')->num_rows();
 		$products = $this->db->get('products')->num_rows();
-
+		$total = $this->db->query('Select sum(amount_paid) as amount_paid from user_purchased_package')->row_array();
 		return array(
 			'user' => $user,
 			'internal_team_member' => $internal_team_member,
 			'user_purchased_package' => $user_purchased_package,
 			'products' => $products,
+			'total' => $total['amount_paid'],
 		);
 	}
 

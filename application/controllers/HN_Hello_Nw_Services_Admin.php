@@ -199,6 +199,29 @@ class HN_Hello_Nw_Services_Admin extends CI_Controller {
 		$this->load->view('admin-common/admin-footer');
 	}
 
+	function user_enquiry() {
+		$this->check_Admin_Login_Model->check_admin_login();
+		$data['title']="Admin Dashboard";
+		$data['users'] = $this->db->order_by('user_contact_us_query_id','DESC')->get('user_contact_us_query')->result_array();
+		$this->load->view('admin-common/admin-header');
+		$this->load->view('admin-common/admin-sidebar');
+		// $this->load->view('admin/product/product-header');
+		$this->load->view('admin/users/user-enquiry',$data);
+		$this->load->view('admin-common/admin-footer');
+	}
+
+
+	function add_user_requiest() {
+		$this->check_Admin_Login_Model->check_admin_login();
+		$data['title']="Admin Dashboard";
+		$data['users'] = $this->db->order_by('user_id','DESC')->get('user')->result_array();
+		$this->load->view('admin-common/admin-header');
+		$this->load->view('admin-common/admin-sidebar');
+		// $this->load->view('admin/product/product-header');
+		$this->load->view('admin/users/new-user',$data);
+		$this->load->view('admin-common/admin-footer');
+	}
+
 
 
 }
