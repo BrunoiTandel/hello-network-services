@@ -1,14 +1,11 @@
 
       <span class="edit-pages-txt">Users Details</span>
-          </div>
-        </div>
-      </div>
-    </div>
+          
  
     <section class="content">
       <div class="container-fluid">
         <div class="content-nav-tabs-container"> 
-          <div class="add-team-bx border p-2 m-3 bg-white">
+          <div class="add-team-bx border p-2 m-3 bg-white d-none">
             <div id="error-client"></div>
           <h5>Bulk Upload</h5>
           <input type="file" class="fld" name="excel_upload" id="add-bulk-upload-case">
@@ -23,10 +20,9 @@
                      <th>Sr No.</th>   
                      <th>User&nbsp;Name</th>  
                      <th>User&nbsp;Mobile Number</th>  
-                     <th>Password</th>  
                      <th>User&nbsp;Email</th>  
                      <th>User&nbsp;IP</th>  
-                     <th>Created Date</th>  
+                     <!-- <th>Created Date</th>   -->
                      <th>User Status</th>  
                      <th>View&nbsp;Details</th>
                      <!-- <th>Actions</th> -->
@@ -35,9 +31,9 @@
                <!-- id="get-case-data-1" -->
                <tbody class="table-fixed-tbody tbody-datatable " id="get-case-data">
                   <?php 
-                     if (count($users)) {
+                     if (count($user)) {
                         $n = 1;
-                       foreach ($users as $key => $value) { 
+                       foreach ($user as $key => $value) { 
                         $status = '<span class="text-danger">'.$value['status'].'</span>';
                         if ($value['status'] =='online') {
                             $status = '<span class="text-success">'.$value['status'].'</span>';
@@ -46,10 +42,9 @@
                           echo '<td>'.($n++).'</td>';
                           echo '<td>'.$value['full_name'].'</td>';
                           echo '<td>'.$value['phone'].'</td>';
-                          echo '<td>'.$value['password'].'</td>';
                           echo '<td>'.$value['email'].'</td>';
                           echo '<td>'.$value['ip_address'].'</td>';
-                          echo '<td>'.$value['u_created_date'].'</td>';
+                          // echo '<td>'.$value['u_created_date'].'</td>';
                           echo '<td>'.$status.'</td>';
                           echo '<td><a href="#"><i class="fa fa-eye"></i></a></td>';
                             
@@ -66,5 +61,4 @@
       </div>
     </section>
   </div>
-
-<script src="<?php echo base_url()?>assets/custom-js/admin/internal-team/add-new-team-member.js"></script>
+ 

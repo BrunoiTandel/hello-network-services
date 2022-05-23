@@ -1,14 +1,14 @@
 <?php
     $new_user_active = '';
-    $add_team_member_active = '';
-    $view_team_members_active = '';
+    $view_new_user = '';
+    $view_all_user = '';
     
     if (strtolower(uri_string()) == 'team-member/add-new-user') {
       $new_user_active = "active";
-    } else if (strtolower(uri_string()) == 'admin/add-internal-team-member') {
-      $add_team_member_active = 'active';
-    } else if (strtolower(uri_string()) == 'admin/view-internal-team-members') {
-      $view_team_members_active = 'active';
+    } else if (strtolower(uri_string()) == 'team-member/view-new-user') {
+      $view_new_user = 'active';
+    } else if (strtolower(uri_string()) == 'team-member/view-all-user') {
+      $view_all_user = 'active';
     } else {
       $new_user_active = 'active';
     }
@@ -28,9 +28,9 @@
               <a class="nav-link nav-link-product-tab nav-link-product-tab-first <?php echo $new_user_active;?>" href="<?php echo $this->config->item('my_base_url')?>team-member/add-new-user">Add New User</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-product-tab <?php echo $add_team_member_active;?>" href="<?php echo $this->config->item('my_base_url')?>admin/add-internal-team-member">Add Team Member</a>
+              <a class="nav-link nav-link-product-tab <?php echo $view_new_user;?>" href="<?php echo $this->config->item('my_base_url')?>team-member/view-new-user">View My Users</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-product-tab <?php echo $view_team_members_active;?>" href="<?php echo $this->config->item('my_base_url')?>admin/view-internal-team-members">View Team Members</a>
+              <a class="nav-link nav-link-product-tab <?php echo $view_all_user;?>" href="<?php echo $this->config->item('my_base_url')?>team-member/view-all-user">View All Users</a>
             </li>
           </ul>

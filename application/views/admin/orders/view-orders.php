@@ -9,7 +9,7 @@
       <div class="container-fluid">
         <div class="content-nav-tabs-container"> 
 
-        <div class="tab-content mt-0">
+        <div class="tab-content mt-0 bg-white">
             <div class="tab-pane fade show active"role="tabpanel" aria-labelledby="custom-content-below-home-tab">  
                   <table id="example1" class="table-fixed table table-striped ">
                <thead class="table-fixed-thead thead-bd-color">
@@ -35,10 +35,10 @@
                        foreach ($users as $key => $value) { 
                           echo '<tr>';
                           echo '<td>'.($n+1).'</td>';
-                          echo '<td>'.$value['user_first_name'].'</td>';
-                          echo '<td>'.$value['user_mobile_number'].'</td>';
-                          echo '<td>'.$value['user_email_id'].'</td>';
-                          echo '<td>'.$value['user_ip_address'].'</td>';
+                          echo '<td>'.$value['username'].'</td>';
+                          echo '<td>'.$value['phone'].'</td>';
+                          echo '<td>'.$value['email'].'</td>';
+                          echo '<td>'.$value['ip_address'].'</td>';
                           echo '<td>'.$value['product_title'].'</td>';
                           echo '<td>'.$value['amount_paid'].'</td>';
                           echo '<td>'.$value['payment_id'].'</td>';

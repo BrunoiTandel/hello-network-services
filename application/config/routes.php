@@ -98,6 +98,7 @@ $route['admin/view-users'] = 'HN_Hello_Nw_Services_Admin/view_users';
 $route['admin/view-orders'] = 'HN_Hello_Nw_Services_Admin/view_orders';
 $route['admin/get-data-records'] = 'HN_Hello_Nw_Services_Admin/reports';
 
+ 
 // Verify Admin Password
 $route['admin/verify-admin-password'] = 'verify_Admin/verify_admin_password';
 $route['admin/check-admin-logged-in'] = 'verify_Admin_Login/check_admin_login';
@@ -110,6 +111,14 @@ $route['team-member'] = 'HN_Hello_Nw_Services_Team_Member';
 $route['team-member/verify-login-details'] = 'HN_Hello_Nw_Services_Team_Member_Login/verify_login_details';
 $route['team-member/logout'] = 'HN_Hello_Nw_Services_Team_Member_Logout/index';
 
+$route['team-member/view-new-user'] = 'HN_Hello_Nw_Services_Team_Member/view_new_user';
+$route['team-member/view-all-user'] = 'HN_Hello_Nw_Services_Team_Member/view_all_user';
+
+$route['team-member/get-all-reports'] = 'HN_Hello_Nw_Services_Team_Member/reports';
+$route['team-member/view-all-orders'] = 'HN_Hello_Nw_Services_Team_Member/view_orders';
+$route['team-member/view-all-products'] = 'HN_Hello_Nw_Services_Team_Member/all_products';
+
+ 
 // Team Member All Pages Links
 $route['team-member/pages'] = 'HN_Hello_Nw_Services_Team_Member/pages';
 

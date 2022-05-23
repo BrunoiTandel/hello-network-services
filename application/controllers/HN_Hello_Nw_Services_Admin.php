@@ -84,12 +84,13 @@ class HN_Hello_Nw_Services_Admin extends CI_Controller {
 
 	function view_internal_team_members() {
 		$this->check_Admin_Login_Model->check_admin_login();
+		$data['team'] = $this->db->order_by('internal_team_member_id','DESC')->select('*')->from('internal_team_member')->join('internal_team_role','internal_team_member.internal_team_member_role = internal_team_role.internal_team_role_id','left')->get('')->result_array();
 		$data['title'] = "Internal Team Role";
 		$this->load->view('admin-common/admin-header');
 		$this->load->view('admin-common/admin-sidebar');
 		$this->load->view('admin/internal-team/internal-team-header');
 		$this->load->view('admin/internal-team/view-internal-team-members',$data);
-		$this->load->view('admin-common/admin-footer');
+		// $this->load->view('admin-common/admin-footer');
 	}
 
 	function view_users() {

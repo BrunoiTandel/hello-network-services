@@ -48,7 +48,7 @@
 	      			</li>
 	      			<?php if ($this->session->userdata('logged-in-user')) { ?>
 	      				<li class="nav-item dropdown-hover" id="hdr-sign-in-logout-li">
-	      					<a id="user-logout-btn" href="javascript:void(0)" class="user-logout-btn nav-link profile"><img src="<?php echo base_url()?>assets/user/images/personal.png" /></a>
+	      					<a href="<?php echo $this->config->item('my_base_url')?>my-profile" class="user-logout-btn nav-link profile"><img src="<?php echo base_url()?>assets/user/images/personal.png" /></a>
 	      					<div class="dropdown-hover-content">
 	                           	<div class="profile-mn">
 	                               	<a href="<?php echo $this->config->item('my_base_url')?>my-profile">Profile</a>

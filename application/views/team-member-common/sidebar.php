@@ -23,13 +23,13 @@
   }
   
   if (strtolower(uri_string()) == 'team-member/pages'
-      || strtolower(uri_string()) == 'admin/add-new-user') {
+      || strtolower(uri_string()) == 'team-member/add-new-user') {
     $pages = 'active';
     $pages_img = 'colored-pages.svg';
-  }  else if (strtolower(uri_string()) == 'admin/add-website-services') {
+  }  else if (strtolower(uri_string()) == 'team-member/add-website-services') {
     $website_services = 'active';
     $website_services_img = 'colored-globe.png';
-  } else if (strtolower(uri_string()) == 'factsuite-admin/payment-gateway') {
+  } else if (strtolower(uri_string()) == 'factsuite-team-member/payment-gateway') {
     $payment_gateway = 'active';
     $payment_gateway_img = 'colored-payment.svg';
   } else {
@@ -96,25 +96,7 @@
               <span class="d-block sidebar-nav-link-name">Pages</span>
             </a>
           </li>
-
-          <li class="nav-item sidebar-nav-item-mrgn" title="Services">
-            <a href="<?php echo $this->config->item('my_base_url')?>factsuite-admin/add-website-services" class="sidebar-nav nav-link text-center <?php echo $website_services; ?>">
-              <span class="d-block sidebar-nav-link-img">
-                <img src="<?php echo base_url()?>assets/dist/img/sidebar-images/<?php echo $website_services_img; ?>">
-              </span>
-              <span class="d-block sidebar-nav-link-name">Services</span>
-            </a>
-          </li>
-
-          <li class="nav-item sidebar-nav-item-mrgn" title="Payment Gateway">
-            <a href="<?php echo $this->config->item('my_base_url')?>factsuite-admin/payment-gateway" class="sidebar-nav nav-link text-center <?php echo $payment_gateway; ?>">
-              <span class="d-block sidebar-nav-link-img">
-                <img src="<?php echo base_url()?>assets/dist/img/sidebar-images/<?php echo $payment_gateway_img; ?>">
-              </span>
-              <span class="d-block sidebar-nav-link-name">Payment Gateway</span>
-            </a>
-          </li>
-
+ 
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

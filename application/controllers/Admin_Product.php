@@ -15,7 +15,7 @@
 		}
 
 		function get_all_products() {
-			if (isset($_POST) && $this->input->post('verify_admin_request') == '1' && $this->session->userdata('logged-in-admin')) {
+			if (isset($_POST) && $this->input->post('verify_admin_request') == '1' ) {
 				echo json_encode(array('status'=>'1','all_products'=>$this->admin_Product_Model->get_all_products()));
 			} else {
 				echo json_encode(array('status'=>'201','message'=>'Bad Request Format'));

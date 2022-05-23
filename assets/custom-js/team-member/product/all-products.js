@@ -71,7 +71,7 @@ function handle_file_select_product_thumbnail_image(e) {
 }
 
 get_all_products();
-function get_all_products() {
+function get_all_products() { 
 	$.ajax({
         type  : 'POST',
         url   : base_url+'admin/get-all-products',
@@ -103,17 +103,17 @@ function get_all_products() {
                     	html += '<div class="pl-3" id="single-product-content-'+data.all_products[i].product_id+'">Plan Price : '+data.all_products[i].product_plan_price+'</div>';
                     	html += '<div class="row pb-3">';
                       	html += '<div class="col-md-5"></div>';
-                      	html += '<div class="col-md-3 product-category-edit-delete">';
+                      /*	html += '<div class="col-md-3 product-category-edit-delete">';
                         html += '<div class="custom-control custom-switch pl-0">';
                         html += '<input type="checkbox" '+check+' onclick="change_product_status('+data.all_products[i].product_id+','+data.all_products[i].product_status+')" class="custom-control-input" id="change_product_status_'+data.all_products[i].product_id+'">';
                         html += '<label class="custom-control-label" for="change_product_status_'+data.all_products[i].product_id+'"></label>';
-                        html += '</div></div>';
-                      	html += '<div class="col-md-2 product-category-edit-delete">';
+                        html += '</div></div>';*/
+                      /*	html += '<div class="col-md-2 product-category-edit-delete">';
                         html += '<a class="product-category-delete-a" id="view_product_'+data.all_products[i].product_id+'" onclick="view_product_modal('+data.all_products[i].product_id+')"><i class="fa fa-eye edit-a ml-0"></i></a>';
                       	html += '</div>';
                       	html += '<div class="col-md-2 product-category-edit-delete">';
                         html += '<a class="product-category-delete-a" id="delete_product_'+data.all_products[i].product_id+'" onclick="delete_product_modal('+data.all_products[i].product_id+')"><i class="fa fa-trash edit-a text-danger ml-0"></i></a>';
-                      	html += '</div>';
+                      	html += '</div>';*/
                     	html += '</div>';
                   		html += '</div>';
                 		html += '</div>';
