@@ -93,8 +93,9 @@ function get_all_products() {
 
 				       	html += '<div class="col-md-4 mt-3" id="single-product-main-div-'+data.all_products[i].product_id+'">';
                   		html += '<div class="latest-item">';
-                  		html += '<div id="single-product-image-div-'+data.all_products[i].product_id+'">';
+                  		html += '<div class="text-right mr-2" id="single-product-image-div-'+data.all_products[i].product_id+'">';
                     	// html += '<img src="'+img_base_url+'assets/uploads/product-thumbnail/'+data.all_products[i].product_image+'">';
+                    	html +='<input class="product-plans" type="checkbox" name="product-plans" value="'+data.all_products[i].product_id+'" >';
                   		html += '</div>';
                     	html += '<h3 id="single-product-product-title-'+data.all_products[i].product_id+'">'+data.all_products[i].product_title+'</h3>';
                     	html += '<div class="pl-3" id="single-product-content-'+data.all_products[i].product_id+'">Data Limit : '+data.all_products[i].product_volume_data_limit+'</div>';
@@ -129,6 +130,7 @@ function get_all_products() {
     });
 }
 
+ 
 function change_product_status(product_id,product_status) {
 	var changed_product_status = 0;
 

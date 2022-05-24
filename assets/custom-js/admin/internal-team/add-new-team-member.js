@@ -258,3 +258,45 @@ function import_excel(){
 		$('#error-client').html('<span class="text-danger error-msg-small">Please select a valid excel sheet.</span>');
 	}
 }
+
+
+
+/* user section */
+
+function view_user_details(uid){
+	$.ajax({
+        type  : 'POST',
+        url   : base_url+'admin_Internal_Team/get_single_user_details',
+        data : {
+        	verify_admin_request : '1',
+        	uid : uid
+        },
+        dataType : 'json',
+        success : function(data) {
+	       // alert(JSON.stringify(data))
+	       /*`user_id`, `username`, `password`, `full_name`, `phone`, `email`,
+	        `address`, `note`, `id_proof`, `start_date`, `end_date`, `bandwidth`,
+	         `ip_address`, `extra_ip_address`, `mac_address`, `mac_vendor`, `location`,
+	          `type`, `auto_bind`, `bandwidth_lock`, `status`, `bill`, `due`, `tag`, `zone*/
+	       $("#view-user-details-model").modal('show');
+	       $("#user-id").val(data.user_id);
+	       $("#user-name").val(data.username); 
+	       $("#name").val(data.full_name);
+	       $("#phone").val(data.phone);
+	       $("#email").val(data.email);
+	       $("#address").val(data.address);
+	       $("#note").val(data.note);
+	       $("#id-proof").val(data.id_proof);
+	       $("#start-date").val(data.start_date);
+	       $("#end-date").val(data.end_date);
+	       $("#bandwidth").val(data.bandwidth);
+	       $("#mac-vendor").val(data.mac_vendor);
+	       $("#tag").val(data.tag);
+	       $("#zone").val(data.zone);
+	       // $("#").val(data.type);
+	       $("#status").val(data.status);
+	       $("#bill").val(data.bill);
+	       $("#due").val(data.due);
+	    }
+    });
+}

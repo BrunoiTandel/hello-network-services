@@ -208,4 +208,11 @@ class Admin_Internal_Team_Model extends CI_Model {
 			return array('status'=>'202','message'=>'Something went wrong while insert the users. Please try again');
 		}
 	}
+
+
+	/* user section */
+
+	function get_single_user_details(){
+		return $this->db->where('uid',$this->input->post('uid'))->get('users')->row_array();
+	}
 }

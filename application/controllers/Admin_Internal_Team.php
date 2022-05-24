@@ -200,5 +200,11 @@
 		}
 	}
 
+
+	function get_single_user_details(){
+		$data = $this->admin_Internal_Team_Model->get_single_user_details();
+			echo json_encode($data);
+	}
+
 	}
  
