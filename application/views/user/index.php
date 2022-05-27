@@ -25,6 +25,19 @@
   	<?php } ?>
 </div>
 
+<section id="hm-testi">
+   <div class="container">
+      <div class="hm-testi-hd wow fadeInUp" data-wow-duration="1.8s">
+         <h1 class="wow fadeInUp" data-wow-duration="1.8s">About <span> Us</span></h1>
+      </div>
+      <div class="about-us-desc-div">
+      	<p>GTPL Hathway Limited is India’s largest MSO providing Digital Cable TV services and is the 6th largest Private Wireline Broadband service provider in India. The Company is engaged in Digital Cable TV distribution and high-speed Broadband service distribution reaching an estimated 11 million households in over 1200+ towns across 19 states in India with presence in Gujarat, West Bengal, Maharashtra, Goa, Bihar, Uttar Pradesh, Madhya Pradesh, Jharkhand, Rajasthan, Odisha, Assam, Tripura, Meghalaya, Manipur, Nagaland, Telangana, Andhra Pradesh, Tamil Nadu and Karnataka.<br><br>
+			The Company is the largest Digital Cable TV and Wireline Broadband Service Provider in Gujarat & is a leading Digital Cable TV Service provider in West Bengal. GTPL also has a significant presence in all other markets.<br><br>
+			The Company is constantly striving to enhance and simplify its customers' lives through quality services and products that give them the freedom to be entertained anytime, anywhere.</p>
+      </div>
+   </div>
+</section>
+
 <div class="our-company container-fluid">
 	<div class="container-fluid custom-container-fluid-2">
 		<div class="row mt-5">

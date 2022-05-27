@@ -1323,3 +1323,21 @@ a.nav-link.profile img {
 .user-plan-list table.table th {
     border-top: 0 !important;
 }
+
+@media screen and (min-width: 1900px) {
+    .package-details-div {
+        width: 75%;
+    }
+
+    .most-popular {
+        right: 12%;
+    }
+
+    .package-details-div:hover {
+        width: 80%;
+    }
+
+    .package-details-div:hover .most-popular {
+        right: 9.5%;
+    }
+}
