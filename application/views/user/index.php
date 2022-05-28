@@ -89,13 +89,13 @@
 			?>
 				<div class="col-md-4 package-details-main-div<?php echo $most_popuar_class;?>">
 					<div class="package-details-div">
-						<?php echo $best_item_div;?>
+						<div class="most-popular">Best Item</div>
 						<span class="package-name"><?php echo $value['product_title'];?></span>
 						<span class="package-data-limit">Data Volume Limit : <?php echo $value['product_volume_data_limit'];?></span>
 						<span class="package-speed">Speed : upto <?php echo $value['product_data_speed'];?></span>
 						<span class="package-validity">Validity : <?php echo $value['product_data_validation'];?></span>
 						<span class="package-price">Plan Price : <i class="fa fa-inr"></i> <?php echo $value['product_plan_price'];?><br>(Exclusive of GST)</span>
-						<button class="buy-plan-btn" onclick="but_now('<?php echo md5(base64_encode(md5(md5($value['product_id']))));?>')">Buy</button>
+						<a href="<?php echo $this->config->item('my_base_url')?>package-details/<?php echo md5(base64_encode(md5(md5($value['product_id']))));?>" class="buy-plan-btn">View Details</a>
 					</div>
 				</div>
 			<?php } ?>	

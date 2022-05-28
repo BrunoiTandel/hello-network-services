@@ -215,6 +215,8 @@ $route['user/get-user-details'] = 'User_Profile/get_user_details';
 $route['user/update-profile-details'] = 'User_Profile/update_profile_details';
 $route['user/update-user-password'] = 'User_Profile/update_user_password';
 
+// User Package
+$route['package-details'] = 'User_Packages/';
 
 
 /* API */
