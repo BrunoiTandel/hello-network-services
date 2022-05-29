@@ -93,4 +93,16 @@ class Admin_Product_Model extends CI_Model {
 		}
 		return array('status'=>'0','message'=>'Something went wrong while deleting the product.');
 	}
+
+	function get_data_yearly_monthly(){
+		$join ='';
+		if($this->session->userdata('logged-in-team-member')) {
+			$join = 'LEFT JOIN `users` ON `user_purchased_package`.`user_id` = `users`.`uid` where users.tag="bbnl"';
+		}
+		
+		return $this->db->query("SELECT YEAR(purchased_date) as Year, MONTH(purchased_date)  as Month, COUNT(*) as SalesCount, DATE_FORMAT(date(purchased_date),'%M %Y') as monthname, SUM(amount_paid) as amount_paid
+			FROM user_purchased_package ".$join." 
+			GROUP BY YEAR(purchased_date), MONTH(purchased_date) 
+			ORDER BY user_purchased_package_id DESC")->result_array();
+	}
 }

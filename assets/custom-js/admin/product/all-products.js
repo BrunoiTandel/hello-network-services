@@ -95,7 +95,7 @@ function get_all_products() {
                   		html += '<div class="latest-item">';
                   		html += '<div class="text-right mr-2" id="single-product-image-div-'+data.all_products[i].product_id+'">';
                     	// html += '<img src="'+img_base_url+'assets/uploads/product-thumbnail/'+data.all_products[i].product_image+'">';
-                    	html +='<input class="product-plans" type="checkbox" name="product-plans" value="'+data.all_products[i].product_id+'" >';
+                    	html +='<input class="product-plans" type="radio" name="product-plans" value="'+data.all_products[i].product_id+'" >';
                   		html += '</div>';
                     	html += '<h3 id="single-product-product-title-'+data.all_products[i].product_id+'">'+data.all_products[i].product_title+'</h3>';
                     	html += '<div class="pl-3" id="single-product-content-'+data.all_products[i].product_id+'">Data Limit : '+data.all_products[i].product_volume_data_limit+'</div>';
@@ -313,4 +313,56 @@ function delete_product(product_id) {
 	variable_array['delete_btn_id'] = '#delete-product-btn';
 	variable_array['ajax_pass_data'] = {verify_admin_request : 1, product_id : product_id};
 	return delete_uploaded_image(variable_array);
+}
+
+
+$("#btn-user-order").on('click',function(){ 
+	var product_val = '';
+	$(".product-plans:checked").each(function(){
+		product_val = $(this).val(); 
+	}); 
+
+	$("#order-product-modal").modal('show');
+
+if (product_val != '') {
+var html ='<button class="btn btn-default btn-close" data-dismiss="modal">Close</button>'+
+'<button class="btn btn-add btn-add btn-update text-white mt-0 modal-btn-gap" onclick="order_now()" id="new-order-product-btn">Confirm Order</button>';
+$("#view-edit-cancel-btn-div-1").html(html);
+$("#order-now-alert").html("<span>Are you sure you want to Active this Data Plan?</span>");
+
+// order_now(product_val);
+}else{
+var html ='<button class="btn btn-default btn-close" data-dismiss="modal">Close</button>'; 
+$("#view-edit-cancel-btn-div-1").html(html);
+$("#order-now-alert").html("<span class='text-danger'>Please Select Any One Data Plan.</span>");	
+}
+});
+
+function order_now(){
+	var product_val = '';
+	$(".product-plans:checked").each(function(){
+		product_val = $(this).val(); 
+	}); 
+
+	$users = $("#users").val();
+	$.ajax({
+			type: "POST",
+		  	url: base_url+"admin_Product/add_product_order",
+		  	data:{user:$users,product:product_val},
+		  	dataType: 'json', 
+		  	success: function(data) {
+		  		if (data.status == 1) {
+			  	 
+				  		toastr.success('product order has been successfully added.');
+				  		 
+						$('#order-product-modal').modal('hide');
+				  	 
+			  	} else {
+			  		toastr.error('Something went wrong while adding order. Please try again.');
+			  	}
+		  	},
+		  	error: function(data) {
+		  		 	toastr.error('Something went wrong while updating the Order. Please try again.');
+		  	}
+		});
 }

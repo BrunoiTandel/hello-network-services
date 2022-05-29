@@ -70,4 +70,32 @@ class User_Packages_Modal extends CI_Model {
 			return array('status'=>'0','message'=>'Wrong Package selected. Please select the correct package.');
 		}
 	}
+
+
+
+	function store_purchased_package_details_direct() {
+		$where_array = array(
+			'product_status' => 1,
+			'product_id' => $this->input->post('product')
+
+		);
+		$package_details = $this->db->where($where_array)->get('products')->row_array();
+		if ($package_details != '') { 
+			$add_data = array(
+				'user_id' => $this->input->post('user'),
+				'package_id' => $package_details['product_id'],
+				'payment_id' => '-',
+				'amount_paid' => (float)($package_details['product_plan_price'] * (18 / 100))+$package_details['product_plan_price'],
+				'gst_applied' => '18',
+				'package_details' => json_encode($package_details),
+			);
+
+			if ($this->db->insert('user_purchased_package',$add_data)) {
+				return array('status'=>'1','message'=>'Package purchased successfully.');
+			}
+			return array('status'=>'2','message'=>'Something went wrong while purchasing the package.');
+		} else {
+			return array('status'=>'0','message'=>'Wrong Package selected. Please select the correct package.');
+		}
+	}
 }

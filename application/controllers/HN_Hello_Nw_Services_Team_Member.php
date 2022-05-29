@@ -10,6 +10,7 @@ class HN_Hello_Nw_Services_Team_Member extends CI_Controller {
 	  	$this->load->model('loginModel');
 	  	$this->load->model('check_Team_Member_Login_Model');
 	  	$this->load->model('orderModel');
+	  	$this->load->model('admin_users_Model');
 	}
 
 	function index() {
@@ -22,6 +23,7 @@ class HN_Hello_Nw_Services_Team_Member extends CI_Controller {
 
 	function dashboard() {
 		$this->check_Team_Member_Login_Model->check_team_member_login();
+		$data['analytics'] = $this->admin_users_Model->get_analytics();
 		$data['title'] = "Team Member Dashboard";
 		$this->load->view('team-member-common/header');
 		$this->load->view('team-member-common/sidebar');
