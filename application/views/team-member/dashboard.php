@@ -195,8 +195,8 @@ function all_year_get_data(years){
     for (var i = 0; i < years.length; i++) {  
       year.push(years[i].monthname);
       total.push(years[i].amount_paid);
-      hello.push((years[i].amount_paid/100) * 25);
-      bbnl.push((years[i].amount_paid/100) * 75);
+      hello.push((years[i].amount_paid/100) * 75);
+      bbnl.push((years[i].amount_paid/100) * 25);
     }
   }
 

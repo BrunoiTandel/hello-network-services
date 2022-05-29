@@ -94,6 +94,7 @@ function get_all_products() {
 				       	html += '<div class="col-md-4 mt-3" id="single-product-main-div-'+data.all_products[i].product_id+'">';
                   		html += '<div class="latest-item">';
                   		html += '<div id="single-product-image-div-'+data.all_products[i].product_id+'">';
+                    	html +='<input class="product-plans float-right mt-2 mr-2" type="radio" name="product-plans" value="'+data.all_products[i].product_id+'" >';
                     	// html += '<img src="'+img_base_url+'assets/uploads/product-thumbnail/'+data.all_products[i].product_image+'">';
                   		html += '</div>';
                     	html += '<h3 id="single-product-product-title-'+data.all_products[i].product_id+'">'+data.all_products[i].product_title+'</h3>';

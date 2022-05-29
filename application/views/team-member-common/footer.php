@@ -1,10 +1,10 @@
 <!-- /.content-wrapper -->
-  <footer class="main-footer border-0">
+  <footer class="main-footer border-0 d-none">
     
   </footer>
 
   <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
+  <aside class="control-sidebar control-sidebar-dark d-none">
     <!-- Control sidebar content goes here -->
   </aside>
   <!-- /.control-sidebar -->
@@ -53,9 +53,44 @@
 <!-- DataTables -->
 <script src="<?php echo base_url()?>assets/plugins/datatables/jquery.dataTables.js"></script>
 <script src="<?php echo base_url()?>assets/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+
+
+<!-- DataTables  & Plugins -->
+<!-- <script src="<?php echo base_url()?>assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="<?php echo base_url()?>assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script> -->
+<script src="<?php echo base_url()?>assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="<?php echo base_url()?>assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="<?php echo base_url()?>assets/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="<?php echo base_url()?>assets/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="<?php echo base_url()?>assets/plugins/jszip/jszip.min.js"></script>
+<script src="<?php echo base_url()?>assets/plugins/pdfmake/pdfmake.min.js"></script>
+<script src="<?php echo base_url()?>assets/plugins/pdfmake/vfs_fonts.js"></script>
+<script src="<?php echo base_url()?>assets/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="<?php echo base_url()?>assets/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="<?php echo base_url()?>assets/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+
 <!-- Horizontal Scrollbar -->
 <script src="<?php echo base_url()?>assets/dist/js/jquery.mousewheel.js"></script>
 <script src="<?php echo base_url()?>assets/dist/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": false, "lengthChange": true, "autoWidth": true,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
 
 <script>
   $(function () {
@@ -145,9 +180,9 @@
   // $('.select2').select2()
 </script>
 
-<!-- <script src="<?php echo base_url()?>assets/custom-js/team-member/check-admin-login.js"></script> -->
+<script src="<?php echo base_url()?>assets/custom-js/admin/check-admin-login.js"></script>
 
-<?php if ($this->session->userdata('logged-in-team-member')) { ?>
+<?php if ($this->session->userdata('logged-in-admin')) { ?>
   <script>
     // check_admin_login();
   </script>
