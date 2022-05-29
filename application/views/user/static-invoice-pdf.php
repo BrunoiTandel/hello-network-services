@@ -214,7 +214,7 @@ $html = '<!DOCTYPE html>
                         <div class="fs-hdr-comp-name">Hello Network Service Pvt Ltd</div>
                     </td>
                     <td class="hdr-tax-invoice-main-td">
-                        <div class="hdr-invoice-date-div">Date:  2022-05-14 14:23:33</div>
+                        <div class="hdr-invoice-date-div">Date:  2022-05-29 14:23:33</div>
                     </td>
                 </tr>
             </table>
@@ -239,7 +239,7 @@ $html = '<!DOCTYPE html>
                     </td>
                     <td>
                         <span class="text-bold">User ID:</span> #10995<br>
-                        <span class="text-bold">Due Date:</span> 2022-06-11<br>
+                        <span class="text-bold">Due Date:</span> 2022-05-29<br>
                         <span class="text-bold">Bank Name:</span> HDFC Bank<br>
                         <span class="text-bold">Account Name:</span> : HELLO NETWORK SERVICE PVT LTD<br>
                         <span class="text-bold">Account Number:</span> 50200057405255<br>
@@ -301,7 +301,7 @@ $html = '<!DOCTYPE html>
                     </tr>
                     <tr>
                         <td class="text-bold">Sub Total:</td>
-                        <td class="text-right">₹2,250.00</td>
+                        <td class="text-right">₹588</td>
                     </tr>
                     <tr>
                         <td colspan="2">
@@ -310,7 +310,7 @@ $html = '<!DOCTYPE html>
                     </tr>
                     <tr>
                         <td class="text-bold">Amount Paid:</td>
-                        <td class="text-right"><span class="text-bold">₹</span>405.00</td>
+                        <td class="text-right"><span class="text-bold">₹</span>588</td>
                     </tr>
                     <tr>
                         <td colspan="2">
@@ -319,7 +319,7 @@ $html = '<!DOCTYPE html>
                     </tr>
                     <tr>
                         <td class="font-weight-bold">Total Due:</td>
-                        <td class="text-right"><span class="text-bold">₹</span>2,250.00</td>
+                        <td class="text-right"><span class="text-bold">₹</span>0</td>
                     </tr>
                 </table>
             </div>
@@ -328,7 +328,7 @@ $html = '<!DOCTYPE html>
             <table>
                 <tbody>
                     <tr>
-                        <td>Portal: <span class="text-bold">vansda-hello.isp.krutarth.network</span></td>
+                        <td>Portal: <span class="text-bold">https://hellofibernet.in/</span></td>
                     </tr>
                 </tbody>
             </table>
