@@ -108,11 +108,13 @@ html, body {
     background: #f5f5f5;
     text-align: center;
     margin: auto;
-    transition: .2s ease-in-out;
+    transition: .5s ease-in-out;
 }
 
 .package-details-div:hover {
-    width: 95%;
+    /*width: 95%;*/
+    transition: .5s ease-in-out;
+    transform: scale(1.1);
 }
 
 .package-details-div span {
@@ -151,6 +153,16 @@ html, body {
     color: #FFFFFF;
     transition: .2s ease-in-out;
     text-decoration: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buy-plan-btn:hover {
+    background: #F59E1D;
+    color: #FFFFFF;
+    transition: .2s ease-in-out;
+    text-decoration: none;
 }
 
 .package-details-div:hover .buy-plan-btn {
@@ -174,7 +186,7 @@ html, body {
 }
 
 .package-details-div:hover .most-popular {
-    right: 2.5%;
+    right: -5.5%;
 }
 
 .most-popular-active .package-details-div {
@@ -1334,10 +1346,15 @@ a.nav-link.profile img {
     }
 
     .package-details-div:hover {
-        width: 80%;
+        /*width: 80%;*/
+        transform: scale(1.1);
     }
 
     .package-details-div:hover .most-popular {
         right: 9.5%;
+    }
+
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 90% !important;
     }
 }
