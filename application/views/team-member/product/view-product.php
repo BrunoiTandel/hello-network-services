@@ -4,6 +4,24 @@
         <div class="content-nav-tabs-container">
           <div class="tab-content">
             <div class="tab-pane fade show active"role="tabpanel" aria-labelledby="custom-content-below-home-tab">
+              <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                  <label>Select User</label>
+                  <select class="input-txt" id="users">
+                    <?php 
+                      if (count($users)) {
+                        foreach ($users as $key => $val) {
+                          echo "<option value='{$val['uid']}'>{$val['full_name']}</option>";
+                        }
+                      }
+                    ?>
+                  </select>
+                </div>
+                <div class="col-sm-3 mt-3">
+                  <button id="btn-user-order" class="btn btn-add btn-update text-white"> Order Now</button>
+                </div>
+              </div>
               <div class="row" id="product-list-div"></div>
             </div>
           </div>

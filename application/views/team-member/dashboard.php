@@ -68,33 +68,14 @@
             </div>
            </a>
          </div>
-
-         <div class="col-md-3">
-           <a href="<?php echo $this->config->item('my_base_url')?>admin/internal-team-role">
-            <div class="edit-pages-a">
-              <div class="row">
-                <div class="col-md-6">
-                  <!-- <img src="<?php echo base_url()?>assets/dist/img/sidebar-images/colored-pages.svg"> -->
-                  <h2><?php echo $analytics['internal_team_member']; ?></h2>
-                </div>
-                <div class="col-md-6 text-right">
-                  <!-- <i class="fa fa-angle-right"></i> -->
-                </div>
-              </div>
-              <span class="card-pages-name">Internal Team</span>
-              <div>  
-              </div>
-            </div>
-           </a>
-         </div>
-
-         <div class="col-md-3 mt-4">
+ 
+         <div class="col-md-3 ">
            <a href="#">
             <div class="edit-pages-a">
               <div class="row">
                 <div class="col-md-6">
                   <!-- <img src="<?php echo base_url()?>assets/dist/img/sidebar-images/colored-pages.svg"> -->
-                  <span style="font-size: 25px;"><b><?php echo $analytics['total']; ?></b></span>
+                  <span style="font-size: 25px;"><b><?php echo isset($analytics['total'])?$analytics['total']:0; ?></b></span>
                 </div>
                 <div class="col-md-6 text-right">
                   <!-- <i class="fa fa-angle-right"></i> -->
@@ -184,18 +165,12 @@
 
 get_yearly_cases();
 function get_yearly_cases() { 
-
-    var date_pick = $('#from-date-recievals1').val();
-  var status = $('#recievals_status1').val(); 
-  var client = $('#client').val(); 
+ 
     var d = new Date();
 var today = ('0'+(d.getMonth()+1)).slice(-2) + '/' + ('0'+d.getDate()).slice(-2)  + '/' +  d.getFullYear();
   var comp = today+' - '+today;
   
-  var datetime = date_pick;
-  if (comp == date_pick) {
-    datetime = ''; 
-  }
+ 
   $.ajax({
     type: "POST",
     url:  base_url+"admin_Product/get_data_yearly", 
@@ -204,12 +179,12 @@ var today = ('0'+(d.getMonth()+1)).slice(-2) + '/' + ('0'+d.getDate()).slice(-2)
       is_admin : 1, 
     },
     success: function(data) {
-      all_year_get_data(data)
+      all_year_get_data(data) 
     }
   });
 } 
 var pending_case_count_chart ='';
-function all_year_get_data(years){
+function all_year_get_data(years){   
   var ctx = document.getElementById('year_case_inventoty_chart').getContext('2d');
   var year = [];
   var total = [];
@@ -217,7 +192,7 @@ function all_year_get_data(years){
   var bbnl = [];
 
   if (years.length > 0) {
-    for (var i = 0; i < years.length; i++) {
+    for (var i = 0; i < years.length; i++) {  
       year.push(years[i].monthname);
       total.push(years[i].amount_paid);
       hello.push((years[i].amount_paid/100) * 25);
@@ -254,11 +229,7 @@ function all_year_get_data(years){
   }
  
   pending_case_count_chart = new Chart(ctx, {
-    // doughnut
-    /*type: 'bar',
-    data: sales_by_item_count_data,
-    options: sales_by_item_count_options  */    
-
+    
       type: 'bar',
         data: sales_by_item_count_data,
         beginAtZero: true,
@@ -268,7 +239,7 @@ function all_year_get_data(years){
                 display: false
             },*/
              maintainAspectRatio     : false,
-    datasetFill             : false,
+              datasetFill: false,
            /* title: {
                 display: false,
                 text: 'Chart.js bar Chart'
@@ -295,86 +266,5 @@ function all_year_get_data(years){
 }
 
 
-
-  var ticksStyle = {
-    fontColor: '#495057',
-    fontStyle: 'bold'
-  }
-   var mode = 'index'
-  var intersect = true
-
-var visitorsChart ='';
-function all_year_get_data1(years){
-  var ctx = document.getElementById('year_case_inventoty_chart').getContext('2d');
-  var year = [];
-  var total = [];
-  var hello = [];
-  var bbnl = [];
-  if (years.length > 0) {
-    for (var i = 0; i < years.length; i++) {
-      year.push(years[i].monthname);
-      total.push(years[i].amount_paid);
-      hello.push((years[i].amount_paid/100) * 25);
-      bbnl.push((years[i].amount_paid/100) * 75);
-    }
-  }
-  
-var sum = eval(total.join("+"));
- // var $visitorsChart = $('#year_case_inventoty_chart')
-  // eslint-disable-next-line no-unused-vars
-   visitorsChart = new Chart(ctx, {
-    data: {
-      labels: year,
-      datasets: [{
-        type: 'bar',
-        data: total,
-        backgroundColor: 'transparent',
-        borderColor: '#007bff',
-        pointBorderColor: '#007bff',
-        pointBackgroundColor: '#007bff',
-        fill: false
-        // pointHoverBackgroundColor: '#007bff',
-        // pointHoverBorderColor    : '#007bff'
-      }]
-    },
-    options: {
-      maintainAspectRatio: false,
-      tooltips: {
-        mode: mode,
-        intersect: intersect
-      },
-      hover: {
-        mode: mode,
-        intersect: intersect
-      },
-      legend: {
-        display: false
-      },
-      scales: {
-        yAxes: [{
-          // display: false,
-          gridLines: {
-            display: true,
-            lineWidth: '4px',
-            color: '#007bff',
-            zeroLineColor: 'transparent'
-          },
-          ticks: $.extend({
-            beginAtZero: true,
-            suggestedMax: sum
-          }, ticksStyle)
-        }],
-        xAxes: [{
-          display: true,
-          gridLines: {
-            display: false
-          },
-          ticks: ticksStyle
-        }]
-      }
-    }
-  }) 
-}
-
-
+ 
   </script>

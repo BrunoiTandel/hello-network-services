@@ -1,5 +1,23 @@
           <div class="tab-content">
             <div class="tab-pane fade show active"role="tabpanel" aria-labelledby="custom-content-below-home-tab">
+              <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                  <label>Select User</label>
+                  <select class="input-txt" id="users">
+                    <?php 
+                      if (count($users)) {
+                        foreach ($users as $key => $val) {
+                          echo "<option value='{$val['uid']}'>{$val['full_name']}</option>";
+                        }
+                      }
+                    ?>
+                  </select>
+                </div>
+                <div class="col-sm-3 mt-3">
+                  <button id="btn-user-order" class="btn btn-add btn-update text-white"> Order Now</button>
+                </div>
+              </div>
               <div class="row" id="product-list-div"></div>
             </div>
           </div>
@@ -125,5 +143,26 @@
     </div>
   </div>
 <!-- Delete Product Modal Ends -->
+
+
+<!-- Delete Product Modal Starts -->
+  <div class="modal fade" id="order-product-modal">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content modal-content-view-collection-category">
+        <div class="modal-header border-0">
+          <h4 class="modal-title-edit-coupon modal-title-delete" id="order-now-alert">Are you sure you want to Active this Data Plan?</h4>
+        </div>
+        <div class="modal-body modal-body-edit-coupon">
+          <div class="row mt-2">
+            <div id="view-edit-cancel-btn-div-1" class="col-md-12 mt-2 text-center">
+              <button class="btn btn-default btn-close" data-dismiss="modal">Close</button> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Delete Product Modal Ends -->
+
 
 <script src="<?php echo base_url()?>assets/custom-js/admin/product/all-products.js"></script>

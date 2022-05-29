@@ -8,6 +8,7 @@
 		  	$this->load->database();
 		  	$this->load->helper('url');  
 		  	$this->load->model('admin_Product_Model');
+		  	$this->load->model('user_Packages_Modal');
 		}
 
 		function index() {
@@ -125,6 +126,19 @@
 			} else {
 				echo json_encode(array('status'=>'201','message'=>'Bad Request Format'));
 			}
+		}
+
+
+		function get_data_yearly() {
+			if (isset($_POST) && $this->input->post('is_admin') == '1') {
+				echo json_encode($this->admin_Product_Model->get_data_yearly_monthly());
+			} else {
+				echo json_encode(array('status'=>'201','message'=>'Bad Request Format'));
+			}
+		}
+
+		function add_product_order(){
+			echo json_encode($this->user_Packages_Modal->store_purchased_package_details_direct());
 		}
 	}
 ?>
