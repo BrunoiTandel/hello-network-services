@@ -1,4 +1,4 @@
-function but_now(package_id,e) {
+function but_now(e) {
     var formdata = new FormData();
     formdata.append('verify_user_request',1);
     formdata.append('package_id',package_id);

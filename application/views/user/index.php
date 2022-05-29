@@ -246,6 +246,4 @@
 	</div>
 </div>
 
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script src="<?php echo base_url()?>assets/custom-js/user/contact-us.js"></script>
-<script src="<?php echo base_url()?>assets/custom-js/user/purchase-plan.js"></script>

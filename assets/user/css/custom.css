@@ -165,6 +165,12 @@ html, body {
     text-decoration: none;
 }
 
+.buy-plan-btn-2 {
+    margin: unset;
+    margin-top: 30px;
+    float: right;
+}
+
 .package-details-div:hover .buy-plan-btn {
     background: #F59E1D;
 }
@@ -199,6 +205,10 @@ html, body {
 .most-popular-active .package-validity,
 .most-popular-active .package-price {
     color: #FFFFFF;
+}
+
+#package-details-main-div {
+    padding-top: 10px;
 }
 
 .error-msg-small, .error-msg {

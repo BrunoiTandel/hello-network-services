@@ -216,8 +216,11 @@ $route['user/update-profile-details'] = 'User_Profile/update_profile_details';
 $route['user/update-user-password'] = 'User_Profile/update_user_password';
 
 // User Package
-$route['package-details'] = 'User_Packages/';
+$route['package-details/(:any)'] = 'User_Packages/index/$1';
 
 
 /* API */
 $route['admin/insert-update-new-hello-network-user-details'] = 'Admin_Internal_Team/get_new_user_insert_request';
+
+// Static Invoice PDF
+$route['hello-static-invoice-pdf'] = 'User_Profile/static_pdf';

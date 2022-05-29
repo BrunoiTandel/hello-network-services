@@ -24,6 +24,10 @@ class User_Profile extends CI_Controller {
 		$this->load->view('user-common/footer');
 	}
 
+	function static_pdf() {
+		$this->load->view('user/static-invoice-pdf');
+	}
+
 	function get_user_details() {
 		if (isset($_POST) && $this->input->post('verify_user_request') == '1') {
 			if ($this->session->userdata('logged-in-user')) {

@@ -5,10 +5,10 @@ class User_Login_Modal extends CI_Model {
 
 	function verify_login() {
 		$where_array = array(
-			'user_mobile_number' => $this->input->post('mobile_no_or_email_id'),
-			'user_password' => MD5($this->input->post('password'))
+			'phone' => $this->input->post('mobile_no_or_email_id'),
+			'password' => $this->input->post('password')
 		);
-		$get_user_details = $this->db->where($where_array)->get('user')->row_array();
+		$get_user_details = $this->db->where($where_array)->get('users')->row_array();
 		
 		if ($get_user_details != '') {
 			$this->session->set_userdata('logged-in-user',$get_user_details);

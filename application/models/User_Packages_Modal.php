@@ -9,26 +9,28 @@ class User_Packages_Modal extends CI_Model {
 
 	function get_purchased_packages() {
 		$user_details = $this->session->userdata('logged-in-user');
-		return $this->db->where('user_id',$user_details['user_id'])->order_by('user_purchased_package_id','DESC')->get('user_purchased_package')->result_array();
+		return $this->db->where('user_id',$user_details['uid'])->order_by('user_purchased_package_id','DESC')->get('user_purchased_package')->result_array();
 	}
 
-	function get_purchase_package_details() {
+	function get_purchase_package_details($package_id) {
 		$where_array = array(
 			'product_status' => 1,
-			'MD5(TO_BASE64(MD5(MD5(product_id))))' => $this->input->post('package_id')
+			'MD5(TO_BASE64(MD5(MD5(product_id))))' => $package_id
 
 		);
 		$package_details = $this->db->where($where_array)->get('products')->row_array();
 		if ($package_details != '') {
-
 			$gst_details = $this->get_gst_details();
+			
+			$data['package_details'] = $package_details;
+
 			$data['package_payment_amount'] = ((float)$package_details['product_plan_price'] + (((float)$package_details['product_plan_price']) * ((float)$gst_details['gst_percentage'] / 100))) * 100;
 			
 			$user_details = $this->session->userdata('logged-in-user');
 			$data['user_details'] = array(
-				'name' => $user_details['user_first_name'].' '.$user_details['user_last_name'],
-				'mobile_number' => $user_details['user_mobile_number'],
-				'email_id' => $user_details['user_email_id']
+				'name' => $user_details['full_name'],
+				'mobile_number' => $user_details['phone'],
+				'email_id' => $user_details['email']
 			);
 
 			$data['payment_key'] = $this->admin_Payment_Details_Model->get_payment_details()['api_authentication_key'];
@@ -54,7 +56,7 @@ class User_Packages_Modal extends CI_Model {
 		if ($package_details != '') {
 			$user_details = $this->session->userdata('logged-in-user');
 			$add_data = array(
-				'user_id' => $user_details['user_id'],
+				'user_id' => $user_details['uid'],
 				'package_id' => $package_details['product_id'],
 				'payment_id' => $this->input->post('razorpay_payment_id'),
 				'amount_paid' => (float)$this->input->post('package_amount') / 100,
