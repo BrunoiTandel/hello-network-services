@@ -98,6 +98,7 @@ class HN_Hello_Nw_Services_Team_Member extends CI_Controller {
 
 	function all_products() {
 		$this->check_Team_Member_Login_Model->check_team_member_login();
+		$data['user'] = $this->db->where('tag','bbnl')->order_by('uid','ASC')->get('users')->result_array();
 		$data['title']="Admin Dashboard";
 		$this->load->view('team-member-common/header');
 		$this->load->view('team-member-common/sidebar');
