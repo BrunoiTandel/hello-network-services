@@ -11,6 +11,7 @@ class HN_Hello_Nw_Services_Admin extends CI_Controller {
 	  	$this->load->model('check_Admin_Login_Model');
 	  	$this->load->model('admin_users_Model');
 	  	$this->load->model('orderModel');
+	  	$this->load->model('user_Packages_Modal');
 	} 
 
 	function index() {
@@ -29,6 +30,11 @@ class HN_Hello_Nw_Services_Admin extends CI_Controller {
 		$this->load->view('admin-common/admin-sidebar');
 		$this->load->view('admin/dashboard',$data);
 		$this->load->view('admin-common/admin-footer');
+	}
+
+	function invoice($id){
+		$data['invoice'] = $this->user_Packages_Modal->get_single_purchased_packages($id); 
+		$this->load->view('admin/invoice/final-invoice',$data);
 	}
 
 
