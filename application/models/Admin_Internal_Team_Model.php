@@ -147,8 +147,9 @@ class Admin_Internal_Team_Model extends CI_Model {
 			'internal_team_member_mobile_number' => $this->input->post('mobile_number'),
 			'internal_team_member_email_id' => $this->input->post('email_id'),
 			'internal_team_member_block' => $this->input->post('block'),
-			'internal_team_member_password' => MD5($password),
+			'internal_team_member_password' => MD5($this->input->post('mobile_number')),
 			'internal_team_member_district' => $this->input->post('district'),
+			'tag' => $this->input->post('tag'),
 			'internal_team_member_address' => $this->input->post('address')
 		);
 

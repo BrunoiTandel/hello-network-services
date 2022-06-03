@@ -30,7 +30,8 @@ class Dump_Data extends CI_Controller {
   $w ='';
   $jin = '';
     if($this->session->userdata('logged-in-team-member')) {
-      $join = ' users.tag="bbnl"';
+      $user = $this->session->userdata('logged-in-team-member');
+      $join = ' users.tag="'.$user['tag'].'"';
       $w = ' where ';
       $jin = 'LEFT JOIN `users` ON `user_purchased_package`.`user_id` = `users`.`uid` ';
     }
@@ -112,7 +113,8 @@ class Dump_Data extends CI_Controller {
     $w ='';
     $jin = '';
       if($this->session->userdata('logged-in-team-member')) {
-        $join = ' users.tag="bbnl"';
+        $user = $this->session->userdata('logged-in-team-member');
+        $join = ' users.tag="'.$user['tag'].'"';
         $w = ' where ';
         $jin = 'LEFT JOIN `users` ON `user_purchased_package`.`user_id` = `users`.`uid` ';
       }

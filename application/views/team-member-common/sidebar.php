@@ -53,7 +53,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo $this->config->item('my_base_url')?>factsuite-admin/logout">
+        <a class="nav-link" href="<?php echo $this->config->item('my_base_url')?>logout">
           <span class="header-admin-greetings logout-fa"><i class="fa fa-power-off" aria-hidden="true"></i></span>
         </a>
       </li>

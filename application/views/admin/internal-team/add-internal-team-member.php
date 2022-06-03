@@ -31,6 +31,11 @@
                   <input type="text" class="input-txt" name="team-member-district" id="team-member-district" placeholder="District">
                   <div id="team-member-district-error-msg-div"></div>
                 </div>
+                <div class="col-sm-4 mt-3">
+                  <span class="product-details-span-light">Tag</span>
+                  <input type="text" class="input-txt" name="team-member-tag" id="team-member-tag" placeholder="Tag">
+                  <div id="team-member-tag-error-msg-div"></div>
+                </div>
                 <div class="col-sm-12 mt-3">
                   <span class="product-details-span-light">Address</span>
                   <textarea class="input-txt" name="team-member-address" id="team-member-address" placeholder="Address" rows="2"></textarea>

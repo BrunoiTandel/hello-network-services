@@ -16,10 +16,12 @@ class Admin_users_Model extends CI_Model {
 		$total = $this->db->query('Select sum(amount_paid) as amount_paid from user_purchased_package')->row_array();
 
 		if($this->session->userdata('logged-in-team-member')) {
-			$user = $this->db->where('tag','bbnl')->get('users')->num_rows(); 
-		$user_purchased_package = $this->db->query('Select * from user_purchased_package LEFT JOIN `users` ON `user_purchased_package`.`user_id` = `users`.`uid` where users.tag="bbnl"')->num_rows();
+			$user = $this->session->userdata('logged-in-team-member');
+			// $this->db->where('users.tag',$user['tag']);
+			$user = $this->db->where('tag',$user['tag'])->get('users')->num_rows(); 
+		$user_purchased_package = $this->db->query('Select * from user_purchased_package LEFT JOIN `users` ON `user_purchased_package`.`user_id` = `users`.`uid` where users.tag="'.$user['tag'].'"')->num_rows();
 		$products = $this->db->get('products')->num_rows();
-		$total = $this->db->query('Select sum(amount_paid) as amount_paid from user_purchased_package LEFT JOIN `users` ON `user_purchased_package`.`user_id` = `users`.`uid` where users.tag="bbnl"')->row_array();
+		$total = $this->db->query('Select sum(amount_paid) as amount_paid from user_purchased_package LEFT JOIN `users` ON `user_purchased_package`.`user_id` = `users`.`uid` where users.tag="'.$user['tag'].'"')->row_array();
 		}
 		return array(
 			'user' => $user,
