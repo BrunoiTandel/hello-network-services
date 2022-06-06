@@ -548,7 +548,8 @@ $uat_list_riyatsa = array(
 );
 
 $production_ip_list = array( 
-	'128.199.27.25'
+	'128.199.27.25',
+	'139.59.88.93'
 );
  
 $config['uat_list_riyatsa'] = $uat_list_riyatsa;
