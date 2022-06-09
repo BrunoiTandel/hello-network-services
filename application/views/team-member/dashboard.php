@@ -11,7 +11,7 @@
       <div class="row">
 
          <div class="col-md-3">
-           <a href="<?php echo $this->config->item('my_base_url')?>admin/view-users">
+           <a href="<?php echo $this->config->item('my_base_url')?>team-member/add-new-user">
             <div class="edit-pages-a">
               <div class="row">
                 <div class="col-md-6">
@@ -31,7 +31,7 @@
 
 
          <div class="col-md-3">
-           <a href="<?php echo $this->config->item('my_base_url')?>admin/view-orders">
+           <a href="<?php echo $this->config->item('my_base_url')?>team-member/view-all-orders">
             <div class="edit-pages-a">
               <div class="row">
                 <div class="col-md-6">
@@ -51,7 +51,7 @@
 
 
          <div class="col-md-3">
-           <a href="<?php echo $this->config->item('my_base_url')?>admin/all-products">
+           <a href="<?php echo $this->config->item('my_base_url')?>team-member/view-all-products">
             <div class="edit-pages-a">
               <div class="row">
                 <div class="col-md-6">
