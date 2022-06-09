@@ -146,13 +146,14 @@ function all_year_get_data_inventory(){
 */
 get_revenue();
 function get_revenue(){
-
+var duration = $("#duration").val();
   $.ajax({
     type: "POST",
     url:  base_url+"admin_Product/custom_revnue", 
     dataType : 'JSON',
     data: {
       is_admin : 1, 
+      duration : duration, 
     },
     success: function(data) {
       if (data !=null) { 

@@ -114,29 +114,33 @@ class Admin_Product_Model extends CI_Model {
    $join ='';
     $w ='';
     $jin = '';
+    $and='';
+    $tag ='';
       if($this->session->userdata('logged-in-team-member')) {
         $user = $this->session->userdata('logged-in-team-member');
         $join = ' users.tag="'.$user['tag'].'"';
         $w = ' where ';
+        $and=' AND ';
         $jin = 'LEFT JOIN `users` ON `user_purchased_package`.`user_id` = `users`.`uid` ';
+        $tag = ', users.tag as tag';
       }
             // $data = $this->adminViewAllCaseModel->getAllAssignedCases();   
         $where ='';
         if ($this->input->post('duration') == 'today') {
-          $where=" where date(purchased_date) = CURDATE() ".$join;
+          $where=" where date(purchased_date) = CURDATE() ".$and.$join;
         }else if($this->input->post('duration') == 'week'){
-          $where=" where date(purchased_date) BETWEEN CURDATE() - INTERVAL 7 DAY AND CURDATE() ".$join;
+          $where=" where date(purchased_date) BETWEEN CURDATE() - INTERVAL 7 DAY AND CURDATE() ".$and.$join;
         }else if($this->input->post('duration') == 'month'){
-          $where=" where date(purchased_date) BETWEEN CURDATE() - INTERVAL 1 MONTH AND CURDATE() ".$join;
+          $where=" where date(purchased_date) BETWEEN CURDATE() - INTERVAL 1 MONTH AND CURDATE() ".$and.$join;
         }else if($this->input->post('duration') == 'year'){
-          $where=" where date(purchased_date) BETWEEN CURDATE() - INTERVAL 1 YEAR AND CURDATE() ".$join;
+          $where=" where date(purchased_date) BETWEEN CURDATE() - INTERVAL 1 YEAR AND CURDATE() ".$and.$join;
         }else if($this->input->post('duration') == 'between'){
-          $where=" where date(purchased_date) BETWEEN  '".$_POST['from']."' AND '".$_POST['to']."' ".$join;
+          $where=" where date(purchased_date) BETWEEN  '".$_POST['from']."' AND '".$_POST['to']."' ".$and.$join;
         }else{
              $where=$w.$join;
         }
 
-       return  $this->db->query('SELECT SUM(user_purchased_package.amount_paid) as amount, users.tag as tag  FROM `user_purchased_package`  '.$jin.' '.$where.'  ORDER BY `user_purchased_package_id` DESC')->row_array();
+       return  $this->db->query('SELECT SUM(user_purchased_package.amount_paid) as amount ' .$tag.'  FROM `user_purchased_package`  '.$jin.' '.$where.'  ORDER BY `user_purchased_package_id` DESC')->row_array();
  
             
 	}
