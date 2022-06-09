@@ -102,7 +102,7 @@
                   <!-- <i class="fa fa-angle-right"></i> -->
                 </div>
               </div>
-              <span class="card-pages-name">BBNL</span>
+              <span class="card-pages-name"><?php echo $tag; ?></span>
               <div>  
               </div>
             </div>
