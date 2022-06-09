@@ -94,15 +94,50 @@ class Admin_Product_Model extends CI_Model {
 		return array('status'=>'0','message'=>'Something went wrong while deleting the product.');
 	}
 
-	function get_data_yearly_monthly(){
+	function get_data_yearly_monthly(){ 
 		$join ='';
+		$tag ='';
 		if($this->session->userdata('logged-in-team-member')) {
-			$join = 'LEFT JOIN `users` ON `user_purchased_package`.`user_id` = `users`.`uid` where users.tag="bbnl"';
+			$user = $this->session->userdata('logged-in-team-member');
+			$join = 'LEFT JOIN `users` ON `user_purchased_package`.`user_id` = `users`.`uid` where users.tag="'.$user['tag'].'"';
+			$tag = ', users.tag as tag';
 		}
 		
-		return $this->db->query("SELECT YEAR(purchased_date) as Year, MONTH(purchased_date)  as Month, COUNT(*) as SalesCount, DATE_FORMAT(date(purchased_date),'%M %Y') as monthname, SUM(amount_paid) as amount_paid
+		return $this->db->query("SELECT YEAR(purchased_date) as Year, MONTH(purchased_date)  as Month, COUNT(*) as SalesCount, DATE_FORMAT(date(purchased_date),'%M %Y') as monthname, SUM(amount_paid) as amount_paid ".$tag."
 			FROM user_purchased_package ".$join." 
 			GROUP BY YEAR(purchased_date), MONTH(purchased_date) 
 			ORDER BY user_purchased_package_id DESC")->result_array();
+	}
+
+	function get_revenue_data(){
+
+   $join ='';
+    $w ='';
+    $jin = '';
+      if($this->session->userdata('logged-in-team-member')) {
+        $user = $this->session->userdata('logged-in-team-member');
+        $join = ' users.tag="'.$user['tag'].'"';
+        $w = ' where ';
+        $jin = 'LEFT JOIN `users` ON `user_purchased_package`.`user_id` = `users`.`uid` ';
+      }
+            // $data = $this->adminViewAllCaseModel->getAllAssignedCases();   
+        $where ='';
+        if ($this->input->post('duration') == 'today') {
+          $where=" where date(purchased_date) = CURDATE() ".$join;
+        }else if($this->input->post('duration') == 'week'){
+          $where=" where date(purchased_date) BETWEEN CURDATE() - INTERVAL 7 DAY AND CURDATE() ".$join;
+        }else if($this->input->post('duration') == 'month'){
+          $where=" where date(purchased_date) BETWEEN CURDATE() - INTERVAL 1 MONTH AND CURDATE() ".$join;
+        }else if($this->input->post('duration') == 'year'){
+          $where=" where date(purchased_date) BETWEEN CURDATE() - INTERVAL 1 YEAR AND CURDATE() ".$join;
+        }else if($this->input->post('duration') == 'between'){
+          $where=" where date(purchased_date) BETWEEN  '".$_POST['from']."' AND '".$_POST['to']."' ".$join;
+        }else{
+             $where=$w.$join;
+        }
+
+       return  $this->db->query('SELECT SUM(user_purchased_package.amount_paid) as amount, users.tag as tag  FROM `user_purchased_package`  '.$jin.' '.$where.'  ORDER BY `user_purchased_package_id` DESC')->row_array();
+ 
+            
 	}
 }

@@ -138,7 +138,7 @@
                     $flag =false;
                     continue;
                 } 
-  /*`user_id`, `username`, `password`, `full_name`, `phone`, `email`, `address`, `note`, `id_proof`, `start_date`, `end_date`, `bandwidth`, `ip_address`, `extra_ip_address`, `mac_address`, `mac_vendor`, `location`, `type`, `auto_bind`, `bandwidth_lock`, `status`, `bill`, `due`, `tag`, `zone*/
+   
                 if ($value['A'] !='') {   
 				                $inserdata[$i]['user_id'] = $value['A']; 
 				                $inserdata[$i]['username'] =$value['D'];
@@ -203,6 +203,11 @@
 
 	function get_single_user_details(){
 		$data = $this->admin_Internal_Team_Model->get_single_user_details();
+			echo json_encode($data);
+	}
+
+	function update_single_user_details(){
+		$data = $this->admin_Internal_Team_Model->update_single_user_details();
 			echo json_encode($data);
 	}
 

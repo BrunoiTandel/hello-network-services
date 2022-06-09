@@ -137,6 +137,15 @@
 			}
 		}
 
+		function custom_revnue(){
+			
+				echo json_encode($this->admin_Product_Model->get_revenue_data());
+			/*if (isset($_POST) && $this->input->post('is_admin') == '1') {
+			} else {
+				echo json_encode(array('status'=>'201','message'=>'Bad Request Format'));
+			}*/
+		}
+
 		function add_product_order(){
 			echo json_encode($this->user_Packages_Modal->store_purchased_package_details_direct());
 		}

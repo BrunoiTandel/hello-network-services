@@ -1,10 +1,10 @@
 <!-- /.content-wrapper -->
-  <footer class="main-footer border-0 d-none">
+  <footer class="main-footer border-0">
     
   </footer>
 
   <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark d-none">
+  <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
   </aside>
   <!-- /.control-sidebar -->

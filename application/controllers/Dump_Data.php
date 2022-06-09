@@ -134,7 +134,7 @@ class Dump_Data extends CI_Controller {
              $where=$w.$join;
         }
 
-        $user_details = $this->db->query('SELECT * FROM `user_purchased_package` LEFT JOIN `user` ON `user_purchased_package`.`user_id` = `user`.`user_id` LEFT JOIN `products` ON `user_purchased_package`.`package_id` = `products`.`product_id` $jin '.$where.'  ORDER BY `user_purchased_package_id` DESC')->result_array();
+        $user_details = $this->db->query('SELECT * FROM `user_purchased_package` LEFT JOIN `products` ON `user_purchased_package`.`package_id` = `products`.`product_id` $jin '.$where.'  ORDER BY `user_purchased_package_id` DESC')->result_array();
  
              
             

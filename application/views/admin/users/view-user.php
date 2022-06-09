@@ -207,3 +207,4 @@
 <!-- View Blog Details Modal Ends -->
 
 <script src="<?php echo base_url()?>assets/custom-js/admin/internal-team/add-new-team-member.js"></script>
+<script src="<?php echo base_url()?>assets/custom-js/admin/users/get-user-list.js"></script>

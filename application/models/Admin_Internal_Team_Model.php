@@ -210,6 +210,34 @@ class Admin_Internal_Team_Model extends CI_Model {
 		}
 	}
 
+	function update_single_user_details(){
+	 
+		$users = array( 
+            'username' => $this->input->post('user_name'),  
+            'full_name' => $this->input->post('name'),
+            'phone' => $this->input->post('phone'),
+            'email' => $this->input->post('email'),
+            'address' => $this->input->post('address'),
+            'note' => $this->input->post('note'),
+            'id_proof' => $this->input->post('id_proof'),
+            'start_date' => $this->input->post('start_date'),
+            'end_date' => $this->input->post('end_date'),
+            'bandwidth' => $this->input->post('bandwidth'),  
+            'connection_type' => $this->input->post('connection_type'), 
+            'status' => $this->input->post('status'),
+            'bill' => $this->input->post('bill'),
+            'due' => $this->input->post('due'),
+            'tag' => $this->input->post('tag'),
+            'zone' => $this->input->post('zone'), 
+		);
+		$this->db->where('user_id',$this->input->post('user_id'));
+		if ($this->db->update('users',$users)) {
+		return array('status'=>'200','message'=>'Service has been inserted.');
+		} else {
+			return array('status'=>'202','message'=>'Something went wrong while insert the users. Please try again');
+		}
+	}
+
 
 	/* user section */
 
