@@ -176,6 +176,18 @@
                 <div class="row">
                   <div class="col-md-12 pl-0">
                     <!-- <h3 class="card-title pt-2"><span class="analytics-title">Cases<label id="inventory-total"></label></span></h3> -->
+                       <div class="float-right col-md-4">
+                <span class="product-details-span-light">Report Period</span>
+                <select class="form-control input-txt " required name="duration" onchange="get_revenue()" id="duration">
+                  <!-- <option selected value="">Select Duration</option> -->
+                  <option value="all">ALL</option>
+                  <option value="today">Today</option>
+                  <option value="week">Weekly</option>
+                  <option value="month">Monthly</option>
+                  <option value="year">Yearly</option>
+                  <!-- <option value="between">Between Date</option> -->
+                </select>
+              </div>
                     <h3 class="card-title pt-2"><span class="analytics-title">Revenue Report Chart</span></h3>
                   </div>
                     
