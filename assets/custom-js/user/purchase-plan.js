@@ -14,7 +14,7 @@ function but_now(e) {
                 if (data.purchase_package_details.status == 1) {
                     var options = {
                         "key": data.purchase_package_details.purchase_package_details.payment_key,
-                        "amount": 1;//data.purchase_package_details.purchase_package_details.package_payment_amount,
+                        "amount": 1,//data.purchase_package_details.purchase_package_details.package_payment_amount,
                         "currency": "INR",    
                         "name": "Hello Service",
                         "description": "Purchase Plans",
