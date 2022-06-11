@@ -34,6 +34,11 @@
                      if (count($users)) {
                         $n = 1;
                        foreach ($users as $key => $value) { 
+                       
+                       $check = '';
+                       if ($value['order_status'] =='1') {
+                          $check = 'checked';
+                       }
                           echo '<tr>';
                           echo '<td>'.($n++).'</td>';
                           echo '<td>'.$value['username'].'</td>';
@@ -44,12 +49,14 @@
                           echo '<td>'.$value['amount_paid'].'</td>';
                           echo '<td>'.$value['payment_id'].'</td>';
                           echo '<td>'.$value['purchased_date'].'</td>';
+
+
                          ?>
-                         <td>
-                        <div class="custom-control custom-switch pl-0">
-                        <input type="checkbox"  onclick="change_product_status(<?php echo $value['user_purchased_package_id']; ?>,<?php echo $value['order_status']; ?>)" class="custom-control-input" id="change_product_status_<?php echo $value['user_purchased_package_id']; ?>">
-                        <label class="custom-control-label" for="change_product_status_<?php echo $value['user_purchased_package_id']; ?>"></label>
-                        </div>
+                         <td class="pl-2">
+                           <div class="custom-control custom-switch pl-2">
+                           <input type="checkbox" <?php echo $check; ?>  onclick="change_product_status(<?php echo $value['user_purchased_package_id']; ?>,<?php echo $value['order_status']; ?>)" class="custom-control-input" id="change_product_status_<?php echo $value['user_purchased_package_id']; ?>">
+                           <label class="custom-control-label" for="change_product_status_<?php echo $value['user_purchased_package_id']; ?>"></label>
+                           </div>
                      </td>
                         <?php
                           echo '<td><a target="_blank" href="'.$this->config->item('my_base_url').'user-invoice/'.md5($value['user_purchased_package_id']).'"><i class="fa fa-file-pdf-o "></i></a></td>';
@@ -68,3 +75,4 @@
     </section>
   </div>
  
+ <script src="<?php echo base_url().'assets/custom-js/admin/order.js'?>"></script>

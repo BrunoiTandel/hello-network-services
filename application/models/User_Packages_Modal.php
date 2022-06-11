@@ -9,12 +9,14 @@ class User_Packages_Modal extends CI_Model {
 
 	function get_purchased_packages() {
 		$user_details = $this->session->userdata('logged-in-user');
+		$this->db->where('user_purchased_package.order_status',1);
 		return $this->db->where('user_id',$user_details['uid'])->order_by('user_purchased_package_id','DESC')->get('user_purchased_package')->result_array();
 	}
 
 
 	function get_single_purchased_packages($id) { 
 		 $this->db->where('MD5(user_purchased_package_id)',$id);
+		 $this->db->where('user_purchased_package.order_status',1);
 		return $this->db->order_by('user_purchased_package_id','DESC')->select('*')->from('user_purchased_package')->join('users','user_purchased_package.user_id = users.uid','left')->join('products','user_purchased_package.package_id = products.product_id','left')->get('')->row_array();
 	}
 

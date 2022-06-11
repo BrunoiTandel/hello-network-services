@@ -9,6 +9,7 @@
 		  	$this->load->helper('url');  
 		  	$this->load->model('admin_Product_Model');
 		  	$this->load->model('user_Packages_Modal');
+		  	$this->load->model('orderModel');
 		}
 
 		function index() {
@@ -148,6 +149,15 @@
 
 		function add_product_order(){
 			echo json_encode($this->user_Packages_Modal->store_purchased_package_details_direct());
+		}
+
+
+		function product_order_status(){
+			if (isset($_POST) && $this->input->post('verify_admin_request') == '1' && $this->session->userdata('logged-in-admin')) {
+				echo json_encode(array('status'=>'1','return_status'=>$this->orderModel->change_order_status()));
+			} else {
+				echo json_encode(array('status'=>'201','message'=>'Bad Request Format'));
+			} 
 		}
 	}
 ?>

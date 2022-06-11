@@ -31,6 +31,7 @@ class HN_Hello_Nw_Services_Team_Member_Login extends CI_Controller {
 	      		$this->db->insert('team_member_login_log',$userdata);
 
 				$this->session->set_userdata('logged-in-team-member', $user);
+				$this->session->unset_userdata('logged-in-admin');	
 				echo json_encode($status);
 			} else {
 				echo json_encode($status); 

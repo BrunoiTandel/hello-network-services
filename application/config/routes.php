@@ -124,6 +124,7 @@ $route['team-member/view-all-orders'] = 'HN_Hello_Nw_Services_Team_Member/view_o
 $route['team-member/view-all-products'] = 'HN_Hello_Nw_Services_Team_Member/all_products';
 $route['team-member/dashboard'] = 'HN_Hello_Nw_Services_Team_Member/dashboard';
 
+$route['admin/change-order-status'] = 'admin_Product/product_order_status';
  
 // Team Member All Pages Links
 $route['team-member/pages'] = 'HN_Hello_Nw_Services_Team_Member/pages';
