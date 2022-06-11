@@ -35,8 +35,8 @@ class User_Packages_Modal extends CI_Model {
 			$user_details = $this->session->userdata('logged-in-user');
 			$data['user_details'] = array(
 				'name' => isset($user_details['full_name'])?$user_details['full_name']:'',
-				'mobile_number' => $user_details['phone'],
-				'email_id' => $user_details['email']
+				'mobile_number' => isset($user_details['phone'])?$user_details['phone']:'',
+				'email_id' => isset($user_details['email'])?$user_details['email']:''
 			);
 
 			$data['payment_key'] = $this->admin_Payment_Details_Model->get_payment_details()['api_authentication_key'];
