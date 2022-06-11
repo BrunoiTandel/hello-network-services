@@ -34,7 +34,7 @@ class User_Packages_Modal extends CI_Model {
 			
 			$user_details = $this->session->userdata('logged-in-user');
 			$data['user_details'] = array(
-				'name' => $user_details['full_name'],
+				'name' => isset($user_details['full_name'])?$user_details['full_name']:'',
 				'mobile_number' => $user_details['phone'],
 				'email_id' => $user_details['email']
 			);
