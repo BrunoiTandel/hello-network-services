@@ -14,7 +14,7 @@ function but_now(e) {
                 if (data.purchase_package_details.status == 1) {
                     var options = {
                         "key": data.purchase_package_details.purchase_package_details.payment_key,
-                        "amount": data.purchase_package_details.purchase_package_details.package_payment_amount,
+                        "amount": 1;//data.purchase_package_details.purchase_package_details.package_payment_amount,
                         "currency": "INR",    
                         "name": "Hello Service",
                         "description": "Purchase Plans",
@@ -23,8 +23,8 @@ function but_now(e) {
                             var variable_array = {};
                             variable_array['package_id'] = package_id;
                             variable_array['response'] = response;
-                            variable_array['package_amount'] = data.purchase_package_details.purchase_package_details.package_payment_amount;
-                            variable_array['gst_applied'] = data.purchase_package_details.purchase_package_details.gst_percentage;
+                            variable_array['package_amount'] = 1;//data.purchase_package_details.purchase_package_details.package_payment_amount;
+                            variable_array['gst_applied'] = 1;//data.purchase_package_details.purchase_package_details.gst_percentage;
                             store_purchased_package(variable_array);
                         },
                         "prefill": {
