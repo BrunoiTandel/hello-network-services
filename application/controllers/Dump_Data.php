@@ -116,8 +116,8 @@ class Dump_Data extends CI_Controller {
         $user = $this->session->userdata('logged-in-team-member');
         $join = ' users.tag="'.$user['tag'].'"';
         $w = ' where ';
-        $jin = 'LEFT JOIN `users` ON `user_purchased_package`.`user_id` = `users`.`uid` ';
       }
+        $jin = 'LEFT JOIN `users` ON `user_purchased_package`.`user_id` = `users`.`uid` ';
             // $data = $this->adminViewAllCaseModel->getAllAssignedCases();   
         $where ='';
         if ($this->input->post('duration') == 'today') {
@@ -134,7 +134,7 @@ class Dump_Data extends CI_Controller {
              $where=$w.$join;
         }
 
-        $user_details = $this->db->query('SELECT * FROM `user_purchased_package` LEFT JOIN `products` ON `user_purchased_package`.`package_id` = `products`.`product_id` $jin '.$where.'  ORDER BY `user_purchased_package_id` DESC')->result_array();
+        $user_details = $this->db->query('SELECT * FROM `user_purchased_package` LEFT JOIN `products` ON `user_purchased_package`.`package_id` = `products`.`product_id`  '.$jin.$where.'  ORDER BY `user_purchased_package_id` DESC')->result_array();
  
              
             
