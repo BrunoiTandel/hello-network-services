@@ -346,9 +346,9 @@ $pdf->loadHtml($html,'UTF-8');
 $pdf->set_paper('a4', 'portrait');// or landscape
 $pdf->render();
 $output = $pdf->output();
-$file_name = 'invoice.pdf';
+$file_name = trim($invoice['username']).time().'.pdf';
 file_put_contents('assets/uploads/purchased-package-invoice/'.$file_name, $output);
-$pdf->stream("invoice.pdf", array("Attachment" => false));
+$pdf->stream($file_name, array("Attachment" => false));
 // $pdf->stream("invoice.pdf");
 exit(0);
 ?>
