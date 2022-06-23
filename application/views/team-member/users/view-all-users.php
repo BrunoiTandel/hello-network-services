@@ -20,8 +20,8 @@
                      <th>Sr No.</th>   
                      <th>User&nbsp;Name</th>  
                      <th>User&nbsp;Mobile Number</th>  
-                     <th>User&nbsp;Email</th>  
-                     <th>User&nbsp;IP</th>  
+                     <th>Plan Type</th>  
+                     <th>Bandwidth</th>  
                      <!-- <th>Created Date</th>   -->
                      <th>User Status</th>  
                      <th>View&nbsp;Details</th>
@@ -42,8 +42,10 @@
                           echo '<td>'.($n++).'</td>';
                           echo '<td>'.$value['full_name'].'</td>';
                           echo '<td>'.$value['phone'].'</td>';
-                          echo '<td>'.$value['email'].'</td>';
-                          echo '<td>'.$value['ip_address'].'</td>';
+                          echo '<td>'.$value['plan_type'].'</td>';
+                          echo '<td>'.$value['bandwidth'].'</td>';
+                          // echo '<td>'.$value['email'].'</td>';
+                          // echo '<td>'.$value['ip_address'].'</td>';
                           // echo '<td>'.$value['u_created_date'].'</td>';
                           echo '<td>'.$status.'</td>';
                            echo '<td><a href="#" onclick="view_user_details('.$value['uid'].')"><i class="fa fa-eye"></i></a>&nbsp;</td>';

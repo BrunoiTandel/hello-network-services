@@ -40,7 +40,9 @@ var status = $("#status").val();
 		formdata.append('note',note); 
 		formdata.append('bill',bill); 
 		formdata.append('due',due); 
-		formdata.append('status',status);  
+		formdata.append('status',status); 
+		formdata.append('plan_type',$("#plan-type").val()); 
+
 		$.ajax({
 			type: "POST",
 		  	url: base_url+"admin_Internal_Team/update_single_user_details",
@@ -52,7 +54,7 @@ var status = $("#status").val();
 		  		if (data.status == '200') { 
 		  			$("#view-user-details-model").modal('hide');
 				  		toastr.success('User has been update successfully.');
-					 
+					 window.location.reload();
 				   
 			  	} else {
 			  		// check_admin_login();

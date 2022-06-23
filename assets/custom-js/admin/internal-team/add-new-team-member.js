@@ -297,6 +297,7 @@ function view_user_details(uid){
 	       $("#status").val(data.status);
 	       $("#bill").val(data.bill);
 	       $("#due").val(data.due);
+	       $("#plan-type").val(data.plan_type);
 	    }
     });
 }

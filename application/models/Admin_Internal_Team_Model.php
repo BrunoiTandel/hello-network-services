@@ -229,6 +229,7 @@ class Admin_Internal_Team_Model extends CI_Model {
             'due' => $this->input->post('due'),
             'tag' => $this->input->post('tag'),
             'zone' => $this->input->post('zone'), 
+            'plan_type' => $this->input->post('plan_type'),
 		);
 		$this->db->where('user_id',$this->input->post('user_id'));
 		if ($this->db->update('users',$users)) {
