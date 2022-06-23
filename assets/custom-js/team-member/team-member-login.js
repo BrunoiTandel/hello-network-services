@@ -5,7 +5,7 @@ function adminLogin() {
 	var email = $("#email").val();
 	var password = $("#password").val();
 
-	if (email != '' && password != '' && email_regex.test(email) == true && password.length >= password_length) {
+	if (email != '' && password != '' && password.length >= password_length) {
 		$('#login-email-error').html('');
 		$('#login-password-error').html('');
 		$('#login-error').html('');
