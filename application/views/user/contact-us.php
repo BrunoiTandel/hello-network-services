@@ -61,15 +61,15 @@
                      <div class="contact1-adrs-txt">
                         <h3>Contact</h3>
                         <p>
-                           <a href="tel:+918460590981">+91 8460590981</a>
+                           <a href="tel:+919537252564">Phone: +91 9898787875 - +91 7575066077 - +91 9537252564</a>
                            <br>
-                           <a href="mailto:tandelbrunoi15@gmail.com">tandelbrunoi15@gmail.com</a>
+                           <a href="mailto:hellonetworkservice@gmail.com">hellonetworkservice@gmail.com</a>
                         </p>
                      </div>
                   </div>
                </div>
             </div>
-         </div>
+         </div> 
       </div>
    </div>
 </section>
