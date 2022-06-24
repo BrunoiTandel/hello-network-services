@@ -23,21 +23,21 @@
             	<div class="ftr-adrs">
                		<h3>Connect with Us</h3>
                		<ul>
-                  		<li><a href="mailto:abc@gmail.com">Email: abc@gmail.com</a></li>
-                  		<li><a href="tel:+919999999999">Phone: +91 919999999999</a></li>
+                  		<li><a href="mailto:hellonetworkservice@gmail.com">Email: hellonetworkservice@gmail.com</a></li> 
+                  		<li><a href="tel:+919537252564">Phone: +91 9898787875 - +91 7575066077 - +91 9537252564</a></li>
                		</ul>
             	</div>
             	<div class="ftr-scl">
-               		<a href="http://localhost/gitHUB/hello-network-services/?/">
+               		<a href="#">
                   		<i class="fa fa-facebook" aria-hidden="true"></i>
                		</a>
-               		<a href="http://localhost/gitHUB/hello-network-services/?/">
+               		<a href="#">
                   		<i class="fa fa-linkedin" aria-hidden="true"></i>
                		</a>
-               		<a href="http://localhost/gitHUB/hello-network-services/?/">
+               		<a href="#">
                   		<i class="fa fa-twitter" aria-hidden="true"></i>
                		</a>
-               		<a href="http://localhost/gitHUB/hello-network-services/?/">
+               		<a href="#">
                   		<i class="fa fa-instagram" aria-hidden="true"></i>
                		</a>
             	</div>
