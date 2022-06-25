@@ -36,4 +36,13 @@ class Welcome extends CI_Controller {
 		$this->load->view('user/index');
 		$this->load->view('user-common/footer');
 	}
+
+	function index_2() {
+		$data['title'] = 'Hello Network Services';
+		$data['packages_list'] = $this->user_Packages_Modal->get_all_products();
+		
+		$this->load->view('user-common/header-2',$data);
+		$this->load->view('user/index-2');
+		$this->load->view('user-common/footer-2');
+	}
 }

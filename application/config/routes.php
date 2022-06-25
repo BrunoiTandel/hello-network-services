@@ -218,6 +218,7 @@ $route['user/update-user-password'] = 'User_Profile/update_user_password';
 
 // User Package
 $route['package-details/(:any)'] = 'User_Packages/index/$1';
+$route['package-details-2/(:any)'] = 'User_Packages/index/$1';
 
 
 /* API */
@@ -225,3 +226,6 @@ $route['admin/insert-update-new-hello-network-user-details'] = 'Admin_Internal_T
 
 // Static Invoice PDF
 $route['hello-static-invoice-pdf'] = 'User_Profile/static_pdf';
+
+// User New UI
+$route['index-2'] = 'Welcome/index_2';

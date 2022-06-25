@@ -1,7 +1,7 @@
 <div id="home-page-banner-carousel" class="carousel slide" data-ride="carousel">
   	<div class="carousel-inner">
   		<?php $n = 4; 
-  		  $a = 1; 
+  		$a = 1; 
   		for ($i = 0; $i < $n; $i++) {
   			$active = '';
   			if ($i == 0) {

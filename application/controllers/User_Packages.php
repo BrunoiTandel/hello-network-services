@@ -16,13 +16,13 @@ class User_Packages extends CI_Controller {
 			$data['title'] = 'Profile';
 			$data['package_details'] = $this->user_Packages_Modal->get_purchase_package_details($package_id);
 			$data['package_id'] = $package_id;
-			$this->load->view('user-common/header',$data);
+			$this->load->view('user-common/header-2',$data);
 			if ($data['package_details']['status'] == 1) {
-				$this->load->view('user/package-details');
+				$this->load->view('user/package-details-2');
 			} else {
 				$this->load->view('user/404-page-not-found');
 			}
-			$this->load->view('user-common/footer');
+			$this->load->view('user-common/footer-2');
 		}
 	}
 
