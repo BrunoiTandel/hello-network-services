@@ -20,8 +20,8 @@
                      <th>Sr No.</th>   
                      <th>User&nbsp;Name</th>  
                      <th>User&nbsp;Mobile Number</th>  
-                     <th>User&nbsp;Email</th>  
-                     <th>User&nbsp;IP</th>  
+                     <th>Plan Type</th>  
+                     <th>Bandwidth</th>  
                      <!-- <th>Created Date</th>   -->
                      <th>User Status</th>  
                      <th>View&nbsp;Details</th>
@@ -42,11 +42,13 @@
                           echo '<td>'.($n++).'</td>';
                           echo '<td>'.$value['full_name'].'</td>';
                           echo '<td>'.$value['phone'].'</td>';
-                          echo '<td>'.$value['email'].'</td>';
-                          echo '<td>'.$value['ip_address'].'</td>';
+                          echo '<td>'.$value['plan_type'].'</td>';
+                          echo '<td>'.$value['bandwidth'].'</td>';
+                          // echo '<td>'.$value['email'].'</td>';
+                          // echo '<td>'.$value['ip_address'].'</td>';
                           // echo '<td>'.$value['u_created_date'].'</td>';
                           echo '<td>'.$status.'</td>';
-                          echo '<td><a href="#"><i class="fa fa-eye"></i></a></td>';
+                           echo '<td><a href="#" onclick="view_user_details('.$value['uid'].')"><i class="fa fa-eye"></i></a>&nbsp;</td>';
                             
                           echo '</tr>';
                        }
@@ -61,4 +63,185 @@
       </div>
     </section>
   </div>
+
+
+
+<!-- View Blog Details Modal Starts -->
+  <div class="modal fade" id="view-user-details-model">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content modal-content-view-collection-category">
+        <div class="modal-header border-0">
+          <h4 class="modal-title-edit-coupon">User Details</h4>
+        </div>
+        <div class="modal-body modal-body-edit-coupon">
+          <div class="row">
+            <div class="col-sm-4">
+              <span class="product-details-span-light">User ID</span>
+              <input type="text" disabled class="input-txt" name="user-id" id="user-id" placeholder="User ID">
+              <div id="blog-title-error-msg-div"></div>
+            </div>
+
+            <div class="col-sm-4">
+              <span class="product-details-span-light">User Name</span>
+              <input type="text" class="input-txt" name="user-name" id="user-name" placeholder="User Name">
+              <div id="user-name-error-msg-div"></div>
+            </div>
+
+            <div class="col-sm-4">
+              <span class="product-details-span-light">Name</span>
+              <input type="text" class="input-txt" name="name" id="name" placeholder="Name">
+              <div id="name-error-msg-div"></div>
+            </div>
+
+            <div class="col-sm-4">
+              <span class="product-details-span-light">Phone</span>
+              <input type="text" class="input-txt" name="phone" id="phone" placeholder="Phone">
+              <div id="phone-error-msg-div"></div>
+            </div>
+
+            <div class="col-sm-4">
+              <span class="product-details-span-light">Email</span>
+              <input type="text" class="input-txt" name="email" id="email" placeholder="Email">
+              <div id="email-error-msg-div"></div>
+            </div>
+
+            <div class="col-sm-4">
+              <span class="product-details-span-light">ID Proof</span>
+              <input type="text" class="input-txt" name="id-proof" id="id-proof" placeholder="ID Proof">
+              <div id="id-proof-error-msg-div"></div>
+            </div>
+
+            <div class="col-sm-4">
+              <span class="product-details-span-light">Address</span>
+              <textarea class="input-txt" id="address" placeholder="Address"></textarea>
+              <div id="address-error-msg-div"></div>
+            </div>
+
+
+            <div class="col-sm-4">
+              <span class="product-details-span-light">Note</span>
+              <textarea class="input-txt" id="note" placeholder="Note"></textarea>
+              <div id="note-error-msg-div"></div>
+            </div>
+
+            <div class="col-sm-4">
+              <span class="product-details-span-light">Bandwidth</span>
+              <input type="text" disabled class="input-txt" name="bandwidth" id="bandwidth" placeholder="Bandwidth">
+              <div id="bandwidth-error-msg-div"></div>
+            </div>
+
+            <div class="col-sm-4">
+              <span class="product-details-span-light">Start Date</span>
+              <input type="text" class="input-txt" name="start-date" id="start-date" placeholder="Start Date">
+              <div id="start-date-error-msg-div"></div>
+            </div>
+
+            <div class="col-sm-4">
+              <span class="product-details-span-light">End Date</span>
+              <input type="text" class="input-txt" name="end-date" id="end-date" placeholder="End Date">
+              <div id="end-date-error-msg-div"></div>
+            </div>
+
+            <div class="col-sm-4">
+              <span class="product-details-span-light">MAC Vendor</span>
+              <input type="text" disabled class="input-txt" name="mac-vendor" id="mac-vendor" placeholder="MAC Vendor">
+              <div id="mac-vendor-error-msg-div"></div>
+            </div>
+
+            <div class="col-sm-4">
+              <span class="product-details-span-light">Tag</span>
+              <input type="text" class="input-txt" name="tag" id="tag" placeholder="Tag">
+              <div id="tag-error-msg-div"></div>
+            </div>
+
+            <div class="col-sm-4">
+              <span class="product-details-span-light">Zone</span>
+              <input type="text" class="input-txt" name="zone" id="zone" placeholder="Zone">
+              <div id="zone-error-msg-div"></div>
+            </div>
+
+            <div class="col-sm-4">
+              <span class="product-details-span-light">Connection Type</span>
+              <select class="input-txt" id="connection-type">
+                  <option>Goverment</option>
+                  <option>Individual</option>
+              </select>
+              <div id="connection-type-error-msg-div"></div>
+            </div>
+
+
+            <div class="col-sm-4">
+              <span class="product-details-span-light">Bill</span>
+              <input type="text" class="input-txt" name="bill" id="bill" placeholder="Bill">
+              <div id="bill-error-msg-div"></div>
+            </div>
+
+
+            <div class="col-sm-4">
+              <span class="product-details-span-light">Due</span>
+              <input type="text" class="input-txt" name="due" id="due" placeholder="Due">
+              <div id="due-error-msg-div"></div>
+            </div>
+
+            <div class="col-sm-4">
+              <span class="product-details-span-light">Status</span>
+              <input type="text" class="input-txt" name="status" id="status" placeholder="Status">
+              <div id="status-error-msg-div"></div>
+            </div>
+
+        </div>
+          <div class="row">
+            <div class="col-md-12" id="blog-error-div"></div>
+            <div id="view-edit-cancel-btn-div" class="col-md-12 mt-2 text-right">
+              <button class="btn btn-default btn-close" data-dismiss="modal">Close</button> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- View Blog Details Modal Ends -->
+
+<script>
+    
+/* user section */
+
+function view_user_details(uid){ 
+    $.ajax({
+        type  : 'POST',
+        url   : base_url+'admin_Internal_Team/get_single_user_details',
+        data : {
+            verify_admin_request : '1',
+            uid : uid
+        },
+        dataType : 'json',
+        success : function(data) {
+           // alert(JSON.stringify(data))
+           /*`user_id`, `username`, `password`, `full_name`, `phone`, `email`,
+            `address`, `note`, `id_proof`, `start_date`, `end_date`, `bandwidth`,
+             `ip_address`, `extra_ip_address`, `mac_address`, `mac_vendor`, `location`,
+              `type`, `auto_bind`, `bandwidth_lock`, `status`, `bill`, `due`, `tag`, `zone*/
+           $("#view-user-details-model").modal('show');
+           $("#user-id").val(data.user_id);
+           $("#user-name").val(data.username); 
+           $("#name").val(data.full_name);
+           $("#phone").val(data.phone);
+           $("#email").val(data.email);
+           $("#address").val(data.address);
+           $("#note").val(data.note);
+           $("#id-proof").val(data.id_proof);
+           $("#start-date").val(data.start_date);
+           $("#end-date").val(data.end_date);
+           $("#bandwidth").val(data.bandwidth);
+           $("#mac-vendor").val(data.mac_vendor);
+           $("#tag").val(data.tag);
+           $("#zone").val(data.zone);
+           // $("#").val(data.type);
+           $("#status").val(data.status);
+           $("#bill").val(data.bill);
+           $("#due").val(data.due);
+        }
+    });
+}
+</script>
  

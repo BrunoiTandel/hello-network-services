@@ -548,7 +548,8 @@ $uat_list_riyatsa = array(
 );
 
 $production_ip_list = array( 
-	'128.199.27.25'
+	'128.199.27.25',
+	'139.59.88.93'
 );
  
 $config['uat_list_riyatsa'] = $uat_list_riyatsa;
@@ -568,13 +569,13 @@ $staging_ip_list = array();
 // failure_msg_for_purchase_package -  0 - for localhost, 1 for UAT,Staging and production
 
 if (in_array($_SERVER['REMOTE_ADDR'], $production_ip_list) || in_array($_SERVER['SERVER_ADDR'], $production_ip_list)) {
-$config['my_base_url'] = $config['my_base_url'].'?/';
+$config['my_base_url'] = $config['my_base_url'].'';
 } else if (in_array($_SERVER['REMOTE_ADDR'], $staging_ip_list) || in_array($_SERVER['SERVER_ADDR'], $staging_ip_list)) {
 	
 } else if (in_array($_SERVER['REMOTE_ADDR'], $uat_list_riyatsa) || in_array($_SERVER['SERVER_ADDR'], $uat_list_riyatsa)) {
 	
 } else {
-	$config['my_base_url'] = $config['my_base_url'].'?/';
+	$config['my_base_url'] = $config['my_base_url'].'';
 }
 
 $config['reset_password_timeout'] = 10;

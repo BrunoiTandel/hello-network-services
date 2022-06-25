@@ -49,7 +49,7 @@ class LoginModel extends CI_Model
     if (strpos($username, '@') !== false) {
       $this->db->where('internal_team_member_email_id', $username);
     } else {
-      $this->db->where('internal_team_member_email_id', $username);
+      $this->db->where('internal_team_member_name', $username);
     }
 
     $this->db->limit(1);

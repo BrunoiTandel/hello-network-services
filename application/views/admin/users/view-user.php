@@ -24,8 +24,8 @@
                      <th>User&nbsp;Name</th>  
                      <th>User&nbsp;Mobile Number</th>  
                      <th>Password</th>  
-                     <th>User&nbsp;Email</th>  
-                     <th>User&nbsp;IP</th>  
+                     <th>Plan Type</th>  
+                     <th>Bandwidth</th>  
                      <th>Created Date</th>  
                      <th>User Status</th>  
                      <th>View&nbsp;Details</th>
@@ -47,8 +47,10 @@
                           echo '<td>'.$value['full_name'].'</td>';
                           echo '<td>'.$value['phone'].'</td>';
                           echo '<td>'.$value['password'].'</td>';
-                          echo '<td>'.$value['email'].'</td>';
-                          echo '<td>'.$value['ip_address'].'</td>';
+                          // echo '<td>'.$value['email'].'</td>';
+                          // echo '<td>'.$value['ip_address'].'</td>';
+                          echo '<td>'.$value['plan_type'].'</td>';
+                          echo '<td>'.$value['bandwidth'].'</td>';
                           echo '<td>'.$value['u_created_date'].'</td>';
                           echo '<td>'.$status.'</td>';
                           echo '<td><a href="#" onclick="view_user_details('.$value['uid'].')"><i class="fa fa-eye"></i></a></td>';
@@ -172,6 +174,15 @@
               <div id="connection-type-error-msg-div"></div>
             </div>
 
+            <div class="col-sm-4">
+              <span class="product-details-span-light">Plan Type</span>
+              <select class="input-txt" id="plan-type">
+                  <option>paid</option>
+                  <option>free</option>
+              </select>
+              <div id="connection-type-error-msg-div"></div>
+            </div>
+
 
             <div class="col-sm-4">
               <span class="product-details-span-light">Bill</span>
@@ -207,3 +218,4 @@
 <!-- View Blog Details Modal Ends -->
 
 <script src="<?php echo base_url()?>assets/custom-js/admin/internal-team/add-new-team-member.js"></script>
+<script src="<?php echo base_url()?>assets/custom-js/admin/users/get-user-list.js"></script>

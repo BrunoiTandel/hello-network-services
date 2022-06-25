@@ -31,8 +31,8 @@
          <h1 class="wow fadeInUp" data-wow-duration="1.8s">About <span> Us</span></h1>
       </div>
       <div class="about-us-desc-div">
-      	<p>The Company is engaged in BSNL distribution and high-speed Broadband service distribution reaching with presence in Vansda.<br><br>
-			The Company is the largest Digital Cable and Wireline Broadband Service Provider in Gujarat & is a leading Digital Cable TV Service provider in West Vansda. Hello Service Provider also has a significant presence in all other markets.<br><br>
+      	<p>The Company is engaged distribution and high-speed Broadband service distribution reaching with presence in Vansda.<br><br>
+			The Company is the Digital Cable and Wireline Broadband Service Provider in Gujarat & is a leading Digital Cable TV Service provider in West Vansda. Hello Service Provider also has a significant presence in all other markets.<br><br>
 			The Company is constantly striving to enhance and simplify its customers' lives through quality services and products that give them the freedom to be entertained anytime, anywhere.</p>
       </div>
    </div>

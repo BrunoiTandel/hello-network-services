@@ -147,8 +147,9 @@ class Admin_Internal_Team_Model extends CI_Model {
 			'internal_team_member_mobile_number' => $this->input->post('mobile_number'),
 			'internal_team_member_email_id' => $this->input->post('email_id'),
 			'internal_team_member_block' => $this->input->post('block'),
-			'internal_team_member_password' => MD5($password),
+			'internal_team_member_password' => MD5($this->input->post('mobile_number')),
 			'internal_team_member_district' => $this->input->post('district'),
+			'tag' => $this->input->post('tag'),
 			'internal_team_member_address' => $this->input->post('address')
 		);
 
@@ -203,6 +204,35 @@ class Admin_Internal_Team_Model extends CI_Model {
             'u_created_date' => date('Y-m-d H:i:s')
 		);
 		if ($this->db->insert('users',$users)) {
+		return array('status'=>'200','message'=>'Service has been inserted.');
+		} else {
+			return array('status'=>'202','message'=>'Something went wrong while insert the users. Please try again');
+		}
+	}
+
+	function update_single_user_details(){
+	 
+		$users = array( 
+            'username' => $this->input->post('user_name'),  
+            'full_name' => $this->input->post('name'),
+            'phone' => $this->input->post('phone'),
+            'email' => $this->input->post('email'),
+            'address' => $this->input->post('address'),
+            'note' => $this->input->post('note'),
+            'id_proof' => $this->input->post('id_proof'),
+            'start_date' => $this->input->post('start_date'),
+            'end_date' => $this->input->post('end_date'),
+            'bandwidth' => $this->input->post('bandwidth'),  
+            'connection_type' => $this->input->post('connection_type'), 
+            'status' => $this->input->post('status'),
+            'bill' => $this->input->post('bill'),
+            'due' => $this->input->post('due'),
+            'tag' => $this->input->post('tag'),
+            'zone' => $this->input->post('zone'), 
+            'plan_type' => $this->input->post('plan_type'),
+		);
+		$this->db->where('user_id',$this->input->post('user_id'));
+		if ($this->db->update('users',$users)) {
 		return array('status'=>'200','message'=>'Service has been inserted.');
 		} else {
 			return array('status'=>'202','message'=>'Something went wrong while insert the users. Please try again');

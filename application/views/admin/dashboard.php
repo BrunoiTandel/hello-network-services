@@ -169,6 +169,41 @@
             </div>
           </div>
 
+          
+           <div class="col-md-12 mt-4">
+            <div class="card card-kpi">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-md-12 pl-0">
+                    <!-- <h3 class="card-title pt-2"><span class="analytics-title">Cases<label id="inventory-total"></label></span></h3> -->
+                       <div class="float-right col-md-4">
+                <span class="product-details-span-light">Report Period</span>
+                <select class="form-control input-txt " required name="duration" onchange="get_revenue()" id="duration">
+                  <!-- <option selected value="">Select Duration</option> -->
+                  <option value="all">ALL</option>
+                  <option value="today">Today</option>
+                  <option value="week">Weekly</option>
+                  <option value="month">Monthly</option>
+                  <option value="year">Yearly</option>
+                  <!-- <option value="between">Between Date</option> -->
+                </select>
+              </div>
+                    <h3 class="card-title pt-2"><span class="analytics-title">Revenue Report Chart</span></h3>
+                  </div>
+                    
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="text-center" id="total_active_inventory_error_div"></div>
+                <div class="text-center chart-div">
+                  <canvas style="height: 350px;!important  width:350px;!important"  id="year_inventoty_chart" class="charts-canvas"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
 </div>
           </div>
           </div>
@@ -205,6 +240,7 @@ var today = ('0'+(d.getMonth()+1)).slice(-2) + '/' + ('0'+d.getDate()).slice(-2)
     },
     success: function(data) {
       all_year_get_data(data)
+      all_year_get_data_inventory(data)
     }
   });
 } 
@@ -220,8 +256,8 @@ function all_year_get_data(years){
     for (var i = 0; i < years.length; i++) {
       year.push(years[i].monthname);
       total.push(years[i].amount_paid);
-      hello.push((years[i].amount_paid/100) * 25);
-      bbnl.push((years[i].amount_paid/100) * 75);
+      hello.push((years[i].amount_paid/100) * 75);
+      bbnl.push((years[i].amount_paid/100) * 25);
     }
   }
 
@@ -233,11 +269,11 @@ function all_year_get_data(years){
       label:'Hello Network',
       data: hello,
       backgroundColor :  ['#f56954','#f56954','#f56954','#f56954','#f56954','#f56954'],
-    },{
+    },/*{
       label:'BBNL',
       data: bbnl,
       backgroundColor :  [ '#00a65a','#00a65a','#00a65a','#00a65a','#00a65a','#00a65a'],
-    },{
+    },*/{
       label:'Total',
       data: total,
       backgroundColor :  [ '#f39c12','#f39c12','#f39c12','#f39c12','#f39c12','#f39c12'],
@@ -296,85 +332,97 @@ function all_year_get_data(years){
 
 
 
-  var ticksStyle = {
-    fontColor: '#495057',
-    fontStyle: 'bold'
-  }
-   var mode = 'index'
-  var intersect = true
 
-var visitorsChart ='';
-function all_year_get_data1(years){
-  var ctx = document.getElementById('year_case_inventoty_chart').getContext('2d');
-  var year = [];
-  var total = [];
-  var hello = [];
-  var bbnl = [];
-  if (years.length > 0) {
-    for (var i = 0; i < years.length; i++) {
-      year.push(years[i].monthname);
-      total.push(years[i].amount_paid);
-      hello.push((years[i].amount_paid/100) * 25);
-      bbnl.push((years[i].amount_paid/100) * 75);
-    }
-  }
-  
-var sum = eval(total.join("+"));
- // var $visitorsChart = $('#year_case_inventoty_chart')
-  // eslint-disable-next-line no-unused-vars
-   visitorsChart = new Chart(ctx, {
+
+get_revenue();
+function get_revenue(){
+var duration = $("#duration").val();
+  $.ajax({
+    type: "POST",
+    url:  base_url+"admin_Product/custom_revnue", 
+    dataType : 'JSON',
     data: {
-      labels: year,
-      datasets: [{
-        type: 'bar',
-        data: total,
-        backgroundColor: 'transparent',
-        borderColor: '#007bff',
-        pointBorderColor: '#007bff',
-        pointBackgroundColor: '#007bff',
-        fill: false
-        // pointHoverBackgroundColor: '#007bff',
-        // pointHoverBorderColor    : '#007bff'
-      }]
+      is_admin : 1, 
+      duration : duration, 
     },
-    options: {
-      maintainAspectRatio: false,
-      tooltips: {
-        mode: mode,
-        intersect: intersect
-      },
-      hover: {
-        mode: mode,
-        intersect: intersect
-      },
-      legend: {
-        display: false
-      },
-      scales: {
-        yAxes: [{
-          // display: false,
-          gridLines: {
-            display: true,
-            lineWidth: '4px',
-            color: '#007bff',
-            zeroLineColor: 'transparent'
-          },
-          ticks: $.extend({
-            beginAtZero: true,
-            suggestedMax: sum
-          }, ticksStyle)
-        }],
-        xAxes: [{
-          display: true,
-          gridLines: {
-            display: false
-          },
-          ticks: ticksStyle
-        }]
+    success: function(data) {
+      if (data !=null) { 
+      all_year_get_data1(data) 
       }
     }
-  }) 
+  });
+}  
+
+// all_year_get_data1();
+var pending_case_count_chart1 ='';
+function all_year_get_data1(data){   
+  var ctx1 = document.getElementById('year_inventoty_chart').getContext('2d');
+  var bbnl = '';
+  var total = '';
+  var hello = ''; 
+
+     total = data.amount;
+      hello = (data.amount/100) * 75;
+     bbnl =  (data.amount/100) * 25;
+
+  var sales_by_item_count_data1  = {
+    labels: [
+      'HELLO Network',  
+      'Total'
+    ],
+    datasets: [{
+          data: [hello,total],
+          backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
+        }]
+  }
+
+  var sales_by_item_count_options = {
+    maintainAspectRatio : false,
+    responsive : true,
+  };
+
+  if(pending_case_count_chart1) {
+    pending_case_count_chart1.destroy();
+  }
+ 
+  pending_case_count_chart1 = new Chart(ctx1, {
+    
+      type: 'doughnut',
+        data: sales_by_item_count_data1,
+        beginAtZero: true,
+        options: {
+            responsive: true,
+            /*legend: {
+                display: false
+            },*/
+             maintainAspectRatio     : false,
+              datasetFill: false,
+           /* title: {
+                display: false,
+                text: 'Chart.js bar Chart'
+            },*/
+            animation: {
+                animateScale: true
+            },
+            scales: {
+              xAxes: [{
+                  stacked: true,
+                }],
+                yAxes: [{
+                      stacked: true,
+                    ticks: {
+                        beginAtZero: true,
+                        callback: function (value) { if (Number.isInteger(value)) { return value; } },
+                        stepSize: 1
+                    }
+                }]
+            }
+        }  
+
+  });
 }
+
+
 
 
   </script>

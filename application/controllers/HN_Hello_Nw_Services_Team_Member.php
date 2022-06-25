@@ -24,6 +24,8 @@ class HN_Hello_Nw_Services_Team_Member extends CI_Controller {
 	function dashboard() {
 		$this->check_Team_Member_Login_Model->check_team_member_login();
 		$data['analytics'] = $this->admin_users_Model->get_analytics();
+		 $user = $this->session->userdata('logged-in-team-member');
+		$data['tag'] = isset($user['tag'])?$user['tag']:'BBNL';
 		$data['title'] = "Team Member Dashboard";
 		$this->load->view('team-member-common/header');
 		$this->load->view('team-member-common/sidebar');
@@ -64,16 +66,17 @@ class HN_Hello_Nw_Services_Team_Member extends CI_Controller {
 
 	
 
-	function view_all_user() {
-		echo "string";
+	function view_all_user() { 
 		$this->check_Team_Member_Login_Model->check_team_member_login();
 		$data['title'] = "Team Member";
-		$data['user'] = $this->db->where('tag','bbnl')->order_by('uid','ASC')->get('users')->result_array();
+		$user = $this->session->userdata('logged-in-team-member');
+			$this->db->where('users.tag',$user['tag']);
+		$data['user'] = $this->db->order_by('uid','ASC')->get('users')->result_array();
 		$this->load->view('team-member-common/header');
 		$this->load->view('team-member-common/sidebar');
 		$this->load->view('team-member/users/header');
 		$this->load->view('team-member/users/view-all-users',$data);
-		// $this->load->view('team-member-common/footer');
+		$this->load->view('team-member-common/footer');
 	}
 
 
@@ -98,13 +101,15 @@ class HN_Hello_Nw_Services_Team_Member extends CI_Controller {
 
 	function all_products() {
 		$this->check_Team_Member_Login_Model->check_team_member_login();
-		$data['user'] = $this->db->where('tag','bbnl')->order_by('uid','ASC')->get('users')->result_array();
+		$user = $this->session->userdata('logged-in-team-member');
+			$this->db->where('users.tag',$user['tag']);
+		$data['users'] = $this->db->order_by('uid','ASC')->get('users')->result_array();
 		$data['title']="Admin Dashboard";
 		$this->load->view('team-member-common/header');
 		$this->load->view('team-member-common/sidebar');
 		// $this->load->view('admin/product/product-header');
 		$this->load->view('team-member/product/view-product',$data);
-		// $this->load->view('team-member-common/footer');
+		$this->load->view('team-member-common/footer');
 	}
 
 

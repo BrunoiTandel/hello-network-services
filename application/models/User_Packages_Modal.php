@@ -9,7 +9,15 @@ class User_Packages_Modal extends CI_Model {
 
 	function get_purchased_packages() {
 		$user_details = $this->session->userdata('logged-in-user');
+		$this->db->where('user_purchased_package.order_status',1);
 		return $this->db->where('user_id',$user_details['uid'])->order_by('user_purchased_package_id','DESC')->get('user_purchased_package')->result_array();
+	}
+
+
+	function get_single_purchased_packages($id) { 
+		 $this->db->where('MD5(user_purchased_package_id)',$id);
+		 $this->db->where('user_purchased_package.order_status',1);
+		return $this->db->order_by('user_purchased_package_id','DESC')->select('*')->from('user_purchased_package')->join('users','user_purchased_package.user_id = users.uid','left')->join('products','user_purchased_package.package_id = products.product_id','left')->get('')->row_array();
 	}
 
 	function get_purchase_package_details($package_id) {
@@ -28,9 +36,9 @@ class User_Packages_Modal extends CI_Model {
 			
 			$user_details = $this->session->userdata('logged-in-user');
 			$data['user_details'] = array(
-				'name' => $user_details['full_name'],
-				'mobile_number' => $user_details['phone'],
-				'email_id' => $user_details['email']
+				'name' => isset($user_details['full_name'])?$user_details['full_name']:'',
+				'mobile_number' => isset($user_details['phone'])?$user_details['phone']:'',
+				'email_id' => isset($user_details['email'])?$user_details['email']:''
 			);
 
 			$data['payment_key'] = $this->admin_Payment_Details_Model->get_payment_details()['api_authentication_key'];

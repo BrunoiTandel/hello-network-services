@@ -5,7 +5,7 @@
             <h1>Personal Information</h1>
          </div>
          <div class="col-md-3">
-            <span id="edit-profile-btn"><button id="edit-profile">Edit</button></span>
+            <!-- <span id="edit-profile-btn d-none"><button id="edit-profile">Edit</button></span> -->
          </div>
       </div>
    </div>
@@ -26,7 +26,7 @@
       </div>
       <div class="row mt-3">
          <div class="col-md-2">
-            <h3>First Name</h3>
+            <h3>User Name</h3>
          </div>
          <div class="col-md-4">
             <h4 id="show-user-first-name">-</h4>
@@ -34,7 +34,7 @@
             <div class="col-md-12 p-0 text-left" id="user-first-name-error-msg-div"></div>
          </div>
          <div class="col-md-2">
-            <h3>Last Name</h3>
+            <h3>Full Name</h3>
          </div>
          <div class="col-md-4">
             <h4 id="show-user-last-name">-</h4>
@@ -54,7 +54,7 @@
          </div>
 
          <div class="col-md-2">
-            <h3>District</h3>
+            <h3>Location</h3>
          </div>
          <div class="col-md-4">
             <h4 id="show-user-district-name">-</h4>
@@ -71,6 +71,15 @@
             <h4 id="show-user-address">-</h4>
             <textarea class="login-fld d-none" placeholder="Address" id="user-address"></textarea>
             <div class="col-md-12 p-0 text-left" id="user-address-error-msg-div"></div>
+         </div>
+
+         <div class="col-md-2">
+            <h3>Bandwidth</h3>
+         </div>
+         <div class="col-md-4">
+            <h4 id="show-user-plan">-</h4>
+            <textarea class="login-fld d-none" placeholder="Address" id="user-plan"></textarea>
+            <div class="col-md-12 p-0 text-left" id="user-plan-error-msg-div"></div>
          </div>
       </div>
       <div class="row">
@@ -94,6 +103,7 @@
                         <th>Package Name</th>
                         <th>Package Price</th>
                         <th>Purchased Date</th>
+                        <th>Invoice</th>
                      </tr>
                   </thead>
                   <tbody class="tbody-datatable">
@@ -103,6 +113,7 @@
                            <td><?php echo json_decode($value['package_details'],true)['product_title'];?></td>
                            <td><?php echo $value['amount_paid'];?></td>
                            <td><?php echo explode(' ',$value['purchased_date'])[0];?></td>
+                           <td><a target="_blank" href="<?php echo $this->config->item('my_base_url').'user-invoice/'.md5($value['user_purchased_package_id']);?>"><i class="fa fa-file-pdf-o "></i></a></td>
                         </tr>
                      <?php } ?>
                   </tbody>

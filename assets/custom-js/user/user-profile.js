@@ -16,29 +16,34 @@ function get_user_details() {
 	  	dataType: 'json', 
 	  	success: function(data) {
 	  		if(data.status == 1) {
-	  			$('#show-user-email-id').html(data.user_details.user_email_id);
+	  			$('#show-user-email-id').html(data.user_details.email);
 
-	  			$('#show-user-phone-number').html('+91-'+data.user_details.user_mobile_number);
+	  			$('#show-user-phone-number').html('+91-'+data.user_details.phone);
 
-	  			var user_first_name = (data.user_details.user_first_name != '') ? data.user_details.user_first_name : '-';
+	  			var user_first_name = (data.user_details.username != '') ? data.user_details.username : '-';
 	  			$('#show-user-first-name').html(user_first_name);
 	  			$('#user-first-name').val(user_first_name);
 
-	  			var user_last_name = (data.user_details.user_last_name != '') ? data.user_details.user_last_name : '-';
+	  			var user_last_name = (data.user_details.full_name != '') ? data.user_details.full_name : '-';
 	  			$('#show-user-last-name').html(user_last_name);
 	  			$('#user-last-name').val(user_last_name);
 
-	  			var user_block = (data.user_details.user_block != '') ? data.user_details.user_block : '-';
+	  			var user_block = (data.user_details.zone != '') ? data.user_details.zone : '-';
 	  			$('#show-user-block-name').html(user_block);
 	  			$('#block-name').val(user_block);
 
-	  			var user_district = (data.user_details.user_district != '') ? data.user_details.user_district : '-';
+	  			var user_district = (data.user_details.location != '') ? data.user_details.location : '-';
 	  			$('#show-user-district-name').html(user_district)
 	  			$('#district-name').val(user_district);
 
-	  			var user_address = (data.user_details.user_address != '') ? data.user_details.user_address : '-';
+	  			var user_address = (data.user_details.address != '') ? data.user_details.address : '-';
 	  			$('#show-user-address').html(user_address)
 	  			$('#user-address').val(user_address);
+	  			
+	  			var bandwidth = (data.user_details.bandwidth != '') ? data.user_details.bandwidth : '-';
+	  			$('#show-user-plan').html(bandwidth)
+	  			$('#user-plan').val(bandwidth);
+	  			
 	  		} else {
 	  			toastr.error('Something went wrong while getting your details. Please try again.');
 	  		}

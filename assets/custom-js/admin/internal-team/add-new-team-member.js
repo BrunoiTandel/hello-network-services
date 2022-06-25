@@ -176,7 +176,7 @@ function add_new_team_member() {
 		formdata.append('block',$('#team-member-block').val());
 		formdata.append('district',$('#team-member-district').val());
 		formdata.append('address',$('#team-member-address').val());
-
+		formdata.append('tag',$('#team-member-tag').val()); 
 		$.ajax({
 			type: "POST",
 		  	url: base_url+"admin/add-new-internal-team-member",
@@ -297,6 +297,7 @@ function view_user_details(uid){
 	       $("#status").val(data.status);
 	       $("#bill").val(data.bill);
 	       $("#due").val(data.due);
+	       $("#plan-type").val(data.plan_type);
 	    }
     });
 }

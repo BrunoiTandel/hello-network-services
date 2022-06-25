@@ -34,6 +34,7 @@ class AdminLogin extends CI_Controller {
 	      		$this->db->insert('admin_login_log',$userdata);
 
 				$this->session->set_userdata('logged-in-admin', $user);
+				$this->session->unset_userdata('logged-in-team-member');	
 				echo json_encode($status);
 			} else {
 				echo json_encode($status); 
