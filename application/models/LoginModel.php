@@ -47,9 +47,9 @@ class LoginModel extends CI_Model
       $this->db->where('internal_team_member_password', MD5($password));
     }
     if (strpos($username, '@') !== false) {
-      $this->db->where('internal_team_member_name', $username);
-    } else {
       $this->db->where('internal_team_member_email_id', $username);
+    } else {
+      $this->db->where('internal_team_member_name', $username);
     }
 
     $this->db->limit(1);
