@@ -218,7 +218,8 @@ html, body {
     margin-top: 25px;
 }
 
-.buy-plan-btn {
+.buy-plan-btn,
+.package-details-div:hover .buy-plan-btn {
     border: 0;
     width: 150px;
     padding: 7px 17px;
@@ -237,10 +238,6 @@ html, body {
     margin: unset;
     margin-top: 30px;
     float: right;
-}
-
-.package-details-div:hover .buy-plan-btn {
-    background: #F59E1D;
 }
 
 .most-popular {
@@ -1548,22 +1545,6 @@ a.nav-link.profile img {
 }
 
 @media screen and (min-width: 1900px) {
-    .package-details-div {
-        width: 75%;
-    }
-
-    .most-popular {
-        right: 12%;
-    }
-
-    .package-details-div:hover {
-        /*width: 80%;*/
-        transform: scale(1.1);
-    }
-
-    .package-details-div:hover .most-popular {
-        right: 9.5%;
-    }
 
     .container, .container-lg, .container-md, .container-sm, .container-xl {
         max-width: 90% !important;
