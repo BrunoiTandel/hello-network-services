@@ -28,7 +28,7 @@
 	  } else { ?>
 	  	<div class="carousel-inner">
   		  	<div class="carousel-item">
-	  			<img src="http://localhost/gitHUB/hello-network-services/assets/user/images/01.jpg" alt="Los Angeles">
+	  			<img src="<?php echo base_url(); ?>assets/user/images/01.jpg" alt="Los Angeles">
 	  			<div class="carousel-caption">
         			<h3>Broadband Internet Access Across Village Via Rural Hostspots.</h3>
         			<p>The Company is engaged in BSNL distribution and high-speed Broadband service</p>
@@ -42,7 +42,7 @@
       		</div>
 			</div>
   		  	<div class="carousel-item active">
-	  			<img src="http://localhost/gitHUB/hello-network-services/assets/user/images/02.jpg" alt="Los Angeles">
+	  			<img src="<?php echo base_url(); ?>assets/user/images/02.jpg" alt="Los Angeles">
 	  			<div class="carousel-bg-shadow"></div>
 	  			<div class="carousel-caption">
         			<h3>Broadband Internet Access Across Village Via Rural Hostspots.</h3>
@@ -57,7 +57,7 @@
       		</div>
 			</div>
   		  	<div class="carousel-item">
-	  			<img src="http://localhost/gitHUB/hello-network-services/assets/user/images/03.jpg" alt="Los Angeles">
+	  			<img src="<?php echo base_url(); ?>assets/user/images/03.jpg" alt="Los Angeles">
 	  			<div class="carousel-bg-shadow"></div>
 	  			<div class="carousel-caption">
         			<h3>Broadband Internet Access Across Village Via Rural Hostspots.</h3>
@@ -72,7 +72,7 @@
       		</div>
 			</div>
   		  	<div class="carousel-item">
-	  			<img src="http://localhost/gitHUB/hello-network-services/assets/user/images/04.jpg" alt="Los Angeles">
+	  			<img src="<?php echo base_url(); ?>assets/user/images/04.jpg" alt="Los Angeles">
 	  			<div class="carousel-bg-shadow"></div>
 	  			<div class="carousel-caption">
         			<h3>Broadband Internet Access Across Village Via Rural Hostspots.</h3>
@@ -184,14 +184,14 @@
 			<div id="our-services-carousel" class="carousel slide" data-ride="carousel">
 				<div class="carousel-inner">
 		  		  	<div class="carousel-item active">
-			  			<img src="http://localhost/gitHUB/hello-network-services/assets/user/images/our-service-bg-img.png">
+			  			<img src="<?php echo base_url(); ?>assets/user/images/our-service-bg-img.png">
 			  			<div class="carousel-caption">
 		        			<h3>LAST MILE CONNECTIVITY</h3>
 		        			<p>Hello Network Services initiative encapsulates enabling of Wi-Fi Service in all users by deploying affordable and effective infrastructure thereby delivering services at an affordable price.</p>
 		      		</div>
 					</div>
 					<div class="carousel-item">
-			  			<img src="http://localhost/gitHUB/hello-network-services/assets/user/images/our-service-bg-img.png">
+			  			<img src="<?php echo base_url(); ?>assets/user/images/our-service-bg-img.png">
 			  			<div class="carousel-caption">
 		        			<h3>LAST MILE CONNECTIVITY</h3>
 		        			<p>Hello Network Services initiative encapsulates enabling of Wi-Fi Service in all users by deploying affordable and effective infrastructure thereby delivering services at an affordable price.</p>
