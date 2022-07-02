@@ -11,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/user/css/slick-theme.css"/>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/user/css/custom-2.css">
+	<!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/user/css/custom-carousel.css"> -->
 	
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="preconnect" href="https://fonts.googleapis.com">

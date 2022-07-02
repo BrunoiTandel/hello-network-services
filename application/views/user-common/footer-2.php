@@ -133,6 +133,22 @@
             	}
          	}]
 		});
+
+		$('.news-list-div').slick({
+		  	autoplay: true,
+		  	dots: false,
+		  	autoplaySpeed: 3000,
+		  	slidesToShow: 3,
+		  	slidesToScroll: 1,
+		  	arrows: true,
+      		responsive: [{
+            	breakpoint: 800,
+            	settings: {
+               		slidesToShow: 1,
+               		slidesToScroll: 1,
+            	}
+         	}]
+		});
 	</script>
 
 	<script>

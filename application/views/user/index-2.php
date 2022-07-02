@@ -211,10 +211,10 @@
 
 <section id="hm-testi">
    <div class="container">
-      <div class="hm-testi-hd wow fadeInUp" data-wow-duration="1.8s">
-         <h1 class="wow fadeInUp" data-wow-duration="1.8s">What Our Clients <span>Say About Us</span></h1>
+      <div class="hm-testi-hd">
+         <h1>What Our Clients <span>Say About Us</span></h1>
       </div>
-      <div class="hm-testi-cnt wow fadeInUp" data-wow-duration="2.1s">
+      <div class="hm-testi-cnt">
          <div class="hm-testi-item">
             <div class="hm-testi-txt">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -265,6 +265,78 @@
    </div>
 </section>
 
+<!-- <div class="wrapper">
+    <div class="cap">
+        <h4 class="header">Gem Encyclopaedia</h4>
+    </div>
+    <div class="body">
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-item">
+                    <div class="item">
+                        <div class="gem purple"></div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="item">
+                        <div class="gem red"></div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="item">
+                        <div class="gem blue"></div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="item">
+                        <div class="gem green"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <p class="instructions">Swipe up and down with the arrow keys or mouse to view the different gems.</p>
+            <div class="item-content">
+                <h3 class="header">Item description</h3>
+                <p class="description">You won’t get good at anything by doing it a lot fucking aimlessly. Intuition is fucking important. Never let your guard down by thinking you’re fucking good enough. Design as if your fucking life depended on it. Your rapidograph pens are fucking dried up, the x-acto blades in your bag are rusty, and your mind is dull.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="col-side"><input class="level-btn" type="button" value="Level 3" /></div>
+        <div class="col-center"><span class="progress-bar"><span class="progress-bar__value"></span></span></div>
+        <div class="col-side"><input class="level-btn" type="button" value="Level 4" /></div>
+    </div>
+</div>
+<div class="disclaimer">
+    <p>Vertical carousels though.</p>
+</div> -->
+
+<section id="hm-news-knowledge">
+   <div class="container">
+      <div class="hm-testi-hd">
+         <h1>News And Knowledge<span> From Hello Network</span></h1>
+         <span class="d-block">Learn more about the networking technology</span>
+      </div>
+      <div class="news-list-div">
+      	<?php for ($i=0; $i < 3; $i++) {?>
+	         <div class="news-item">
+	         	<a href="#">
+		         	<img class="news-img" src="<?php echo base_url()?>assets/user/images/grey-330-420px.png">
+		            <div class="news-item-txt">
+		              	<h1>Lorem ipsum dolor sit amet, consetetur</h1>
+		              	<span>
+		              		Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+		              	</span>
+		            </div>
+		         </a>
+	         </div>
+	      <?php } ?>
+      </div>
+   </div>
+</section>
+
 <div class="container pl-0 enquire-now-div">
 	<div class="row">
 		<div class="col-md-6">
@@ -306,3 +378,51 @@
 </div>
 
 <script src="<?php echo base_url()?>assets/custom-js/user/contact-us.js"></script>
+<script>
+	// Gem descriptions
+var gems = [{name: 'Amethyst', desc: 'The amethyst, considered the highest level crafting stone, aliquam dolores et eum. Et facilisis iracundia usu, an integre noluisse eos, ea eum quod error appetere.'},
+		   {name: 'Ruby', desc: 'This polished ruby gem adds fire damage vel zril epicurei expetendis te, nec ea vidisse bonorum.'},
+			{name: 'Topaz', desc: 'Topaz, mined from the crust of the underworld, dolores et eum. Et facilisis iracundia usu, an integre noluisse eos.'},
+			{name: 'Emerald', desc: 'The basic emerald is not very exciting, but ea eum quod error appetere. At scribentur disputationi pro, cu quot tota singulis per.'}];
+
+$('.content .header').html(gems[0].name);
+$('.content .description').html(gems[0].desc)
+
+var numSlides;
+var $carousel = $('.carousel');
+
+$carousel.on('beforeChange', function(event, slick, currentSlide, newSlide) {
+	if (newSlide !== currentSlide) {
+		$('.item-content').animate({ opacity: 0}, 150);
+	}
+}).on('afterChange', function(event, slick, currentSlide) {
+	$('.item-content').animate({ opacity: 1}, 150);
+	$('.content .header').html(gems[currentSlide].name);
+	$('.content .description').html(gems[currentSlide].desc);
+}).on('init', function(event, slick) {
+	numSlides = slick.slideCount;
+});
+
+$carousel.slick({
+	infinite: false,
+	vertical: true,
+	verticalSwiping: true,
+	centerPadding: '40px',
+	speed: 200,
+	focusOnSelect: true,
+	arrows: false
+});
+
+// Up/down arrows
+$('html').keydown(function(event) {
+	var currentSlide = $carousel.slick('slickCurrentSlide');
+	
+	// Up
+	if (event.keyCode === 40 && currentSlide !== 0) {
+		$carousel.slick("slickPrev");
+	}
+	else if (event.keyCode === 38 && numSlides - 1 !== currentSlide) {
+		$carousel.slick("slickNext");
+	}
+});
+</script>
