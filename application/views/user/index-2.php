@@ -320,7 +320,7 @@
          <span class="d-block">Learn more about the networking technology</span>
       </div>
       <div class="news-list-div">
-      	<?php for ($i=0; $i < 3; $i++) {?>
+      	<?php for ($i=0; $i < 5; $i++) {?>
 	         <div class="news-item">
 	         	<a href="#">
 		         	<img class="news-img" src="<?php echo base_url()?>assets/user/images/grey-330-420px.png">
