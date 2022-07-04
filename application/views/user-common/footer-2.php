@@ -4,14 +4,14 @@
       		<div class="col-md-12 text-center">
       			<div class="ftr-adrs">
                		<ul>
-                  		<li><a href="mailto:support@hellonetwork.com">Email: support@hellonetwork.com</a></li>
-                  		<li><a href="tel:+919999999999">Phone: +91 919999999999</a></li>
+                  		<li><a href="mailto:hellonetworkservice@gmail.com">Email: hellonetworkservice@gmail.com</a></li>
+                  		<li><a href="tel:+919537252564">Phone: +91 9898787875 - +91 7575066077 - +91 9537252564</a></li>
                		</ul>
             	</div>
             	<div class="ftr-lnks">
                		<ul>
                   		<li><a href="<?php echo $this->config->item('my_base_url')?>">Home</a></li>
-                  		<li><a href="<?php echo $this->config->item('my_base_url')?>about-us">About Us</a></li>
+                  		<!-- <li><a href="<?php echo $this->config->item('my_base_url')?>about-us">About Us</a></li> -->
                   		<li><a href="<?php echo $this->config->item('my_base_url')?>#plans-div">Products</a></li>
                   		<li><a href="<?php echo $this->config->item('my_base_url')?>blogs">Blog</a></li>
                   		<li><a href="<?php echo $this->config->item('my_base_url')?>contact-us">Contact Us</a></li>
@@ -20,16 +20,16 @@
             	<hr>
             	<div class="ftr-scl">
                		<a href="http://localhost/gitHUB/hello-network-services/?/">
-                  		<img src="<?php echo base_url()?>assets/user/images/contact-facebook.png">
+                  		<img src="<?php echo base_url(); ?>assets/user/images/contact-facebook.png">
                		</a>
                		<a href="http://localhost/gitHUB/hello-network-services/?/">
-                  		<img src="<?php echo base_url()?>assets/user/images/contact-instagram.png">
+                  		<img src="<?php echo base_url(); ?>assets/user/images/contact-instagram.png">
                		</a>
                		<a href="http://localhost/gitHUB/hello-network-services/?/">
-                  		<img src="<?php echo base_url()?>assets/user/images/contact-linkedin.png">
+                  		<img src="<?php echo base_url(); ?>assets/user/images/contact-linkedin.png">
                		</a>
                		<a href="http://localhost/gitHUB/hello-network-services/?/">
-                  		<img src="<?php echo base_url()?>assets/user/images/contact-twitter.png">
+                  		<img src="<?php echo base_url(); ?>assets/user/images/contact-twitter.png">
                		</a>
             	</div>
       		</div>
