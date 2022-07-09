@@ -153,6 +153,14 @@ html, body {
     font-weight: bold;
 }
 
+#ads-carousel {
+    margin-top: 20px;
+}
+
+#ads-carousel .carousel-inner .carousel-item img {
+    border-radius: 15px;
+}
+
 .plans-div {
     margin-top: 85px;
 }
@@ -825,7 +833,7 @@ footer {
     bottom: 30px;
     width: 80%;
     right: 40px;
-    left: 20px;
+    left: 40px;
     color: #FFFFFF;
 }
 
@@ -1607,9 +1615,12 @@ a.nav-link.profile img {
 }
 
 @media screen and (min-width: 1900px) {
-
     .container, .container-lg, .container-md, .container-sm, .container-xl {
         max-width: 90% !important;
+    }
+
+    .news-item-txt {
+        left: 60px;
     }
 }
 

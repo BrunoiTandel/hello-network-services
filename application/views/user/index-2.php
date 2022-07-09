@@ -96,6 +96,31 @@
 	<?php } ?>
 </div>
 
+<div class="container-fluid custom-container-fluid-2">
+	<div id="ads-carousel" class="carousel slide" data-ride="carousel">
+		<div class="carousel-inner">
+		  	<?php $n = 4; 
+		  	for ($i = 0; $i < $n; $i++) {
+		  		$active = '';
+		  		if ($i == 0) {
+		  			$active = 'active';
+		  		} ?>
+		  		<div class="carousel-item <?php echo $active;?>">
+			  		<img src="<?php echo base_url()?>assets/user/images/grey-1920-290px.png">
+				</div>
+		  	<?php } ?>
+		</div>
+		<?php if ($n > 0) { ?>
+		  	<a class="carousel-control-prev" href="#ads-carousel" data-slide="prev">
+		    	<span class="carousel-control-prev-icon"></span>
+		  	</a>
+		  	<a class="carousel-control-next" href="#ads-carousel" data-slide="next">
+		    	<span class="carousel-control-next-icon"></span>
+		  	</a>
+	  	<?php } ?>
+	</div>
+</div>
+
 <div class="plans-div container-fluid">
 	<div class="row">
 		<div class="col-md-12 text-center">
