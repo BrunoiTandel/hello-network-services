@@ -7,8 +7,8 @@
                <p>If you would like to know more about any of our services and/or how we could collaborate, we’d love to hear from you!</p>
             </div>
             <div class="contact1-map">
-               <img class="not-hover-img" src="<?php echo base_url()?>assets/user/images/conatct-map.jpg">
-               <img class="on-hover-img" src="<?php echo base_url()?>assets/user/images/conatct-map-hvr.jpg">
+               <img class="not-hover-img" src="<?php echo base_url()?>assets/user/images/conatct-map1.jpg">
+               <img class="on-hover-img" src="<?php echo base_url()?>assets/user/images/conatct-map-hvr1.jpg">
             </div>
          </div>
          <div class="col-md-5">
