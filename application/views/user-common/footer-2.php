@@ -1,38 +1,47 @@
 <footer>
-   	<div class="container-fluid">
+   	<div class="container">
       	<div class="row">
-      		<div class="col-md-12 text-center">
-      			<div class="ftr-adrs">
-               		<ul>
-                  		<li><a href="mailto:hellonetworkservice@gmail.com">Email: hellonetworkservice@gmail.com</a></li>
-                  		<li><a href="tel:+919537252564">Phone: +91 9898787875 - +91 7575066077 - +91 9537252564</a></li>
-               		</ul>
+         	<div class="col-md-4">
+	            <div class="ftr-logo">
+               		<img src="<?php echo base_url()?>assets/dist/img/logo/logo.png" />
+               		<p>Better Decisions, Made Easy</p>
             	</div>
+         	</div>
+         	<div class="col-md-4">
             	<div class="ftr-lnks">
+               		<h3>Quick Links</h3>
                		<ul>
                   		<li><a href="<?php echo $this->config->item('my_base_url')?>">Home</a></li>
-                  		<!-- <li><a href="<?php echo $this->config->item('my_base_url')?>about-us">About Us</a></li> -->
+                  		<li><a href="<?php echo $this->config->item('my_base_url')?>about-us">About Us</a></li>
                   		<li><a href="<?php echo $this->config->item('my_base_url')?>#plans-div">Products</a></li>
-                  		<li><a href="<?php echo $this->config->item('my_base_url')?>blogs">Blog</a></li>
+                  		<li><a href="<?php echo $this->config->item('my_base_url')?>blog">Blog</a></li>
                   		<li><a href="<?php echo $this->config->item('my_base_url')?>contact-us">Contact Us</a></li>
                		</ul>
             	</div>
-            	<hr>
+         	</div>
+         	<div class="col-md-4">
+            	<div class="ftr-adrs">
+               		<h3>Connect with Us</h3>
+               		<ul>
+                  		<li><a href="mailto:hellonetworkservice@gmail.com">Email: hellonetworkservice@gmail.com</a></li> 
+                  		<li><a href="tel:+919537252564">Phone: +91 9898787875 - +91 7575066077 - +91 9537252564</a></li>
+               		</ul>
+            	</div>
             	<div class="ftr-scl">
-               		<a href="http://localhost/gitHUB/hello-network-services/?/">
-                  		<img src="<?php echo base_url(); ?>assets/user/images/contact-facebook.png">
+               		<a href="#">
+                  		<i class="fa fa-facebook" aria-hidden="true"></i>
                		</a>
-               		<a href="http://localhost/gitHUB/hello-network-services/?/">
-                  		<img src="<?php echo base_url(); ?>assets/user/images/contact-instagram.png">
+               		<a href="#">
+                  		<i class="fa fa-linkedin" aria-hidden="true"></i>
                		</a>
-               		<a href="http://localhost/gitHUB/hello-network-services/?/">
-                  		<img src="<?php echo base_url(); ?>assets/user/images/contact-linkedin.png">
+               		<a href="#">
+                  		<i class="fa fa-twitter" aria-hidden="true"></i>
                		</a>
-               		<a href="http://localhost/gitHUB/hello-network-services/?/">
-                  		<img src="<?php echo base_url(); ?>assets/user/images/contact-twitter.png">
+               		<a href="#">
+                  		<i class="fa fa-instagram" aria-hidden="true"></i>
                		</a>
             	</div>
-      		</div>
+         	</div>
       	</div>
       	<div class="row">
          	<div class="col-md-12">
@@ -124,37 +133,7 @@
 		  	slidesToScroll: 1,
 		  	centerMode: true,
 		  	centerPadding: '0px',
-		  	slidesToShow: 3,
-      		responsive: [{
-            	breakpoint: 800,
-            	settings: {
-               		slidesToShow: 1,
-               		slidesToScroll: 1,
-            	}
-         	}]
-		});
-
-		$('.news-list-div').slick({
-		  	autoplay: true,
-		  	dots: false,
-		  	autoplaySpeed: 3000,
-		  	slidesToShow: 3,
-		  	slidesToScroll: 1,
-		  	arrows: true,
-      		responsive: [
-      			{
-            		breakpoint: 800,
-            		settings: {
-               			slidesToShow: 1
-            		}
-         		},
-         		// {
-         		// 	breakpoint: 1900,
-           //  		settings: {
-           //     			slidesToShow: 4
-           //  		}
-         		// }
-         	]
+		  	slidesToShow: 3
 		});
 	</script>
 
