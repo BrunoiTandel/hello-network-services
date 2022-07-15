@@ -31,12 +31,12 @@
 	  			<img src="<?php echo base_url(); ?>assets/user/images/01.jpg" alt="Los Angeles">
 	  			<div class="carousel-caption">
         			<h3>Broadband Internet Access Across Village Via Rural Hostspots.</h3>
-        			<p>The Company is engaged in BSNL distribution and high-speed Broadband service</p>
+        			<p>The Company is engaged in Vodafone distribution and high-speed Broadband service</p>
         			<div class="carousel-plans-div">
 	      			<a href="#">Get Started<img src="<?php echo base_url()?>assets/user/images/arrow-right.png"></a>
 	      			<div class="carousel-plans-desc-div">
 	      				<label>Plan starts at</label>
-	      				<span>₹1250/Month</span>
+	      				<span>₹499/Month</span>
 	      			</div>
 	      		</div>
       		</div>
@@ -46,7 +46,7 @@
 	  			<div class="carousel-bg-shadow"></div>
 	  			<div class="carousel-caption">
         			<h3>Broadband Internet Access Across Village Via Rural Hostspots.</h3>
-        			<p>The Company is engaged in BSNL distribution and high-speed Broadband service</p>
+        			<p>The Company is engaged in Vodafone distribution and high-speed Broadband service</p>
         			<div class="carousel-plans-div">
 	      			<a href="#">Get Started<img src="<?php echo base_url()?>assets/user/images/arrow-right.png"></a>
 	      			<div class="carousel-plans-desc-div">
@@ -61,7 +61,7 @@
 	  			<div class="carousel-bg-shadow"></div>
 	  			<div class="carousel-caption">
         			<h3>Broadband Internet Access Across Village Via Rural Hostspots.</h3>
-        			<p>The Company is engaged in BSNL distribution and high-speed Broadband service</p>
+        			<p>The Company is engaged in Vodafone distribution and high-speed Broadband service</p>
         			<div class="carousel-plans-div">
 	      			<a href="#">Get Started<img src="<?php echo base_url()?>assets/user/images/arrow-right.png"></a>
 	      			<div class="carousel-plans-desc-div">
@@ -76,7 +76,7 @@
 	  			<div class="carousel-bg-shadow"></div>
 	  			<div class="carousel-caption">
         			<h3>Broadband Internet Access Across Village Via Rural Hostspots.</h3>
-        			<p>The Company is engaged in BSNL distribution and high-speed Broadband service</p>
+        			<p>The Company is engaged in Vodafone distribution and high-speed Broadband service</p>
         			<div class="carousel-plans-div">
 	      			<a href="#">Get Started<img src="<?php echo base_url()?>assets/user/images/arrow-right.png"></a>
 	      			<div class="carousel-plans-desc-div">
@@ -169,7 +169,7 @@
 			<div class="col-md-6">
 				<!-- <img class="our-company-img" src="<?php echo base_url()?>assets/user/images/side-b.jpg"> -->
 				<div class="about-us-desc-div">
-		      	<p>The Company is engaged in BSNL distribution and high-speed Broadband service distribution reaching with presence in Vansda.</p>
+		      	<p>The Company is engaged in Vodafone distribution and high-speed Broadband service distribution reaching with presence in Vansda.</p>
 					<p>The Company is the largest Digital Cable and Wireline Broadband Service Provider in Gujarat & is a leading Digital Cable TV Service provider in West Vansda. Hello Service Provider also has a significant presence in all other markets.</p>
 					<p>The Company is constantly striving to enhance and simplify its customers' lives through quality services and products that give them the freedom to be entertained anytime, anywhere.</p>
 		      </div>
