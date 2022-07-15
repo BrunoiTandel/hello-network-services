@@ -51,7 +51,7 @@
 	      			<a href="#">Get Started<img src="<?php echo base_url()?>assets/user/images/arrow-right.png"></a>
 	      			<div class="carousel-plans-desc-div">
 	      				<label>Plan starts at</label>
-	      				<span>₹1250/Month</span>
+	      				<span>₹499/Month</span>
 	      			</div>
 	      		</div>
       		</div>
@@ -66,7 +66,7 @@
 	      			<a href="#">Get Started<img src="<?php echo base_url()?>assets/user/images/arrow-right.png"></a>
 	      			<div class="carousel-plans-desc-div">
 	      				<label>Plan starts at</label>
-	      				<span>₹1250/Month</span>
+	      				<span>₹499/Month</span>
 	      			</div>
 	      		</div>
       		</div>
@@ -81,7 +81,7 @@
 	      			<a href="#">Get Started<img src="<?php echo base_url()?>assets/user/images/arrow-right.png"></a>
 	      			<div class="carousel-plans-desc-div">
 	      				<label>Plan starts at</label>
-	      				<span>₹1250/Month</span>
+	      				<span>₹499/Month</span>
 	      			</div>
 	      		</div>
       		</div>
