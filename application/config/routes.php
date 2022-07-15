@@ -57,6 +57,7 @@ $route['translate_uri_dashes'] = FALSE;
 // Admin Links
 $route['admin'] = 'HN_Hello_Nw_Services_Admin';
 $route['admin/logout'] = 'Admin_Logout/index';
+$route['data-plans'] = 'welcome/data_plan';
 
 
 // Admin All Pages Links

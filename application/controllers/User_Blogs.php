@@ -14,17 +14,17 @@ class User_Blogs extends CI_Controller {
 	function index() {
 		$data['title'] = 'Factsuite';
 		
-		$this->load->view('user-common/header-2',$data);
+		$this->load->view('user-common/header',$data);
 		$this->load->view('user/blogs-2');
-		$this->load->view('user-common/footer-2');
+		$this->load->view('user-common/footer');
 	}
 
 	function blog_details() {
 		$data['title'] = 'Factsuite';
 		
-		$this->load->view('user-common/header-2',$data);
+		$this->load->view('user-common/header',$data);
 		$this->load->view('user/blog-details-2');
-		$this->load->view('user-common/footer-2');
+		$this->load->view('user-common/footer');
 	}
 
 	function add_contact_us_enquiry() {

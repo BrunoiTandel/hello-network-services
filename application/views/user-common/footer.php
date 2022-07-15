@@ -12,7 +12,7 @@
                		<ul>
                   		<li><a href="<?php echo $this->config->item('my_base_url')?>">Home</a></li>
                   		<!-- <li><a href="<?php echo $this->config->item('my_base_url')?>about-us">About Us</a></li> -->
-                  		<li><a href="<?php echo $this->config->item('my_base_url')?>#plans-div">Products</a></li>
+                  		<li><a href="<?php echo $this->config->item('my_base_url')?>data-plans">Products</a></li>
                   		<li><a href="<?php echo $this->config->item('my_base_url')?>blogs">Blog</a></li>
                   		<li><a href="<?php echo $this->config->item('my_base_url')?>contact-us">Contact Us</a></li>
                		</ul>

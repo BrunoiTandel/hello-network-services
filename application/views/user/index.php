@@ -135,6 +135,9 @@
 	<div class="container-fluid custom-container-fluid">
 		<div class="row packages-list-main-div" id="packages-list">
 			<?php foreach($packages_list as $key => $value) { 
+				if ($key ==4) {
+					break;
+				}
 				$most_popuar_class = '';
 				$best_item_div = '';
 				if ($value['is_best_item'] == 1) {

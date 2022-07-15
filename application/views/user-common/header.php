@@ -46,7 +46,7 @@
 	        			<a class="nav-link" href="<?php echo $this->config->item('my_base_url')?>contact-us">Contact Us</a>
 	      			</li>
 	      			<li class="nav-item for-mobile">
-	  					<a href="<?php echo $this->config->item('my_base_url')?>#plans-div" class="hdr-view-data-plans">View Data Plans</a>
+	  					<a href="<?php echo $this->config->item('my_base_url')?>data-plans" class="hdr-view-data-plans">View Data Plans</a>
                     </li>
 	  				<?php if ($this->session->userdata('logged-in-user')) { ?>
 	      				<li class="nav-item dropdown-hover for-mobile" id="hdr-sign-in-logout-li">
@@ -67,7 +67,7 @@
 	  		<div class="for-desktop">
 	  			<ul class="navbar-nav">
 	  				<li class="nav-item">
-	  					<a href="<?php echo $this->config->item('my_base_url')?>#plans-div" class="hdr-view-data-plans">View Data Plans</a>
+	  					<a href="<?php echo $this->config->item('my_base_url')?>data-plans" class="hdr-view-data-plans">View Data Plans</a>
                     </li>
 	  				<?php if ($this->session->userdata('logged-in-user')) { ?>
 	      				<li class="nav-item dropdown-hover" id="hdr-sign-in-logout-li">

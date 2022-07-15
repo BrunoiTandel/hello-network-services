@@ -38,6 +38,15 @@ class Welcome extends CI_Controller {
 		$this->load->view('user-common/footer');
 	}
 
+
+	function data_plan() {
+		$data['title'] = 'Hello Network Services';
+		$data['packages_list'] = $this->user_Packages_Modal->get_all_products(); 
+		$this->load->view('user-common/header',$data);
+		$this->load->view('user/data-plan');
+		$this->load->view('user-common/footer');
+	}
+
 	function index_2() {
 		$data['title'] = 'Hello Network Services';
 		$data['packages_list'] = $this->user_Packages_Modal->get_all_products();
