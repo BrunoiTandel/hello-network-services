@@ -205,7 +205,7 @@ $route['contact-us'] = 'User_Contact_Us';
 
 // User Blogs
 $route['blogs'] = 'User_Blogs';
-$route['blog-details'] = 'User_Blogs/blog_details';
+$route['blog-details/(:any)'] = 'User_Blogs/blog_details/$1';
 
 
 
@@ -232,3 +232,6 @@ $route['hello-static-invoice-pdf'] = 'User_Profile/static_pdf';
 
 // User New UI
 $route['index-2'] = 'Welcome/index_2';
+
+// Blogs
+$route['user/get-all-blogs'] = 'User_Blogs/get_all_blogs';

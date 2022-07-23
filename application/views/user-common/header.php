@@ -23,7 +23,9 @@
 	<script type="text/javascript" src="<?php echo base_url()?>assets/user/js/jquery.min.js"></script>
 
 	<script>
-	   var base_url = "<?php echo $this->config->item('my_base_url')?>";
+	   	var img_base_url = '<?php echo base_url();?>';
+	   	var base_url = "<?php echo $this->config->item('my_base_url')?>";
+	   	var my_base_url = "<?php echo $this->config->item('my_base_url')?>";
 	</script>
 </head>
 

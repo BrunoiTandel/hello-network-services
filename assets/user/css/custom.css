@@ -1350,6 +1350,43 @@ a.nav-link.profile img {
     border-top: 0 !important;
 }
 
+.no-page-txt {
+    text-align: center;
+}
+
+.no-page-txt img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.no-page-txt h1 {
+    color: #481777;
+    font-size: 27px;
+    line-height: 43px;
+    font-weight: 500;
+    letter-spacing: 1.6px;
+    margin: 16px 0px 7px 0px;
+}
+
+.no-page-txt p {
+    font-size: 16px;
+    color: #4E4E4E;
+    letter-spacing: 0.96px;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+.no-page-txt a {
+    color: #FFF;
+    font-size: 16px;
+    display: inline-block;
+    text-decoration: none;
+    background: transparent linear-gradient(180deg, #F59E1D 0%, #EB9E2C 100%) 0% 0% no-repeat;
+    padding: 12px 70px;
+    border-radius: 10px;
+    box-shadow: 0 0 1px rgb(0 0 0 / 0%);
+}
+
 @media screen and (min-width: 1900px) {
     .package-details-div {
         width: 75%;
