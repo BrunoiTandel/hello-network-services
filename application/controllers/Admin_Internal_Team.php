@@ -211,5 +211,10 @@
 			echo json_encode($data);
 	}
 
+	function send_mail(){ 
+		$data = $this->admin_Internal_Team_Model->send_mail();
+			echo json_encode($data);
+	}
+
 	}
  

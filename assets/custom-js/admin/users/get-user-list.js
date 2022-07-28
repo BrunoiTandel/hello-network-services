@@ -67,3 +67,25 @@ var status = $("#status").val();
 		  	}
 		});
 });
+
+function send_user_details(id){
+	$.ajax({
+			type: "POST",
+		  	url: base_url+"admin_Internal_Team/send_mail",
+		  	data:{uid:id},
+		  	dataType: 'json',
+		    contentType: false,
+		    processData: false,
+		  	success: function(data) { 
+		  		if (data.status == '200') {  
+				  		toastr.success('Email successfully sent.'); 
+				   
+			  	} else {
+			  		toastr.error('Something went wrong while sending the mail. Please try again.');
+			  	}
+		  	},
+		  	error: function(data) { 
+		  		toastr.error('Something went wrong while sending the mail. Please try again.');
+		  	}
+		});
+}

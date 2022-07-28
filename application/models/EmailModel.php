@@ -55,15 +55,16 @@ class EmailModel extends CI_Model {
 			if ($path !='' && $file !='') { 
 				$mail->AddAttachment( $path.$file , $file); 
 			  }  
-			$mail->SMTPDebug = 1;
-			$mail->Debugoutput = function($str, $level) {echo "debug level $level; message: $str"; echo "<br>";};
+			// $mail->SMTPDebug = 1;
+			// $mail->Debugoutput = function($str, $level) {echo "debug level $level; message: $str"; echo "<br>";};
 			if(!$mail->Send()) {
-			    echo "Mail sending failed";
+			    // echo "Mail sending failed";
+			    return array('status'=>200);
 			} else {
-			    echo "Successfully sent";
-			    // return array('status'=>0);
+			    // echo "Successfully sent";
+			    return array('status'=>201);
 			}
-			    return array('status'=>1);
+			    return array('status'=>201);
 	}
 
 	function insuffMailToCandiate($candidate_id,$candidate_name,$component_name,$insuff_remarks,$candidate_mail_id){

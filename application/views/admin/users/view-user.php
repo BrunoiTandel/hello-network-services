@@ -29,7 +29,7 @@
                      <th>Created Date</th>  
                      <th>User Status</th>  
                      <th>View&nbsp;Details</th>
-                     <!-- <th>Actions</th> -->
+                     <th>Actions</th>
                   </tr>
                </thead>
                <!-- id="get-case-data-1" -->
@@ -54,6 +54,7 @@
                           echo '<td>'.$value['u_created_date'].'</td>';
                           echo '<td>'.$status.'</td>';
                           echo '<td><a href="#" onclick="view_user_details('.$value['uid'].')"><i class="fa fa-eye"></i></a></td>';
+                          echo '<td><a href="#" onclick="send_user_details('.$value['uid'].')"><i class="fa fa-envelope text-info"></i></a></td>';
                             
                           echo '</tr>';
                        }

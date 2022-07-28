@@ -2,6 +2,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin_Internal_Team_Model extends CI_Model {
+	function __construct() {
+		  	parent::__construct();
+		  	$this->load->database();
+		  	$this->load->helper('url'); 
+		  	$this->load->model('emailModel');
+		}
 
 	function get_all_internal_team_roles() {
 		return $this->db->order_by('internal_team_role_id','ASC')->get('internal_team_role')->result_array();
@@ -244,5 +250,52 @@ class Admin_Internal_Team_Model extends CI_Model {
 
 	function get_single_user_details(){
 		return $this->db->where('uid',$this->input->post('uid'))->get('users')->row_array();
+	}
+
+	function send_mail(){
+		$user = $this->get_single_user_details();
+		$mail_subject = "Credentials";
+		$mail_message = '';
+		$mail_message="
+				<html>
+					<head>
+						<style>
+							table {
+								font-family: arial, sans-serif;
+								border-collapse: collapse;
+								width: 100%;
+							}
+
+							td, th {
+								border: 1px solid #dddddd;
+								text-align: left;
+								padding: 8px;
+							}
+
+							tr:nth-child(even) {
+								background-color: #dddddd;
+							}
+						</style>
+					</head>
+					<body>
+						<p>Dear “".$user['username']."”,</p>
+						<p>Greetings from Hello!!</p> 
+						<table> 
+							<th>Candidate Name</th>
+							<th>Mobile Number</th>
+							<th>Password</th>
+							<tr> 
+							<td>".$user['username']."</td>
+							<td>".$user['phone']."</td>
+							<td>".$user['password']."</td>
+							<tr>
+						</table>
+						 
+						<p><b>Yours sincerely,<br>
+						Hello Network</b></p>
+					</body>
+				</html>";
+		
+	$this->emailModel->send_mail($user['email'],$mail_subject,$mail_message)
 	}
 }
