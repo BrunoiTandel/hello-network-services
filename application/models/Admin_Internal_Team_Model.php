@@ -296,6 +296,6 @@ class Admin_Internal_Team_Model extends CI_Model {
 					</body>
 				</html>";
 		
-	$this->emailModel->send_mail($user['email'],$mail_subject,$mail_message)
+	$this->emailModel->send_mail($user['email'],$mail_subject,$mail_message);
 	}
 }
