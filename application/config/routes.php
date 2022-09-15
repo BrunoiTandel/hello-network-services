@@ -181,6 +181,19 @@ $route['admin/update-blog'] = 'admin_Blog/update_blog';
 $route['admin/delete-blog'] = 'admin_Blog/delete_blog';
 
 
+
+// Admin Adversement
+$route['admin/add-adversement'] = 'HN_Hello_Nw_Services_Admin/add_adversement';
+$route['admin/all-adversements'] = 'HN_Hello_Nw_Services_Admin/all_adversements';
+$route['admin/get-all-post-type'] = 'admin_Adversement/get_all_post_type';
+$route['admin/add-new-adversement'] = 'admin_Adversement/add_new_adversement';
+$route['admin/get-all-adversements'] = 'admin_Adversement/get_all_adversements';
+$route['admin/change-adversement-status'] = 'admin_Adversement/change_adversement_status';
+$route['admin/get-adversement-details'] = 'admin_Adversement/get_adversement_details';
+$route['admin/update-adversement'] = 'admin_Adversement/update_adversement';
+$route['admin/delete-adversement'] = 'admin_Adversement/delete_adversement';
+
+
 // Admin Blogs
 $route['admin/add-product'] = 'HN_Hello_Nw_Services_Admin/add_product';
 $route['admin/all-products'] = 'HN_Hello_Nw_Services_Admin/all_products'; 

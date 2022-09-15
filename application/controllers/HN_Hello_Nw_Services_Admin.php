@@ -185,6 +185,28 @@ class HN_Hello_Nw_Services_Admin extends CI_Controller {
 	}
 
 
+
+	function add_adversement() {
+		$this->check_Admin_Login_Model->check_admin_login();
+		$data['title']="Admin Dashboard";
+		$this->load->view('admin-common/admin-header');
+		$this->load->view('admin-common/admin-sidebar');
+		$this->load->view('admin/adversement/adversement-header');
+		$this->load->view('admin/adversement/add-adversement',$data);
+		$this->load->view('admin-common/admin-footer');
+	}
+
+	function all_adversements() {
+		$this->check_Admin_Login_Model->check_admin_login();
+		$data['title']="Admin Dashboard";
+		$this->load->view('admin-common/admin-header');
+		$this->load->view('admin-common/admin-sidebar');
+		$this->load->view('admin/adversement/adversement-header');
+		$this->load->view('admin/adversement/all-adversement',$data);
+		$this->load->view('admin-common/admin-footer');
+	}
+
+
 	function add_product() {
 		$this->check_Admin_Login_Model->check_admin_login();
 		$data['title']="Admin Dashboard";

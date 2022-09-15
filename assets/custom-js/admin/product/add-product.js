@@ -128,22 +128,22 @@ function add_product() {
 		  		if (data.status == 1) {
 			  		$('#add-product-btn').prop('disabled',false);
 					$('#product-error-div').html('');
-				  	if (data.new_blob_details.status == '1') {
-				  		toastr.success('New product has been added successfully.');
+				  	// if (data.new_blob_details.status == '1') {
+				  		toastr.success('New product has been adde d successfully.');
 						$('#product-title').val();  
 						$('#data-volume-limit').val(); 
 						$('#speed').val();
 						$('#validity').val();
-						$('#plan-price').val(); 
+						$('#plan-price').val();  
 						$('#plan-type').val(); 
 						CKEDITOR.instances['product_content'].setData('');
 						$("#product-thumbnail-image").val('');
 						$('#product-thumbnail-image-div').html('');
 						
 						product_thumbnail_image_array = [];
-				  	} else {
+				  	/*} else {
 				  		toastr.error('Something went wrong while adding the product. Please try again.');
-			  		}
+			  		}*/
 			  	} else {
 			  		check_admin_login();
 			  	}

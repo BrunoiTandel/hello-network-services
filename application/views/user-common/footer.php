@@ -5,7 +5,7 @@
       			<div class="ftr-adrs">
                		<ul>
                   		<li><a href="mailto:hellonetworkservice@gmail.com">Email: hellonetworkservice@gmail.com</a></li>
-                  		<li><a href="tel:+919537252564">Phone: +91 9898787875 - +91 7575066077 - +91 9537252564</a></li>
+                  		<li><a href="tel:+919537252564">Phone: +91 7575066077 - +91 9537252564</a></li>
                		</ul>
             	</div>
             	<div class="ftr-lnks">
