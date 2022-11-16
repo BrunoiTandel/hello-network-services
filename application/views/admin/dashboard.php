@@ -94,7 +94,7 @@
               <div class="row">
                 <div class="col-md-6">
                   <!-- <img src="<?php echo base_url()?>assets/dist/img/sidebar-images/colored-pages.svg"> -->
-                  <span style="font-size: 25px;"><b><?php echo $analytics['total']; ?></b></span>
+                  <span style="font-size: 25px;"><b><?php echo round($analytics['total'],2); ?></b></span>
                 </div>
                 <div class="col-md-6 text-right">
                   <!-- <i class="fa fa-angle-right"></i> -->
@@ -115,7 +115,7 @@
                   <!-- <img src="<?php echo base_url()?>assets/dist/img/sidebar-images/colored-pages.svg"> -->
                   <span style="font-size: 25px;"><b><?php
                   $pr = ($analytics['total']/100) * 25;
-                   echo $pr; ?></b>  <span>(25%)</span></span>
+                   echo round($pr,2); ?></b>  <span>(25%)</span></span>
                 </div>
                 <div class="col-md-6 text-right">
                   <!-- <i class="fa fa-angle-right"></i> -->
@@ -135,7 +135,7 @@
                 <div class="col-md-6">
                   <!-- <img src="<?php echo base_url()?>assets/dist/img/sidebar-images/colored-pages.svg"> -->
                   <span style="font-size: 25px;"><b><?php 
-                   echo $analytics['total'] - $pr; ?></b>  <span>(75%)</span></span>
+                   echo round($analytics['total'] - $pr,2); ?></b>  <span>(75%)</span></span>
                 </div>
                 <div class="col-md-6 text-right">
                   <!-- <i class="fa fa-angle-right"></i> -->

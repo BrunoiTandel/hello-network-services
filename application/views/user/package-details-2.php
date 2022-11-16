@@ -1,4 +1,13 @@
 <?php $package_details = $package_details['purchase_package_details']['package_details']; ?>
+<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7690060139204930"
+     data-ad-slot="4517332140"
+     data-auto-format="mcrspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad>
 <div id="package-details-main-div">
 	<div class="plans-div container">
 		<div class="row">
