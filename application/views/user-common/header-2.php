@@ -25,9 +25,12 @@
 	   	var base_url = "<?php echo $this->config->item('my_base_url')?>";
 	   	var my_base_url = "<?php echo $this->config->item('my_base_url')?>";
 	</script>
-</head>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7690060139204930"
+
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7690060139204930"
      crossorigin="anonymous"></script>
+
+</head>
+
 <body>
 	<nav class="navbar navbar-expand-md bg-white navbar-light fixed-top pb-0">
 		<div class="container">
