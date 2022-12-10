@@ -32,8 +32,8 @@ function all_year_get_data(years){
     for (var i = 0; i < years.length; i++) {  
       year.push(years[i].monthname);
       total.push(years[i].amount_paid);
-      hello.push((years[i].amount_paid/100) * 75);
-      bbnl.push((years[i].amount_paid/100) * 25);
+      hello.push((years[i].amount_paid/100) * 85);
+      bbnl.push((years[i].amount_paid/100) * 15);
       tag = years[i].tag;
     }
   }
@@ -172,8 +172,8 @@ function all_year_get_data1(data){
   var hello = ''; 
 
      total = data.amount;
-      hello = (data.amount/100) * 75;
-     bbnl =  (data.amount/100) * 25;
+      hello = (data.amount/100) * 85;
+     bbnl =  (data.amount/100) * 15;
 
   var sales_by_item_count_data1  = {
     labels: [
