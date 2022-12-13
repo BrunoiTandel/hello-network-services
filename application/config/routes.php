@@ -245,6 +245,9 @@ $route['hello-static-invoice-pdf'] = 'User_Profile/static_pdf';
 
 // User New UI
 $route['index-2'] = 'Welcome/index_2';
+$route['privacy-policy'] = 'Welcome/policy';
+$route['terms-of-use'] = 'Welcome/policy';
+$route['cancellation-policy'] = 'Welcome/policy';
 
 // Blogs
 $route['user/get-all-blogs'] = 'User_Blogs/get_all_blogs';

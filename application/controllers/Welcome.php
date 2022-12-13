@@ -55,4 +55,10 @@ class Welcome extends CI_Controller {
 		$this->load->view('user/index-2');
 		$this->load->view('user-common/footer-2');
 	}
+
+	function policy(){
+		$this->load->view('user-common/header');
+		$this->load->view('user/privacy-policy');
+		$this->load->view('user-common/footer');
+	}
 }

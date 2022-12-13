@@ -57,6 +57,7 @@ class LoginModel extends CI_Model
        
     if($query -> num_rows() == 1) {
       $user = $query->row_array();
+      $this->db->query("SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''))");
       return array('status'=>'1','user'=>$user);
     } else {
       return array('status'=>'0','message'=>'invalid_login');

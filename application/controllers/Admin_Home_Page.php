@@ -116,5 +116,13 @@
 				echo json_encode(array('status'=>'201','message'=>'Bad Request Format'));
 			}
 		}
+
+
+		function update_order_date(){
+			$order = array('purchased_date'=>$this->input->post('value'));
+			if ($this->db->where('user_purchased_package_id',$this->input->post('id'))->update('user_purchased_package',$order)) {
+				echo json_encode(array('status'=>'1'));
+			}
+		}
 	}
 ?>

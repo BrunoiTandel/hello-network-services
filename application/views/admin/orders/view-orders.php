@@ -39,7 +39,7 @@
                        if ($value['order_status'] =='1') {
                           $check = 'checked';
                        }
-                          echo '<tr>';
+                          echo '<tr id="pay_'.$value['user_purchased_package_id'].'">';
                           echo '<td>'.($n++).'</td>';
                           echo '<td>'.$value['username'].'</td>';
                           echo '<td>'.$value['phone'].'</td>';
@@ -48,7 +48,7 @@
                           echo '<td>'.$value['product_title'].'</td>';
                           echo '<td>'.$value['amount_paid'].'</td>';
                           echo '<td>'.$value['payment_id'].'</td>';
-                          echo '<td>'.$value['purchased_date'].'</td>';
+                          echo '<td id="date_'.$value['user_purchased_package_id'].'" id-data="'.$value['user_purchased_package_id'].'"><input readonly class="change_date date-and-time-picker" type="text" value="'.$value['purchased_date'].'" id="purchased_date-'.$value['user_purchased_package_id'].'"></td>';
 
 
                          ?>
@@ -74,5 +74,25 @@
       </div>
     </section>
   </div>
+
+  <script type="text/javascript">
+     $(".change_date").on('change',function(){ 
+         $.ajax({
+        type  : 'POST',
+        url   : base_url+'Admin_Home_Page/update_order_date',
+        data : {
+         verify_admin_request : '1',
+         value : $(this).val(),
+         id : $(this).attr('id').split('-')[1]
+        },
+        dataType : 'json',
+        success : function(data) {
+           if (data.status == '1') {
+              toastr.success('Date has been successfully updated.');
+           }
+       }
+    });
+     })
+  </script>
  
  <script src="<?php echo base_url().'assets/custom-js/admin/order.js'?>"></script>
