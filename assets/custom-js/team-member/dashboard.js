@@ -27,6 +27,7 @@ function all_year_get_data(years){
   var hello = [];
   var bbnl = [];
   var tag = '';
+  var total_color =[], hello_color = [], bbnl_color = [];
 
   if (years.length > 0) {
     for (var i = 0; i < years.length; i++) {  
@@ -34,26 +35,27 @@ function all_year_get_data(years){
       total.push(years[i].amount_paid);
       hello.push((years[i].amount_paid/100) * 85);
       bbnl.push((years[i].amount_paid/100) * 15);
+      total_color.push('#f39c12');
+      hello_color.push('#f56954');
+      bbnl_color.push('#f56954');
       tag = years[i].tag;
     }
   }
 
   var sales_by_item_count_data  = {
-    labels: [
-      year 
-    ],
+    labels:year,
     datasets: [{
       label:'Hello Network',
       data: hello,
-      backgroundColor :  ['#f56954','#f56954','#f56954','#f56954','#f56954','#f56954'],
+      backgroundColor :  hello_color,
     },{
       label:tag,
       data: bbnl,
-      backgroundColor :  [ '#00a65a','#00a65a','#00a65a','#00a65a','#00a65a','#00a65a'],
+      backgroundColor :  bbnl_color,
     },{
       label:'Total',
       data: total,
-      backgroundColor :  [ '#f39c12','#f39c12','#f39c12','#f39c12','#f39c12','#f39c12'],
+      backgroundColor :  total_color,
     }]
   }
 
