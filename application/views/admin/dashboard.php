@@ -249,34 +249,32 @@ function all_year_get_data(years){
   var ctx = document.getElementById('year_case_inventoty_chart').getContext('2d');
   var year = [];
   var total = [];
+  var total_color = [];
   var hello = [];
+  var hello_color = [];
   var bbnl = [];
 
   if (years.length > 0) {
     for (var i = 0; i < years.length; i++) {
       year.push(years[i].monthname);
       total.push(years[i].amount_paid);
+      total_color.push('#f39c12');
+      hello_color.push('#f56954');
       hello.push((years[i].amount_paid/100) * 85);
       bbnl.push((years[i].amount_paid/100) * 15);
     }
   }
 
   var sales_by_item_count_data  = {
-    labels: [
-      year 
-    ],
+    labels: year,
     datasets: [{
       label:'Hello Network',
       data: hello,
-      backgroundColor :  ['#f56954','#f56954','#f56954','#f56954','#f56954','#f56954'],
-    },/*{
-      label:'BBNL',
-      data: bbnl,
-      backgroundColor :  [ '#00a65a','#00a65a','#00a65a','#00a65a','#00a65a','#00a65a'],
-    },*/{
-      label:'Total',
+      backgroundColor : hello_color,
+    },{
+      label:'Total', 
       data: total,
-      backgroundColor :  [ '#f39c12','#f39c12','#f39c12','#f39c12','#f39c12','#f39c12'],
+      backgroundColor : total_color,
     }]
   }
 
