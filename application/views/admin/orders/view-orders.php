@@ -48,7 +48,12 @@
                           echo '<td>'.$value['product_title'].'</td>';
                           echo '<td>'.$value['amount_paid'].'</td>';
                           echo '<td>'.$value['payment_id'].'</td>';
-                          echo '<td id="date_'.$value['user_purchased_package_id'].'" id-data="'.$value['user_purchased_package_id'].'"><input readonly class="change_date date-and-time-picker" type="text" value="'.$value['purchased_date'].'" id="purchased_date-'.$value['user_purchased_package_id'].'"></td>';
+                          if ($this->session->userdata('logged-in-admin')) {
+                             echo '<td id="date_'.$value['user_purchased_package_id'].'" id-data="'.$value['user_purchased_package_id'].'"><input readonly class="change_date date-and-time-picker" type="text" value="'.$value['purchased_date'].'" id="purchased_date-'.$value['user_purchased_package_id'].'"></td>';
+                          }else{
+                            echo '<td id="date_'.$value['user_purchased_package_id'].'" id-data="'.$value['user_purchased_package_id'].'">'.$value['purchased_date'].'</td>';
+                          }
+                          
 
 
                          ?>
