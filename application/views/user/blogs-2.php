@@ -47,6 +47,9 @@
             </div>
          </div>
       </div>
+      <amp-auto-ads type="adsense"
+        data-ad-client="ca-pub-7690060139204930">
+</amp-auto-ads>
       <div id="blog-results">
          <div class="row" id="all-posts"></div>
       </div>

@@ -27,6 +27,12 @@
 	   	var base_url = "<?php echo $this->config->item('my_base_url')?>";
 	   	var my_base_url = "<?php echo $this->config->item('my_base_url')?>";
 	</script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7690060139204930"
+     crossorigin="anonymous"></script>
+  
+	<script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+</script>
 </head>
 
 <body>
@@ -90,3 +96,11 @@
 	  	</div>
 	</nav>
 	<div class="hdr-mrgn"></div>
+	<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7690060139204930"
+     data-ad-slot="4517332140"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
