@@ -26,8 +26,8 @@
 	   	var my_base_url = "<?php echo $this->config->item('my_base_url')?>";
 	</script>
 
-	<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7690060139204930"
-     crossorigin="anonymous"></script> -->
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7690060139204930"
+     crossorigin="anonymous"></script>
 
 </head>
 
@@ -71,13 +71,4 @@
 	  	</div>
 	</nav>
 	<div class="hdr-mrgn"></div>
-	 <!--  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7690060139204930"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="autorelaxed"
-     data-ad-client="ca-pub-7690060139204930"
-     data-ad-slot="4517332140"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script> -->
+	
