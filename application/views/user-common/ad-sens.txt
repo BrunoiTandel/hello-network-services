@@ -1,0 +1,27 @@
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7690060139204930"
+     crossorigin="anonymous"></script>
+
+
+2)
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7690060139204930"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7690060139204930"
+     data-ad-slot="4517332140"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+3)
+<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7690060139204930"
+     data-ad-slot="4517332140"
+     data-auto-format="mcrspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad>
